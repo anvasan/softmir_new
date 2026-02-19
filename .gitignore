@@ -10,7 +10,7 @@ wp-content/upgrade/
 wp-content/uploads/
 wp-content/wflogs/
 wp-content/plugins/
-wp-content/themes/*
+wp-content/themes/
 !wp-content/themes/softmir/
 !wp-content/plugins/softmir-core/
 
