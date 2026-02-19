@@ -1,0 +1,33 @@
+
+# WordPress default files
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wflogs/
+wp-content/plugins/
+wp-content/themes/
+!wp-content/themes/softmir/
+!wp-content/plugins/softmir-core/
+
+# Log files
+*.log
+debug.log
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Node modules
+node_modules/
+package-lock.json

@@ -1,0 +1,4491 @@
+# Translation of Plugins - Site Reviews - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Site Reviews - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-06-09 12:15:01+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Site Reviews - Stable (latest release)\n"
+
+#: views/pages/tools/system-info.php:5
+msgctxt "admin-text"
+msgid "Loading, please wait..."
+msgstr "Загрузка, пожалуйста, подождите..."
+
+#: plugin/Controllers/ToolsController.php:188
+msgctxt "admin-text"
+msgid "Your user role does not have permission to view the system info."
+msgstr "Ваша роль пользователя не имеет разрешения на просмотр системной информации."
+
+#: plugin/Commands/EnqueueAdminAssets.php:136
+msgctxt "admin-text"
+msgid "Unable to fetch the System Info."
+msgstr "Невозможно получить информацию о системе."
+
+#: plugin/Controllers/MenuController.php:139
+msgctxt "admin-text"
+msgid "Integrations"
+msgstr "Интеграция"
+
+#: views/partials/dashboard-widget.php:35
+msgctxt "admin-text"
+msgid "(opens in a new tab)"
+msgstr "(откроется в новой вкладке)"
+
+#: views/pages/tools/general/import-reviews.php:35
+msgctxt "admin-text"
+msgid "Download"
+msgstr "Скачать"
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:159
+#: plugin/Integrations/Elementor/ElementorReviewWidget.php:75
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:140
+msgctxt "admin-text"
+msgid "Alignment"
+msgstr "Выравнивание"
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:166
+#: plugin/Integrations/Elementor/ElementorReviewWidget.php:82
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:147
+#: plugin/Integrations/JetWooBuilder/Controller.php:50
+msgctxt "admin-text"
+msgid "Center"
+msgstr "По центру"
+
+#: plugin/Integrations/Elementor/ElementorFormWidget.php:140
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:211
+#: plugin/Integrations/Elementor/ElementorReviewWidget.php:107
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:234
+msgctxt "admin-text"
+msgid "Color"
+msgstr "Цвет"
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:170
+#: plugin/Integrations/Elementor/ElementorReviewWidget.php:86
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:151
+#: plugin/Integrations/JetWooBuilder/Controller.php:54
+msgctxt "admin-text"
+msgid "End"
+msgstr "Окончание"
+
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:167
+msgctxt "admin-text"
+msgid "Max Width"
+msgstr "Макс. ширина"
+
+#: plugin/Metaboxes/AssignedPostsMetabox.php:28 plugin/Modules/Discord.php:160
+#: plugin/Modules/Html/TemplateTags.php:85 plugin/Modules/Slack.php:197
+msgid "(no title)"
+msgstr "(без названия)"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:703
+msgctxt "status labels"
+msgid "All"
+msgstr "Все"
+
+#: templates/woocommerce/rating.php:6
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] "%s отзыв клиента"
+msgstr[1] "%s отзыва клиентов"
+msgstr[2] "%s отзывов клиентов"
+
+#: plugin/Notices/GatekeeperNotice.php:84
+msgctxt "admin-text"
+msgid "Activate %s"
+msgstr "Активировать %s"
+
+#: plugin/Integrations/WooCommerce/Elementor/Widgets/ProductRating.php:86
+msgid "Alignment"
+msgstr "Выравнивание"
+
+#: config/integrations/ultimatemember.php:48
+#: config/integrations/woocommerce.php:74
+msgctxt "admin-text"
+msgid "Average Rating"
+msgstr "Средний рейтинг"
+
+#: templates/woocommerce/widgets/recent-reviews.php:15
+msgid "by %s"
+msgstr "автор: %s"
+
+#: plugin/Integrations/WooCommerce/Elementor/Widgets/ProductRating.php:93
+msgid "Center"
+msgstr "По центру"
+
+#: views/integrations/woocommerce/product-data-panel.php:40
+msgctxt "admin-text"
+msgid "Enable reviews"
+msgstr "Включить отзывы"
+
+#: plugin/Integrations/WooCommerce/Elementor/Widgets/ProductRating.php:101
+msgid "Justified"
+msgstr "По ширине"
+
+#: plugin/Integrations/WooCommerce/Elementor/Widgets/ProductRating.php:89
+msgid "Left"
+msgstr "Слева"
+
+#: plugin/Integrations/WooCommerce/Elementor/Widgets/ProductRating.php:25
+msgid "Link Color"
+msgstr "Цвет ссылки"
+
+#: views/pages/welcome/getting-started.php:69
+msgctxt "admin-text"
+msgid "%s minutes, %s seconds"
+msgstr "%s минут, %s секунд"
+
+#: plugin/Controllers/MenuController.php:54
+msgctxt "admin-text"
+msgid "Help & Support"
+msgstr "Помощь и поддержка"
+
+#: views/partials/notices/write-review.php:12
+msgctxt "admin-text"
+msgid "Leave a review"
+msgstr "Оставьте отзыв"
+
+#: plugin/Controllers/DeactivationController.php:40
+msgctxt "admin-text"
+msgid "Click here"
+msgstr "Нажмите здесь"
+
+#: plugin/Controllers/MenuController.php:136
+msgctxt "admin-text"
+msgid "Forms"
+msgstr "Формы"
+
+#: config/settings.php:996
+msgctxt "admin-text"
+msgid "Dark"
+msgstr "Темный"
+
+#: config/settings.php:995
+msgctxt "admin-text"
+msgid "Light"
+msgstr "Светлый"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterAuthor.php:15
+msgctxt "admin-text"
+msgid "Any author"
+msgstr "Любой автор"
+
+#: views/partials/listtable/filter.php:13
+msgctxt "admin-text"
+msgid "Search..."
+msgstr "Поиск..."
+
+#: plugin/Controllers/AdminController.php:106 views/pages/tools/console.php:58
+msgctxt "admin-text"
+msgid "Apply"
+msgstr "Применить"
+
+#: views/pages/tools/general/import-reviews.php:73
+msgctxt "admin-text"
+msgid "Detect automatically"
+msgstr "Определять автоматически"
+
+#: config/settings.php:102
+msgctxt "admin-text"
+msgid "Custom Login URL"
+msgstr "Пользовательский URL для входа"
+
+#: config/settings.php:131
+msgctxt "admin-text"
+msgid "Site Reviews uses the %s function to get the registration URL. If you would like to use a custom registration URL, enter it here."
+msgstr "Site Reviews использует функцию %s для получения регистрационного URL. Если вы хотите использовать собственный регистрационный URL, введите его здесь."
+
+#: config/settings.php:128
+msgctxt "admin-text"
+msgid "Custom Registration URL"
+msgstr "Собственный URL регистрации"
+
+#: config/settings.php:105
+msgctxt "admin-text"
+msgid "Site Reviews uses the %s function to get the login URL. If you would like to use a custom login URL, enter it here."
+msgstr "Site Reviews использует функцию %s для получения URL входа. Если вы хотите использовать собственный URL входа, введите его здесь."
+
+#: plugin/Commands/DownloadCsvTemplate.php:19
+msgctxt "admin-text"
+msgid "The User ID of the reviewer"
+msgstr "ID пользователя рецензента"
+
+#: plugin/Integrations/Elementor/ElementorWidget.php:89
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:22
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:22
+#: plugin/Integrations/FusionBuilder/FusionReviewForm.php:20
+msgctxt "admin-text"
+msgid "The Current Page"
+msgstr "Текущая страница"
+
+#: plugin/Integrations/Elementor/ElementorWidget.php:90
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:23
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:23
+#: plugin/Integrations/FusionBuilder/FusionReviewForm.php:21
+msgctxt "admin-text"
+msgid "The Parent Page"
+msgstr "Родительская страница"
+
+#: plugin/Integrations/Elementor/ElementorWidget.php:104
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:50
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:50
+#: plugin/Integrations/FusionBuilder/FusionReviewForm.php:48
+msgctxt "admin-text"
+msgid "The Page author"
+msgstr "Автор страницы"
+
+#: views/pages/settings/strings.php:29
+msgctxt "admin-text"
+msgid "Custom Text"
+msgstr "Произвольный текст"
+
+#: views/pages/settings/strings.php:3
+msgctxt "admin-text"
+msgid "Custom Text Settings"
+msgstr "Пользовательские настройки текста"
+
+#: views/pages/settings/strings.php:13
+msgctxt "admin-text"
+msgid "If you are using the Polylang plugin, any custom text you enter here will be translatable on the Polylang \"Strings translations\" page."
+msgstr "Если вы используете подключаемый модуль Polylang, любой пользовательский текст, который вы введете здесь, будет доступен для перевода на странице \"Строки перевода\" в ​​Polylang."
+
+#: views/pages/settings/strings.php:12
+msgctxt "admin-text"
+msgid "Here you can customise any English text of the plugin that is shown on the frontend of your website, including the field labels and placeholders of the review form."
+msgstr "Здесь вы можете настроить любой английский текст плагина, который будет отображаться на фронтенде вашего сайта, включая метки полей и заполнители формы отзыва."
+
+#: plugin/Modules/Html/Partials/Pagination.php:35
+msgid "Loading, please wait..."
+msgstr "Загрузка, подождите..."
+
+#: plugin/Modules/Html/Partials/Pagination.php:37
+msgctxt "screen reader text"
+msgid "Load more reviews"
+msgstr "Загрузить еще отзывы"
+
+#: plugin/Modules/Html/Partials/Pagination.php:38
+msgid "Load more"
+msgstr "Загрузить больше"
+
+#: config/settings.php:407 plugin/Controllers/MenuController.php:138
+msgctxt "admin-text"
+msgid "Strings"
+msgstr "Строки"
+
+#: plugin/Commands/ToggleStatus.php:78
+#: plugin/Controllers/TranslationController.php:148
+msgctxt "admin-text"
+msgid "Approved <span class=\"count\">(%s)</span>"
+msgid_plural "Approved <span class=\"count\">(%s)</span>"
+msgstr[0] "Одобрен <span class=\"count\">(%s)</span>"
+msgstr[1] "Одобрено <span class=\"count\">(%s)</span>"
+msgstr[2] "Одобрено <span class=\"count\">(%s)</span>"
+
+#: plugin/Commands/ToggleStatus.php:86
+#: plugin/Controllers/TranslationController.php:144
+msgctxt "admin-text"
+msgid "Unapproved <span class=\"count\">(%s)</span>"
+msgid_plural "Unapproved <span class=\"count\">(%s)</span>"
+msgstr[0] "Не одобрен <span class=\"count\">(%s)</span>"
+msgstr[1] "Не одобрено <span class=\"count\">(%s)</span>"
+msgstr[2] "Не одобрено <span class=\"count\">(%s)</span>"
+
+#: config/settings.php:339
+msgctxt "admin-text"
+msgid "Fallback Avatar URL"
+msgstr "URL резервного аватара"
+
+#: config/settings.php:341
+msgctxt "admin-text"
+msgid "Enter a custom image URL to use as the fallback avatar."
+msgstr "Введите URL пользовательского изображения для использования в качестве резервного аватара."
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:37
+msgid "Add"
+msgstr "Добавить"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:44
+msgid "Search Scheduled Actions"
+msgstr "Поиск запланированных действий"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_TaxonomyRegistrar.php:22
+msgid "Action Group"
+msgstr "Группа действий"
+
+#. translators: %s: date interval
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:487
+msgid " (%s ago)"
+msgstr " (%s назад)"
+
+#. translators: %s: date interval
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:490
+msgid " (%s)"
+msgstr " (%s)"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:111
+msgid "Action Scheduler"
+msgstr "Планировщик действий"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:122
+msgid "Action Status"
+msgstr "Статус действия"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:302
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:98
+msgid "Arguments"
+msgstr "Аргументы"
+
+#. translators: %s: time interval
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:261
+msgid "Every %s"
+msgstr "Каждые %s"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:303
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:99
+msgid "Group"
+msgstr "Группа"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:224
+msgid "Now!"
+msgstr "Сейчас!"
+
+#. translators: %s refers to the action ID
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:140
+msgid "Started processing action %s"
+msgstr "Начато действие по обработке %s"
+
+#. translators: %s php class name
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_WPCLI_Command.php:34
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:45
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ProgressBar.php:67
+msgid "The %s class can only be run within WP CLI."
+msgstr "Класс %s может быть запущен только в WP CLI."
+
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:71
+msgid "There are too many concurrent batches."
+msgstr "Слишком много параллельных пакетов."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:114
+msgid "Version:"
+msgstr "Версия:"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:56
+msgctxt "post"
+msgid "In-Progress"
+msgstr "В процессе"
+
+#. translators: %d: amount of actions
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:99
+msgid "Running %d action"
+msgid_plural "Running %d actions"
+msgstr[0] "Выполнение %d действия"
+msgstr[1] "Выполнение %d действий"
+msgstr[2] "Выполнение %d действий"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:301
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:97
+msgid "Status"
+msgstr "Статус"
+
+#. translators: %s: amount of time
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:164
+msgid "%s hour"
+msgid_plural "%s hours"
+msgstr[0] "%s час"
+msgstr[1] "%s часа"
+msgstr[2] "%s часов"
+
+#. translators: %s: amount of time
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:169
+msgid "%s minute"
+msgid_plural "%s minutes"
+msgstr[0] "%s минута"
+msgstr[1] "%s минуты"
+msgstr[2] "%s минут"
+
+#. translators: %s: amount of time
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:149
+msgid "%s month"
+msgid_plural "%s months"
+msgstr[0] "%s месяц"
+msgstr[1] "%s месяца"
+msgstr[2] "%s месяцев"
+
+#. translators: %s: amount of time
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:154
+msgid "%s week"
+msgid_plural "%s weeks"
+msgstr[0] "%s неделя"
+msgstr[1] "%s недели"
+msgstr[2] "%s недель"
+
+#. translators: %s: amount of time
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:159
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] "%s день"
+msgstr[1] "%s дня"
+msgstr[2] "%s дней"
+
+#. translators: %s: amount of time
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:174
+msgid "%s second"
+msgid_plural "%s seconds"
+msgstr[0] "%s секунда"
+msgstr[1] "%s секунды"
+msgstr[2] "%s секунд"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:35
+msgid "Scheduled Action"
+msgstr "Запланированное действие"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:300
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:96
+msgid "Hook"
+msgstr "Ловушка"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:304
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:100
+msgid "Recurrence"
+msgstr "Повтор"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:101
+msgid "Scheduled Date"
+msgstr "Запланированная дата"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:306
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:102
+msgid "Log"
+msgstr "Журнал"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:129
+msgid "Run"
+msgstr "Выполнить"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:130
+msgid "Process the action now as if it were run as part of a queue"
+msgstr "Выполнить действие сейчас, как будто оно выполняется в порядке очереди"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:134
+msgid "Cancel the action now to avoid it being run in future"
+msgstr "Отменить действие сейчас, чтобы оно не выполнялось в будущем"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:267
+msgid "Non-repeating"
+msgstr "Без повтора"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:666
+msgid "Search hook, args and claim ID"
+msgstr "Ловушка поиска, аргументы и ID заявки"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_QueueRunner.php:249
+msgid "Every minute"
+msgstr "Ежеминутно"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:318
+msgid "Invalid schedule. Cannot save action."
+msgstr "Неверное планирование. Невозможно сохранить действие."
+
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:117
+msgid "The claim has been lost. Aborting current batch."
+msgstr "Заявка потеряна. Принудительное прерывание текущего пакета."
+
+#. translators: 1: action ID 2: exception message
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:168
+msgid "Error processing action %1$s: %2$s"
+msgstr "Действие по обработке ошибки %1$s: %2$s"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_DataController.php:149
+msgid "Attempting to reduce used memory..."
+msgstr "Попытка уменьшить используемую память..."
+
+#. translators: %d refers to how many scheduled tasks were found to run
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:150
+msgid "Found %d scheduled task"
+msgid_plural "Found %d scheduled tasks"
+msgstr[0] "Найдена %d запланированная задача"
+msgstr[1] "Найдены %d запланированные задачи"
+msgstr[2] "Найдены %d запланированные задачи"
+
+#. translators: %d refers to the total number of batches executed
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:165
+msgid "%d batch executed."
+msgid_plural "%d batches executed."
+msgstr[0] "%d пакет выполнен."
+msgstr[1] "%d пакета выполнено."
+msgstr[2] "%d пакетов выполнено."
+
+#. translators: %s refers to the exception error message
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:182
+msgid "There was an error running the action scheduler: %s"
+msgstr "В процессе работы планировщика действий произошла ошибка: %s"
+
+#. translators: %d refers to the total number of tasks completed
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:197
+msgid "%d scheduled task completed."
+msgid_plural "%d scheduled tasks completed."
+msgstr[0] "Выполнена %d запланированная задача."
+msgstr[1] "Выполнено %d запланированные задачи."
+msgstr[2] "Выполнено %d запланированных задач."
+
+#. translators: %s: error message
+#. translators: %s: action error message
+#. translators: %s is an error message.
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:138
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:49
+#: vendors/woocommerce/action-scheduler/classes/migration/ActionScheduler_DBStoreMigrator.php:49
+msgid "Error saving action: %s"
+msgstr "Ошибка при сохранении действия: %s"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:101
+msgid "Unable to save action."
+msgstr "Не удалось сохранить действие."
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:696
+msgid "Unable to claim actions. Database error."
+msgstr "Не удалось запросить действия. Ошибка базы данных."
+
+#. translators: %s: group name(s)
+#. translators: %s is the group name
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:981
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:717
+msgid "The group \"%s\" does not exist."
+msgid_plural "The groups \"%s\" do not exist."
+msgstr[0] "Группы «%s» не существует."
+msgstr[1] ""
+msgstr[2] ""
+
+#. translators: %s: claim ID
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:824
+msgid "Unable to unlock claim %s. Database error."
+msgstr "Не удалось разблокировать заявку %s. Ошибка базы данных."
+
+#. translators: %s: action ID
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:852
+msgid "Unable to unlock claim on action %s. Database error."
+msgstr "Не удалось разблокировать заявку на действие %s. Ошибка базы данных."
+
+#. translators: %s: action ID
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:878
+msgid "Unable to mark failure on action %s. Database error."
+msgstr "Не удалось отметить сбой действия %s. Ошибка базы данных."
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1288
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:904
+msgid "Invalid action ID. No status found."
+msgstr "Неверный ID действия. Статус не найден."
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:41
+msgctxt "post"
+msgid "Failed"
+msgstr "Неудачно"
+
+#. translators: %s: count
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:58
+msgid "In-Progress <span class=\"count\">(%s)</span>"
+msgid_plural "In-Progress <span class=\"count\">(%s)</span>"
+msgstr[0] "Выполняется <span class=\"count\">(%s)</span>"
+msgstr[1] "Выполняется <span class=\"count\">(%s)</span>"
+msgstr[2] "Выполняется <span class=\"count\">(%s)</span>"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:36
+msgctxt "Admin menu name"
+msgid "Scheduled Actions"
+msgstr "Запланированные действия"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:40
+msgid "Edit Scheduled Action"
+msgstr "Редактирование запланированного действия"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:41
+msgid "New Scheduled Action"
+msgstr "Новое запланированное действие"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:42
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:43
+msgid "View Action"
+msgstr "Просмотр действия"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:45
+msgid "No actions found"
+msgstr "Действия не найдены"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:46
+msgid "No actions found in trash"
+msgstr "В корзине действий не найдено"
+
+#. translators: 1: action ID 2: arguments
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_InvalidActionException.php:40
+msgid "Action [%1$s] has invalid arguments. It cannot be JSON decoded to an array. $args = %2$s"
+msgstr "Действие [%1$s] имеет некорректные аргументы. Оно не может быть декодировано из JSON в массив. $args = %2$s"
+
+#. translators: 1: action ID 2: hook name
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:155
+msgid "Completed processing action %1$s with hook: %2$s"
+msgstr "Завершена обработка действия %1$s, сработавшая ловушка: %2$s"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:125
+msgid "Oldest Scheduled Date"
+msgstr "Самая ранняя назначенная дата"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:126
+msgid "Newest Scheduled Date"
+msgstr "Самая новая назначенная дата"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:296
+msgid "Columns"
+msgstr "Столбцы"
+
+#. translators: 1: action ID 2: schedule
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_InvalidActionException.php:22
+msgid "Action [%1$s] has an invalid schedule: %2$s"
+msgstr "Для действия [%1$s] установлено недопустимое расписание: %2$s"
+
+#. translators: %s: date interval
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_WPCommentCleaner.php:121
+msgid "This data will be deleted in %s."
+msgstr "Эти данные будут удалены в %s."
+
+#. translators: 1: next cleanup message 2: github issue URL
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_WPCommentCleaner.php:126
+msgid "Action Scheduler has migrated data to custom tables; however, orphaned log entries exist in the WordPress Comments table. %1$s <a href=\"%2$s\">Learn more &raquo;</a>"
+msgstr "Планировщик действий перенес данные в пользовательские таблицы; однако в таблице комментариев WordPress присутствуют осиротевшие записи журнала. %1$s <a href=\"%2$s\">Узнать больше</a>"
+
+#. translators: %s is an action ID.
+#: vendors/woocommerce/action-scheduler/classes/migration/ActionMigrator.php:109
+msgid "Unable to remove source migrated action %s"
+msgstr "Невозможно удалить исходное перенесенное действие %s"
+
+#: vendors/woocommerce/action-scheduler/classes/migration/Controller.php:183
+msgid "Action Scheduler migration in progress. The list of scheduled actions may be incomplete."
+msgstr "Выполняется перенос по расписанию планировщика действий. Список запланированных действий может быть неполным."
+
+#: vendors/woocommerce/action-scheduler/classes/migration/Config.php:77
+msgid "Source store must be configured before running a migration"
+msgstr "Исходное хранилище должно быть настроено перед запуском переноса"
+
+#: vendors/woocommerce/action-scheduler/classes/migration/Config.php:123
+msgid "Destination store must be configured before running a migration"
+msgstr "Целевое хранилище должно быть настроено перед запуском переноса"
+
+#. translators: %d: amount of actions
+#: vendors/woocommerce/action-scheduler/classes/migration/Runner.php:114
+msgid "Migrating %d action"
+msgid_plural "Migrating %d actions"
+msgstr[0] "Перенос действия %d"
+msgstr[1] "Перенос действий %d"
+msgstr[2] "Перенос действий %d"
+
+#. translators: 1: source action ID 2: source store class 3: destination action
+#. ID 4: destination store class
+#: vendors/woocommerce/action-scheduler/classes/migration/Runner.php:141
+msgid "Migrated action with ID %1$d in %2$s to ID %3$d in %4$s"
+msgstr "Действие перемещения с ID %1$d в %2$s в ID %3$d в %4$s"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:298
+msgid "Scheduled Action Columns"
+msgstr "Столбцы запланированных действий"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:300
+msgid "Name of the action hook that will be triggered."
+msgstr "Название ловушки действия, которая будет запущена."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:301
+msgid "Action statuses are Pending, Complete, Canceled, Failed"
+msgstr "Статусы действий: В ожидании, Завершено, Отменено, Не выполнено"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:302
+msgid "Optional data array passed to the action hook."
+msgstr "Необязательный массив данных передается в ловушку действия."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:303
+msgid "Optional action group."
+msgstr "Необязательная группа действий."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:304
+msgid "The action's schedule frequency."
+msgstr "Периодичность выполнения действия."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:305
+msgid "Scheduled"
+msgstr "Запланировано"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:305
+msgid "The date/time the action is/was scheduled to run."
+msgstr "Дата/время, когда было запланировано выполнение этого действия."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:275
+msgid "Action Scheduler is a scalable, traceable job queue for background processing large sets of actions. Action Scheduler works by triggering an action hook to run at some time in the future. Scheduled actions can also be scheduled to run on a recurring schedule."
+msgstr "Планировщик действий — это масштабируемая отслеживаемая очередь заданий для фоновой обработки больших наборов действий. Планировщик действий работает, вызывая ловушку действия для запуска в определенный момент в будущем. Запланированные действия также могут быть запланированы для выполнения по регулярному расписанию."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:306
+msgid "Activity log for the action."
+msgstr "Журнал активности для данного действия."
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:130
+msgid "Database error."
+msgstr "Ошибка базы данных."
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:425
+msgid "Invalid value for select or count parameter. Cannot query actions."
+msgstr "Неверное значение для параметра select или count. Невозможно запросить действия."
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1290
+msgid "Unknown status found for action."
+msgstr "Найден неизвестный статус для действия."
+
+#. translators: %s is the error message
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:1068
+msgid "%s Support for strings longer than this will be removed in a future version."
+msgstr "%s Поддержка более длинных строк будет удалена в следующей версии."
+
+#. translators: %d: amount of time
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_DataController.php:145
+msgid "Stopped the insanity for %d second"
+msgid_plural "Stopped the insanity for %d seconds"
+msgstr[0] "Установлено ограничение на %d сек."
+msgstr[1] "Установлено ограничение на %d сек."
+msgstr[2] "Установлено ограничение на %d сек."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:111
+msgid "This section shows details of Action Scheduler."
+msgstr "В этом разделе показаны сведения о планировщике действий."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:118
+msgid "Data store:"
+msgstr "Хранилище данных:"
+
+#: views/pages/documentation/support/common-problems-and-solutions.php:131
+msgid "Service Unavailable."
+msgstr "Сервис недоступен."
+
+#: views/pages/addons/index.php:10
+msgctxt "admin-text"
+msgid "Site Reviews Premium"
+msgstr "Site Reviews Premium"
+
+#: views/pages/addons/index.php:16
+msgctxt "admin-text"
+msgid "Check it out!"
+msgstr "Попробуйте это!"
+
+#. translators: %s: count
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:43
+msgid "Failed <span class=\"count\">(%s)</span>"
+msgid_plural "Failed <span class=\"count\">(%s)</span>"
+msgstr[0] "Неудавшийся <span class=\"count\">(%s)</span>"
+msgstr[1] "Неудавшихся <span class=\"count\">(%s)</span>"
+msgstr[2] "Неудавшихся <span class=\"count\">(%s)</span>"
+
+#. translators: %s: amount of time
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:144
+msgid "%s year"
+msgid_plural "%s years"
+msgstr[0] "%s год"
+msgstr[1] "%s года"
+msgstr[2] "%s лет"
+
+#: vendors/woocommerce/action-scheduler/classes/migration/Config.php:146
+msgid "Destination logger must be configured before running a migration"
+msgstr "Регистратор назначения должен быть настроен перед запуском переноса"
+
+#: vendors/woocommerce/action-scheduler/classes/migration/Config.php:100
+msgid "Source logger must be configured before running a migration"
+msgstr "Исходный регистратор должен быть настроен перед запуском переноса"
+
+#: vendors/woocommerce/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:69
+msgid "There are too many concurrent batches, but the run is forced to continue."
+msgstr "Существует слишком много параллельных пакетов, но выполнение принудительно продолжается."
+
+#: plugin/Commands/DownloadCsvTemplate.php:18
+msgctxt "admin-text"
+msgid "The Users that the review is assigned to (separate multiple IDs with a comma)"
+msgstr "Пользователи, которым назначен отзыв (разделяйте несколько ID запятой)"
+
+#: plugin/Commands/DownloadCsvTemplate.php:16
+msgctxt "admin-text"
+msgid "The Posts that the review is assigned to (separate multiple IDs with a comma)"
+msgstr "Запись, которой присвоен отзыв (разделяйте несколько ID запятой)"
+
+#: plugin/Commands/DownloadCsvTemplate.php:17
+msgctxt "admin-text"
+msgid "The Categories that the review is assigned to (separate multiple IDs with a comma)"
+msgstr "Рубрики, к которым относится отзыв (разделяйте несколько IDs запятой)"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:38
+msgid "Add New Scheduled Action"
+msgstr "Добавить запланированное действие"
+
+#: plugin/Overrides/ScheduledActionsTable.php:110
+msgctxt "admin-text"
+msgid "Run Now"
+msgstr "Запустить сейчас"
+
+#: plugin/Overrides/ScheduledActionsTable.php:457
+msgctxt "%s: time interval (admin-text)"
+msgid "Every %s"
+msgstr "Каждые %s"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:459
+msgid "Canceled"
+msgstr "Отменено"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:457
+msgid "In-progress"
+msgstr "В процессе"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:109
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_DBLogger.php:142
+msgid "action canceled"
+msgstr "действие отменено"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:207
+msgid "action ignored"
+msgstr "действие проигнорировано"
+
+#: plugin/Overrides/ScheduledActionsTable.php:115
+msgctxt "admin-text"
+msgid "Cancel the action now to avoid it being run in future"
+msgstr "Отменить действие сейчас, чтобы оно не выполнялось в будущем"
+
+#: plugin/Overrides/ScheduledActionsTable.php:111
+msgctxt "admin-text"
+msgid "Process the action now as if it were run as part of a queue"
+msgstr "Выполнить действие сейчас, как будто оно выполняется в порядке очереди"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:458
+msgid "Failed"
+msgstr "Неудачно"
+
+#: plugin/Modules/Date.php:41
+msgctxt "%s: amount of time"
+msgid "%s hour"
+msgid_plural "%s hours"
+msgstr[0] "%s час"
+msgstr[1] "%s часа"
+msgstr[2] "%s часов"
+
+#: plugin/Modules/Date.php:53
+msgctxt "%s: amount of time"
+msgid "%s second"
+msgid_plural "%s seconds"
+msgstr[0] "%s секунда"
+msgstr[1] "%s секунды"
+msgstr[2] "%s секунд"
+
+#: plugin/Modules/Date.php:29
+msgctxt "%s: amount of time"
+msgid "%s week"
+msgid_plural "%s weeks"
+msgstr[0] "%s неделя"
+msgstr[1] "%s недели"
+msgstr[2] "%s недель"
+
+#: plugin/Modules/Date.php:17
+msgctxt "%s: amount of time"
+msgid "%s year"
+msgid_plural "%s years"
+msgstr[0] "%s год"
+msgstr[1] "%s года"
+msgstr[2] "%s лет"
+
+#: plugin/Modules/Date.php:35
+msgctxt "%s: amount of time"
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] "%s день"
+msgstr[1] "%s дня"
+msgstr[2] "%s дней"
+
+#: plugin/Modules/Date.php:47
+msgctxt "%s: amount of time"
+msgid "%s minute"
+msgid_plural "%s minutes"
+msgstr[0] "%s минута"
+msgstr[1] "%s минуты"
+msgstr[2] "%s минут"
+
+#: plugin/Modules/Date.php:23
+msgctxt "%s: amount of time"
+msgid "%s month"
+msgid_plural "%s months"
+msgstr[0] "%s месяц"
+msgstr[1] "%s месяца"
+msgstr[2] "%s месяцев"
+
+#: plugin/Modules/Date.php:16
+msgctxt "%s: amount of time"
+msgid "in %s year"
+msgid_plural "in %s years"
+msgstr[0] "в %s году"
+msgstr[1] "в %s годах"
+msgstr[2] "в %s лет"
+
+#: plugin/Overrides/ScheduledActionsTable.php:93
+msgctxt "admin-text"
+msgid "Args"
+msgstr "Аргументы"
+
+#: plugin/Overrides/ScheduledActionsTable.php:94
+msgctxt "admin-text"
+msgid "Log"
+msgstr "Журнал"
+
+#: plugin/Overrides/ScheduledActionsTable.php:106
+msgctxt "admin-text"
+msgid "Retry"
+msgstr "Повторить"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:786
+msgid "Search"
+msgstr "Поиск"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:82
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:97
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:98
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:89
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:23
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:34
+msgid "Scheduled Actions"
+msgstr "Запланированные действия"
+
+#: plugin/Modules/Date.php:36
+msgctxt "%s: amount of time"
+msgid "%s day ago"
+msgid_plural "%s days ago"
+msgstr[0] "%s день назад"
+msgstr[1] "%s дня назад"
+msgstr[2] "%s дней назад"
+
+#: plugin/Modules/Date.php:42
+msgctxt "%s: amount of time"
+msgid "%s hour ago"
+msgid_plural "%s hours ago"
+msgstr[0] "%s час назад"
+msgstr[1] "%s часа назад"
+msgstr[2] "%s часов назад"
+
+#: plugin/Modules/Date.php:48
+msgctxt "%s: amount of time"
+msgid "%s minute ago"
+msgid_plural "%s minutes ago"
+msgstr[0] "%s минуту назад"
+msgstr[1] "%s минуты назад"
+msgstr[2] "%s минут назад"
+
+#. translators: %s is the Action Scheduler version.
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:273
+msgid "About Action Scheduler %s"
+msgstr "О планировщике действий %s"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:122
+msgid "Claim ID"
+msgstr "ID заявки"
+
+#. translators: %s: amount of claims
+#: plugin/Overrides/ScheduledActionsTable.php:240
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:381
+msgid "Maximum simultaneous queues already in progress (%s queue). No additional queues will begin processing until the current queues are complete."
+msgid_plural "Maximum simultaneous queues already in progress (%s queues). No additional queues will begin processing until the current queues are complete."
+msgstr[0] "Максимальное число одновременных очередей, которые уже выполняются (%s очередь). Обработка дополнительных очередей не начнется, пока не будут завершены текущие."
+msgstr[1] "Максимальное число одновременных очередей, которые уже выполняются (%s очереди). Обработка дополнительных очередей не начнется, пока не будут завершены текущие."
+msgstr[2] "Максимальное число одновременных очередей, которые уже выполняются (%s очередей). Обработка дополнительных очередей не начнется, пока не будут завершены текущие."
+
+#. translators: %s: action HTML
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:423
+msgid "Successfully executed action: %s"
+msgstr "Успешно выполнено действие: %s"
+
+#. translators: %s: action HTML
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:431
+msgid "Successfully processed change for action: %s"
+msgstr "Успешно обработано изменение для действия: %s"
+
+#. translators: 1: action HTML 2: action ID 3: error message
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:437
+msgid "Could not process change for action: \"%1$s\" (ID: %2$d). Error: %3$s"
+msgstr "Не удалось обработать изменение для действия: \"%1$s\" (ID: %2$d). Ошибка: %3$s"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:100
+msgid "action created"
+msgstr "действие создано"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:123
+msgid "action started"
+msgstr "действие начато"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:140
+msgid "action complete"
+msgstr "действие выполнено"
+
+#. translators: %s: exception message
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:158
+msgid "action failed: %s"
+msgstr "не удалось выполнить действие: %s"
+
+#. translators: 1: error message 2: filename 3: line
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:183
+msgid "unexpected shutdown: PHP Fatal error %1$s in %2$s on line %3$s"
+msgstr "непредвиденное выключение: Критическая ошибка PHP %1$s в %2$s в строке %3$s"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:193
+msgid "action reset"
+msgstr "действие сброшено"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:224
+msgid "There was a failure fetching this action"
+msgstr "Не удалось получить это действие"
+
+#. translators: %s: search query
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:668
+msgid "Search results for \"%s\""
+msgstr "Результаты поиска для «%s»"
+
+#. translators: %s: process URL
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:398
+msgid "A new queue has begun processing. <a href=\"%s\">View actions in-progress &raquo;</a>"
+msgstr "Началась обработка новой очереди. <a href=\"%s\">Посмотреть выполняемые действия &raquo;</a>"
+
+#. translators: %d: seconds
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:401
+msgid "The next queue will begin processing in approximately %d seconds."
+msgstr "Обработка следующей очереди начнется примерно через %d сек."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ActionFactory.php:233
+msgid "Invalid action - must be a recurring action."
+msgstr "Неверное действие — должно быть повторяющимся действием."
+
+#. translators: %s: context
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:121
+msgid "action started via %s"
+msgstr "действие началось через %s"
+
+#. translators: %s: context
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:138
+msgid "action complete via %s"
+msgstr "действие завершено через %s"
+
+#. translators: 1: context 2: exception message
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:155
+msgid "action failed via %1$s: %2$s"
+msgstr "действие не удалось через %1$s: %2$s"
+
+#. translators: %s: context
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:205
+msgid "action ignored via %s"
+msgstr "действие игнорируется через %s"
+
+#. translators: %s: exception message
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:222
+msgid "There was a failure fetching this action: %s"
+msgstr "Не удалось получить это действие %s"
+
+#. translators: %s: exception message
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:238
+msgid "There was a failure scheduling the next instance of this action: %s"
+msgstr "Произошла ошибка при планировании следующего экземпляра этого действия: %s"
+
+#. translators: %d is a number (maximum length of action arguments).
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:377
+msgid "ActionScheduler_Action::$args too long. To ensure the args column can be indexed, action args should not be more than %d characters when encoded as JSON."
+msgstr "ActionScheduler_Action::$args имееи слишком большую длину. Для индексации столбца args аргументы действия не должны содержать символов более %d при кодировании в формате JSON."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:365
+msgid "It appears one or more database tables were missing. Attempting to re-create the missing table(s)."
+msgstr "Кажется, отсутствует одна или несколько таблиц баз данных. Пытаемся восстановить отсутствующие таблицы."
+
+#. translators: %s function name.
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler.php:271
+msgid "%s() was called before the Action Scheduler data store was initialized"
+msgstr "%s() был вызван перед тем, как было инициализировано хранилище данных Action Scheduler"
+
+#: config/settings.php:84
+msgctxt "admin-text"
+msgid "Require Approval For"
+msgstr "Требуется одобрение для"
+
+#: plugin/Controllers/MenuController.php:162
+msgctxt "admin-text"
+msgid "Scheduled Actions"
+msgstr "Запланированные действия"
+
+#: plugin/Overrides/ScheduledActionsTable.php:92
+msgctxt "admin-text"
+msgid "Scheduled Date"
+msgstr "Запланированная дата"
+
+#: plugin/Overrides/ScheduledActionsTable.php:89
+msgctxt "admin-text"
+msgid "Hook"
+msgstr "Hook"
+
+#: plugin/Overrides/ScheduledActionsTable.php:91
+msgctxt "admin-text"
+msgid "Recurrence"
+msgstr "Повторение"
+
+#: plugin/Overrides/ScheduledActionsTable.php:453
+msgctxt "admin-text"
+msgid "Non-repeating"
+msgstr "Без повторения"
+
+#: plugin/Controllers/AdminController.php:192
+msgctxt "admin-text"
+msgid "Try Premium"
+msgstr "Попробуйте премиум"
+
+#: config/settings.php:86
+msgid "%s star or less"
+msgid_plural "%s stars or less"
+msgstr[0] "%s звезда или меньше"
+msgstr[1] "%s звезды или меньше"
+msgstr[2] "%s звезд или меньше"
+
+#: plugin/Modules/Date.php:18
+msgctxt "%s: amount of time"
+msgid "%s year ago"
+msgid_plural "%s years ago"
+msgstr[0] "%s год назад"
+msgstr[1] "%s года назад"
+msgstr[2] "%s лет назад"
+
+#: plugin/Modules/Date.php:22
+msgctxt "%s: amount of time"
+msgid "in %s month"
+msgid_plural "in %s months"
+msgstr[0] "в %s месяце"
+msgstr[1] "в %s месяцах"
+msgstr[2] "в %s месяцах"
+
+#: plugin/Overrides/ScheduledActionsTable.php:120
+msgctxt "admin-text"
+msgid "Delete the action now"
+msgstr "Удалить действие сейчас"
+
+#: plugin/Overrides/ScheduledActionsTable.php:107
+msgctxt "admin-text"
+msgid "Retry the action now as if it were run as part of a queue"
+msgstr "Повторите действие сейчас, как если бы оно выполнялось как часть очереди"
+
+#: config/settings.php:85
+msgctxt "admin-text"
+msgid "The minimum rating that will change the status of a new review submission to \"unapproved\"."
+msgstr "Минимальный рейтинг, который изменит статус новой отправки отзыва на \"не одобренный\"."
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:541
+msgid "Filter"
+msgstr "Фильтровать"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:456
+msgid "Pending"
+msgstr "В ожидании"
+
+#: plugin/Modules/Date.php:24
+msgctxt "%s: amount of time"
+msgid "%s month ago"
+msgid_plural "%s months ago"
+msgstr[0] "%s  месяц назад"
+msgstr[1] "%s  месяца назад"
+msgstr[2] "%s  месяцев назад"
+
+#: plugin/Modules/Date.php:54
+msgctxt "%s: amount of time"
+msgid "%s second ago"
+msgid_plural "%s seconds ago"
+msgstr[0] "%s секунду назад"
+msgstr[1] "%s секунды назад"
+msgstr[2] "%s секунд назад"
+
+#: plugin/Modules/Date.php:30
+msgctxt "%s: amount of time"
+msgid "%s week ago"
+msgid_plural "%s weeks ago"
+msgstr[0] "%s неделю назад"
+msgstr[1] "%s недели назад"
+msgstr[2] "%s недель назад"
+
+#: vendors/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Store.php:455
+msgid "Complete"
+msgstr "Завершено"
+
+#: plugin/Modules/Html/TemplateTags.php:144
+msgctxt "admin-text"
+msgid "View the review in WordPress &rarr;"
+msgstr "Смотреть отзыв в WordPress &rarr;"
+
+#. translators: %s: action HTML
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:427
+msgid "Successfully canceled action: %s"
+msgstr "Отменено действие: %s"
+
+#: plugin/Modules/Date.php:28
+msgctxt "%s: amount of time"
+msgid "in %s week"
+msgid_plural "in %s weeks"
+msgstr[0] "за %s неделю"
+msgstr[1] "за %s недели"
+msgstr[2] "за %s недель"
+
+#: plugin/Modules/Date.php:34
+msgctxt "%s: amount of time"
+msgid "in %s day"
+msgid_plural "in %s days"
+msgstr[0] "за %s день"
+msgstr[1] "за %s дня"
+msgstr[2] "за %s дней"
+
+#: plugin/Modules/Date.php:40
+msgctxt "%s: amount of time"
+msgid "in %s hour"
+msgid_plural "in %s hours"
+msgstr[0] "за %s час"
+msgstr[1] "за %s часа"
+msgstr[2] "за %s часов"
+
+#: plugin/Modules/Date.php:46
+msgctxt "%s: amount of time"
+msgid "in %s minute"
+msgid_plural "in %s minutes"
+msgstr[0] "за %s минуту"
+msgstr[1] "за %s минуты"
+msgstr[2] "за %s минут"
+
+#: plugin/Modules/Date.php:52
+msgctxt "%s: amount of time"
+msgid "in %s second"
+msgid_plural "in %s seconds"
+msgstr[0] "за %s секунду"
+msgstr[1] "за %s секунды"
+msgstr[2] "за %s секунд"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterCategory.php:25
+msgctxt "admin-text"
+msgid "No category"
+msgstr "Без рубрики"
+
+#: config/settings.php:330
+msgctxt "admin-text"
+msgid "This image is displayed when there is no avatar."
+msgstr "Это изображение отображается при отсутствии аватара."
+
+#: config/settings.php:327
+msgctxt "admin-text"
+msgid "Wavatar (faces with generated features)"
+msgstr "Ваватар (лица с созданными функциями)"
+
+#: config/settings.php:316
+msgctxt "admin-text"
+msgid "Fallback Avatar"
+msgstr "Резервный аватар"
+
+#: config/settings.php:325
+msgctxt "admin-text"
+msgid "Retro (8-bit arcade-style pixelated faces)"
+msgstr "Ретро (8-битные пикселизированные лица в аркадном стиле)"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterAssignedUser.php:20
+msgctxt "admin-text"
+msgid "No assigned user"
+msgstr "Пользователь не назначен"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterAssignedPost.php:19
+msgctxt "admin-text"
+msgid "No assigned post"
+msgstr "Запись не назначена"
+
+#: config/settings.php:322
+msgctxt "admin-text"
+msgid "Mystery (silhouetted outline of a person)"
+msgstr "Mystery (силуэт лица)"
+
+#: config/settings.php:321
+msgctxt "admin-text"
+msgid "Monster (monsters with generated faces)"
+msgstr "Monster (монстры с генерируемыми лицами)"
+
+#: config/settings.php:320
+msgctxt "admin-text"
+msgid "Initials (initials of reviewer's name)"
+msgstr "Инициалы (инициалы имени рецензента)"
+
+#: views/partials/editor/metabox-details.php:5
+msgctxt "admin-text"
+msgid "Edit Details"
+msgstr "Редактировать подробности"
+
+#: plugin/Defaults/AddonDefaults.php:54
+msgctxt "admin-text"
+msgid "Premium members only"
+msgstr "Только участники премиум-класса"
+
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:36
+msgctxt "admin-text"
+msgid "Do not limit by category"
+msgstr "Не ограничивать по рубрикам"
+
+#: plugin/Modules/Avatar.php:93
+msgid "Avatar for %s"
+msgstr "Аватар для %s"
+
+#: plugin/Modules/Date.php:64
+msgid "A moment ago"
+msgid_plural "Now"
+msgstr[0] "Минуту назад"
+msgstr[1] "Сейчас"
+msgstr[2] "Сейчас"
+
+#: plugin/Controllers/LicensingController.php:82
+msgctxt "admin-text"
+msgid "To activate your license, please visit the %s page on your Nifty Plugins account and click the \"Manage Sites\" button to activate it for your website."
+msgstr "Чтобы активировать лицензию, посетите страницу %s на вашем аккаунте Nifty Plugins и нажмите кнопку \"Manage Sites\", чтобы активировать ее для вашего сайта."
+
+#: views/partials/screen/filters.php:12
+msgctxt "admin-text"
+msgid "Enabling a filter will only display the dropdown if there are options to filter by, otherwise it will remain hidden."
+msgstr "Включение фильтра будет отображать раскрывающийся список только в том случае, если есть параметры для фильтрации, в противном случае он останется скрытым."
+
+#: views/integrations/woocommerce/bulk-edit.php:9
+#: views/partials/screen/inline-edit.php:87
+#: views/partials/screen/inline-edit.php:97
+msgctxt "admin-text"
+msgid "Allow"
+msgstr "Разрешить"
+
+#: views/partials/screen/inline-edit.php:46
+msgctxt "admin-text"
+msgid "Bulk Edit"
+msgstr "Массовое редактирование"
+
+#: views/integrations/woocommerce/bulk-edit.php:10
+#: views/partials/screen/inline-edit.php:88
+#: views/partials/screen/inline-edit.php:98
+msgctxt "admin-text"
+msgid "Do not allow"
+msgstr "Запретить"
+
+#: views/partials/screen/inline-edit.php:84
+msgctxt "admin-text"
+msgid "Comments"
+msgstr "Комментарии"
+
+#: plugin/Overrides/ScheduledActionsTable.php:90
+#: views/partials/screen/inline-edit.php:66
+msgctxt "admin-text"
+msgid "Status"
+msgstr "Статус"
+
+#: plugin/Commands/EnqueueAdminAssets.php:91
+#: plugin/Overrides/ReviewsListTable.php:82
+#: views/integrations/woocommerce/bulk-edit.php:8
+#: views/partials/screen/inline-edit.php:68
+#: views/partials/screen/inline-edit.php:86
+#: views/partials/screen/inline-edit.php:96
+msgctxt "admin-text"
+msgid "No Change"
+msgstr "Без изменений"
+
+#: views/pages/tools/general/repair-review-relations.php:25
+msgctxt "admin-text"
+msgid "This tool will repair the review relationships in your database by removing any review details in the custom database table that do not point to a valid review."
+msgstr "Этот инструмент восстановит связи между отзывами в вашей базе данных, удалив все сведения об отзыве в пользовательской таблице базы данных, которые не указывают на действительный отзыв."
+
+#: config/settings.php:290
+msgctxt "admin-text"
+msgid "Strict Assignment (faster database queries)"
+msgstr "Строгое назначение (более быстрые запросы к БД)"
+
+#: views/pages/tools/general/repair-review-relations.php:24
+msgctxt "admin-text"
+msgid "Site Reviews stores review details in a custom database table, these entries are linked to the review post type in the WordPress posts table using the review's Post ID."
+msgstr "Site Reviews хранит информацию об отзывах в пользовательской таблице базы данных, эти записи связаны с типом записи отзыва в таблице записи WordPress, используя ID записи отзыва."
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterCategory.php:11
+msgctxt "admin-text"
+msgid "Filter by category"
+msgstr "Фильтр по рубрике"
+
+#: compatibility.php:122
+msgctxt "admin-text"
+msgid "Create Reviews"
+msgstr "Создание отзывов"
+
+#: compatibility.php:133
+msgctxt "admin-text"
+msgid "Respond To Reviews"
+msgstr "Отвечать на отзывы"
+
+#: compatibility.php:134
+msgctxt "admin-text"
+msgid "Respond To Others' Reviews"
+msgstr "Отвечайте на отзывы других"
+
+#: plugin/Controllers/MenuController.php:114
+msgctxt "admin-text"
+msgid "API"
+msgstr "API"
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewParameters.php:92
+msgctxt "admin-text"
+msgid "Current page of the collection."
+msgstr "Текущая страница коллекции."
+
+#: plugin/Integrations/Elementor/ElementorWidget.php:218
+msgctxt "admin-text"
+msgid "Custom ID"
+msgstr "Произвольный ID"
+
+#: views/partials/screen/filters.php:4
+msgctxt "admin-text"
+msgid "Filters"
+msgstr "Фильтры"
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:114
+#: plugin/Controllers/Api/Version1/RestReviewController.php:158
+#: plugin/Controllers/Api/Version1/RestReviewController.php:345
+msgctxt "admin-text"
+msgid "Invalid review ID."
+msgstr "Недействительный ID отзыва."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewParameters.php:75
+msgctxt "admin-text"
+msgid "Offset the result set by a specific number of items."
+msgstr "Смещение набора результатов на определенное количество элементов."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewParameters.php:80
+msgctxt "admin-text"
+msgid "Order sort attribute ascending or descending."
+msgstr "Порядок сортировки атрибутов по возрастанию или по убыванию."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewParameters.php:86
+msgctxt "admin-text"
+msgid "Sort collection by object attribute."
+msgstr "Сортировка коллекции по атрибуту объекта."
+
+#: views/partials/screen/inline-edit.php:32
+#: views/partials/screen/inline-edit.php:131
+msgctxt "admin-text"
+msgid "Update"
+msgstr "Обновить"
+
+#: plugin/Integrations/Elementor/ElementorWidget.php:124
+msgctxt "admin-text"
+msgid "Advanced"
+msgstr "Дополнительно"
+
+#: plugin/Controllers/ListTableController.php:42
+#: plugin/Controllers/ListTableController.php:56
+msgctxt "admin-text"
+msgid "%s is currently editing"
+msgstr "%s в настоящее время редактируется"
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewParameters.php:99
+msgctxt "admin-text"
+msgid "Maximum number of items to be returned in result set."
+msgstr "Макс. количество элементов, которые будут отображены в результатах."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:307
+msgctxt "admin-text"
+msgid "Unique identifier for the object."
+msgstr "Уникальный идентификатор для объекта."
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:126
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:107
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:103
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:82
+msgctxt "admin-text"
+msgid "Minimum Rating"
+msgstr "Минимальный рейтинг"
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:133
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:114
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:112
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:91
+msgctxt "admin-text"
+msgid "The schema should only be enabled once per page."
+msgstr "Схема должна быть включена только один раз на странице."
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:134
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:115
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:113
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:92
+msgctxt "admin-text"
+msgid "Enable the schema?"
+msgstr "Включить схему?"
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:33
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:151
+#: plugin/Tinymce/SiteReviewsTinymce.php:104
+msgctxt "admin-text"
+msgid "Latest Reviews"
+msgstr "Последние отзывы"
+
+#: plugin/Controllers/EditorController.php:128
+msgctxt "admin-text"
+msgid "Publicly responding to third-party %s reviews is disabled."
+msgstr "Публичные ответы на сторонние отзывы %s отключены."
+
+#: plugin/Controllers/Api/Version1/RestTypeController.php:25
+msgctxt "admin-text"
+msgid "There are no review types."
+msgstr "Типов отзывов нет."
+
+#: plugin/Controllers/Api/Version1/RestTypeController.php:39
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to view review types."
+msgstr "Вам не разрешено просматривать типы отзывов."
+
+#: plugin/Controllers/Api/Version1/Schema/SummarySchema.php:29
+msgctxt "admin-text"
+msgid "The average rating."
+msgstr "Средний рейтинг."
+
+#: plugin/Controllers/Api/Version1/Schema/SummarySchema.php:34
+msgctxt "admin-text"
+msgid "The defined maximum rating."
+msgstr "Определённый максимальный рейтинг."
+
+#: plugin/Controllers/Api/Version1/Schema/SummarySchema.php:39
+msgctxt "admin-text"
+msgid "The defined minimum rating."
+msgstr "Определённый минимальный рейтинг."
+
+#: plugin/Controllers/Api/Version1/Schema/SummarySchema.php:44
+msgctxt "admin-text"
+msgid "The bayesian ranking number."
+msgstr "Число байесовского рейтинга."
+
+#: plugin/Controllers/Api/Version1/Schema/SummarySchema.php:49
+msgctxt "admin-text"
+msgid "The total number of reviews for each rating level from zero to maximum rating."
+msgstr "Общее кол-во отзывов для каждого уровня рейтинга от нулевого до максимального."
+
+#: plugin/Controllers/Api/Version1/Schema/SummarySchema.php:55
+msgctxt "admin-text"
+msgid "The total number of reviews used to calculate the average."
+msgstr "Общее кол-во отзывов, используемое для расчета среднего."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:59
+msgctxt "admin-text"
+msgid "The current user can change the author on this review."
+msgstr "Текущий пользователь может изменить автора этого отзыва."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:177
+msgctxt "admin-text"
+msgid "The email of the person who submitted the review."
+msgstr "Электронная почта человека, оставившего отзыв."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:182
+msgctxt "admin-text"
+msgid "Unique identifier for the review."
+msgstr "Уникальный идентификатор отзыва."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:188
+msgctxt "admin-text"
+msgid "The IP address of the person who submitted the review."
+msgstr "IP-адрес человека, оставившего отзыв."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:151
+msgctxt "admin-text"
+msgid "The content of the review."
+msgstr "Содержимое отзыва."
+
+#: plugin/Controllers/ListTableController.php:190
+msgctxt "admin-text"
+msgid "Respond"
+msgstr "Ответить"
+
+#: views/partials/screen/locked-indicator.php:6
+msgctxt "admin-text"
+msgid "&#8220;%s&#8221; is locked"
+msgstr "&#8220;%s&#8221; заблокирован"
+
+#: plugin/Integrations/Elementor/ElementorWidget.php:224
+msgctxt "admin-text"
+msgid "Additional CSS classes"
+msgstr "Дополнительные классы CSS"
+
+#: plugin/Integrations/Elementor/ElementorFormWidget.php:79
+msgctxt "admin-text"
+msgid "Assign Reviews to a User"
+msgstr "Назначить отзывы к пользователю"
+
+#: plugin/Integrations/Elementor/ElementorFormWidget.php:71
+msgctxt "admin-text"
+msgid "Assign Reviews to a Category"
+msgstr "Назначить отзывы к рубрике"
+
+#: plugin/Integrations/Elementor/ElementorFormWidget.php:56
+msgctxt "admin-text"
+msgid "Assign Reviews to a Page"
+msgstr "Назначить отзывы к странице"
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:60
+msgctxt "admin-text"
+msgid "Cannot create existing review."
+msgstr "Невозможно создать существующий отзыв."
+
+#: views/partials/screen/inline-edit.php:23
+msgctxt "admin-text"
+msgid "Your Response"
+msgstr "Ваш ответ"
+
+#: plugin/Integrations/Elementor/ElementorFormWidget.php:65
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:55
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:67
+msgctxt "admin-text"
+msgid "Enter the Post IDs"
+msgstr "Введите ID записей"
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:297
+msgctxt "admin-text"
+msgid "Whether to bypass Trash and force deletion."
+msgstr "Удалять навсегда, пропуская перемещение в корзину."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:261
+msgctxt "admin-text"
+msgid "Type of Review for the object."
+msgstr "Тип отзыва для объекта."
+
+#: views/partials/screen/inline-edit.php:15
+msgctxt "admin-text"
+msgid "Their Review"
+msgstr "Их отзыв"
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:133
+msgctxt "admin-text"
+msgid "The users assigned to the review."
+msgstr "Пользователи, которым назначен отзыв."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:256
+msgctxt "admin-text"
+msgid "The title of the review."
+msgstr "Заголовок отзыва."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:125
+msgctxt "admin-text"
+msgid "The terms assigned to the review in the %s taxonomy."
+msgstr "Условия, присвоенные отзову в таксономии %s."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:94
+msgctxt "admin-text"
+msgid "The review has already been deleted."
+msgstr "Отзыв уже удален."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:90
+msgctxt "admin-text"
+msgid "The review does not support trashing. Set \"%s\" to delete."
+msgstr "Отзыв не поддерживает удаление в корзину. Установите \"%s\" для удаления."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:98
+#: plugin/Controllers/Api/Version1/RestReviewController.php:393
+msgctxt "admin-text"
+msgid "The review cannot be deleted."
+msgstr "Отзыв не может быть удален."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:241
+msgctxt "admin-text"
+msgid "The response given to the review."
+msgstr "Ответ, данный на отзыв."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:117
+msgctxt "admin-text"
+msgid "The posts assigned to the review of any public post type."
+msgstr "Записи, предназначенные для отзыва любого открытого типа записи."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:231
+msgctxt "admin-text"
+msgid "The name of the person who submitted the review."
+msgstr "Имя человека, оставившего отзыв."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:141
+msgctxt "admin-text"
+msgid "The ID for the author of the review."
+msgstr "ID автора отзыва."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:217
+msgctxt "admin-text"
+msgid "The date the review was last modified, in the site's timezone."
+msgstr "Дата последнего изменения отзыва в часовом поясе сайта."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:171
+msgctxt "admin-text"
+msgid "The date the review was published, in the site's timezone."
+msgstr "Дата публикации отзыва в часовом поясе сайта."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:32
+msgctxt "admin-text"
+msgid "The current user can publish this review."
+msgstr "Текущий пользователь может опубликовать этот отзыв."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:46
+msgctxt "admin-text"
+msgid "The current user can post unfiltered HTML markup and JavaScript."
+msgstr "Текущий пользователь может использовать HTML разметку и JavaScript без фильтрации."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:86
+msgctxt "admin-text"
+msgid "The current user can create terms in the %s taxonomy."
+msgstr "Текущий пользователь может создавать элементы в таксономии %s."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:72
+msgctxt "admin-text"
+msgid "The current user can assign terms in the %s taxonomy."
+msgstr "Текущий пользователь может назначать элементы в таксономии %s."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:146
+msgctxt "admin-text"
+msgid "The avatar of the person who submitted the review."
+msgstr "Аватар человека, оставившего отзыв."
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterTerms.php:16
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:88
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:100
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:76
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:76
+msgctxt "admin-text"
+msgid "Terms were not accepted"
+msgstr "Условия не приняты"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterTerms.php:15
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:87
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:99
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:75
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:75
+msgctxt "admin-text"
+msgid "Terms were accepted"
+msgstr "Условия приняты"
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:216
+msgctxt "admin-text"
+msgid "Sorry, you do not have permission to access reviews."
+msgstr "У вас нет доступа к отзывам."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:162
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to view this review."
+msgstr "Вам не разрешено смотреть этот отзыв."
+
+#: plugin/Integrations/Elementor/ElementorWidget.php:222
+msgctxt "admin-text"
+msgid "Separate multiple classes with spaces."
+msgstr "Разделяйте несколько классов пробелами."
+
+#: plugin/Controllers/ListTableController.php:283
+msgctxt "admin-text"
+msgid "Saving is disabled: %s is currently editing this review."
+msgstr "Сохранение отключено: %s в данный момент редактирует этот отзыв."
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterType.php:9
+msgctxt "admin-text"
+msgid "Filter by review type"
+msgstr "Фильтровать по типу отзыва"
+
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:31
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:130
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:64
+msgctxt "admin-text"
+msgid "Rating Summary"
+msgstr "Сводка по рейтингу"
+
+#: plugin/Integrations/Elementor/ElementorWidget.php:103
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:49
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:49
+#: plugin/Integrations/FusionBuilder/FusionReviewForm.php:47
+msgctxt "admin-text"
+msgid "The Logged-in user"
+msgstr "Вошедший пользователь"
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:198
+msgctxt "admin-text"
+msgid "The page number requested is larger than the number of pages available."
+msgstr "Запрошенный номер страницы превышает количество доступных страниц."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:353
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to update reviews as this user."
+msgstr "Вам не разрешено обновлять отзывы как этому пользователю."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:349
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to edit this review."
+msgstr "Вам не разрешено изменять этот отзыв."
+
+#: plugin/Controllers/ListTableController.php:272
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to respond to this review."
+msgstr "Вы не разрешено отвечать на этот отзыв."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:219
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to edit reviews."
+msgstr "Вам не разрешено редактировать отзывы."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:118
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to delete this review."
+msgstr "Вам не разрешено удалять этот отзыв."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:64
+#: plugin/Controllers/Api/Version1/RestReviewController.php:68
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to create reviews as this user."
+msgstr "Вам не разрешено создавать отзывы как этому пользователю."
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:72
+#: plugin/Controllers/Api/Version1/RestReviewController.php:357
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to assign the provided terms."
+msgstr "Вы не имеете права назначать предоставленные условия."
+
+#: plugin/Controllers/ListTableController.php:275
+msgctxt "admin-text"
+msgid "Someone"
+msgstr "Кто-то"
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:224
+msgctxt "admin-text"
+msgid "The date the review was last modified, as GMT."
+msgstr "Дата последнего изменения отзыва, по Гринвичу (GMT)."
+
+#: plugin/Controllers/Api/Version1/RestSummaryController.php:61
+msgctxt "admin-text"
+msgid "Sorry, you are not allowed to view review summaries."
+msgstr "Вам не разрешено просматривать краткие отзывы."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:236
+msgctxt "admin-text"
+msgid "The rating of the review."
+msgstr "Рейтинг отзыва."
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:119
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:94
+msgctxt "admin-text"
+msgid "Reviews Per Page"
+msgstr "Отзывов на страницу"
+
+#: plugin/Controllers/Api/Version1/RestReviewController.php:324
+msgctxt "admin-text"
+msgid "Review update failed, please check the Site Reviews console log for more details."
+msgstr "Ошибка обновления отзыв. Дополнительные сведения см. в журнале консоли Site Reviews."
+
+#: views/partials/screen/inline-edit.php:11
+msgctxt "admin-text"
+msgid "Respond to the review"
+msgstr "Ответить на отзыв"
+
+#: plugin/Controllers/ListTableController.php:188
+msgctxt "admin-text"
+msgid "Respond inline to &#8220;%s&#8221;"
+msgstr "Ответить в режиме онлайн на &#8220;%s&#8221;"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterAssignedUser.php:13
+msgctxt "admin-text"
+msgid "Filter by assigned user"
+msgstr "Фильтр по назначенному пользователю"
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:84
+#: plugin/Integrations/Elementor/ElementorSummaryWidget.php:96
+msgctxt "admin-text"
+msgid "Limit Reviews to terms"
+msgstr "Ограничение отзывов условиями"
+
+#: views/pages/tools/general/import-reviews.php:71
+msgctxt "admin-text"
+msgid "Delimiter"
+msgstr "Разделитель"
+
+#: views/pages/tools/general/import-reviews.php:75
+msgctxt "admin-text"
+msgid "Semicolon (;)"
+msgstr "Точка с запятой (;)"
+
+#: views/pages/tools/general/import-reviews.php:74
+msgctxt "admin-text"
+msgid "Comma (,)"
+msgstr "Запятая (,)"
+
+#: plugin/Commands/DownloadCsvTemplate.php:22
+msgctxt "admin-text"
+msgid "The review date"
+msgstr "Дата отзыва"
+
+#: views/pages/tools/general/import-reviews.php:81
+msgctxt "admin-text"
+msgid "Select the date format used in the reviews"
+msgstr "Выбрать формат даты, используемый в отзывах"
+
+#: config/forms/metabox-fields.php:31
+#: plugin/Controllers/PrivacyController.php:117
+msgctxt "admin-text"
+msgid "Terms Accepted"
+msgstr "Условия приняты"
+
+#: plugin/Widgets/Widget.php:110
+msgctxt "admin-text"
+msgid "Site Reviews: Unknown Widget"
+msgstr "Site Reviews: Неизвестный виджет"
+
+#: plugin/Application.php:168 plugin/Controllers/LicensingController.php:74
+#: plugin/Controllers/LicensingController.php:83
+msgctxt "admin-text"
+msgid "License Keys"
+msgstr "Лицензионные ключи"
+
+#: config/settings.php:401
+msgctxt "admin-text"
+msgid "The default text is: %s"
+msgstr "Текст по умолчанию: %s"
+
+#: config/settings.php:1026
+msgctxt "admin-text"
+msgid "Enable Akismet"
+msgstr "Включить Akismet"
+
+#: config/settings.php:456 config/settings.php:487 config/settings.php:515
+#: config/settings.php:543 config/settings.php:571 config/settings.php:596
+#: config/settings.php:610 config/settings.php:624 config/settings.php:642
+#: config/settings.php:657 config/settings.php:672 config/settings.php:687
+#: config/settings.php:701 views/pages/settings/schema.php:28
+msgctxt "admin-text"
+msgid "Custom Fields metabox"
+msgstr "Метабокс пользовательских полей"
+
+#: config/settings.php:414
+msgctxt "admin-text"
+msgid "If you would like to keep the pagination links but prevent search engines from indexing them, add the following lines to your %s file: %s"
+msgstr "Если вы хотите сохранить ссылки на страницы, но запретить их индексацию поисковыми системами, добавьте в файл %s следующие строки: %s"
+
+#: config/settings.php:285
+msgctxt "admin-text"
+msgid "Strict Assignment displays reviews that are assigned to this <code>AND</code> that."
+msgstr "Строгое назначение отображает отзывы, назначенные этому <code>И</code> тому."
+
+#: config/settings.php:455 config/settings.php:486 config/settings.php:514
+#: config/settings.php:542 config/settings.php:570 config/settings.php:595
+#: config/settings.php:609 config/settings.php:623 config/settings.php:641
+#: config/settings.php:656 config/settings.php:671 config/settings.php:686
+#: config/settings.php:700
+msgctxt "admin-text"
+msgid "You can use the %s to override this value on your page. The Custom Field name to use is:"
+msgstr "Вы можете использовать %s, чтобы переопределить это значение на своей странице. Имя пользовательского поля для использования:"
+
+#: config/settings.php:422
+msgctxt "admin-text"
+msgid "Paginated URLs include the %s URL parameter."
+msgstr "Пагинированные URL-адреса включают параметр URL-адреса %s."
+
+#: config/settings.php:94
+msgctxt "admin-text"
+msgid "This will only allow registered users to submit reviews."
+msgstr "Это позволит только зарегистрированным пользователям отправлять отзывы."
+
+#: config/settings.php:161
+msgctxt "admin-text"
+msgid "Select the notification recipients."
+msgstr "Выбрать получателей уведомления."
+
+#: plugin/Commands/ConvertTableEngine.php:38
+msgctxt "admin-text"
+msgid "The <code>%s</code> table could not be converted to InnoDB."
+msgstr "Таблица <code>%s</code> не может быть преобразована в InnoDB."
+
+#: views/pages/tools/general/configure-ip-detection.php:81
+msgctxt "admin-text"
+msgid "Test IP Address Detection"
+msgstr "Тест обнаружения IP-адреса"
+
+#: views/pages/tools/general/reset-assigned-meta.php:12
+msgctxt "admin-text"
+msgid "Site Reviews stores the individual review count, average rating, and ranking for each assigned post, category, and user. If you suspect that these meta values are incorrect (perhaps you cloned a page that had reviews assigned to it), you may use this tool to recalculate them."
+msgstr "Site Reviews хранит индивидуальное количество отзывов, среднюю оценку и рейтинг для каждой назначенной записи, рубрике и пользователя. Если вы подозреваете, что эти мета-значения неверны (возможно, вы клонировали страницу, которой были присвоены отзывы), вы можете использовать этот инструмент для их пересчета."
+
+#: views/pages/tools/general/repair-permissions.php:12
+msgctxt "admin-text"
+msgid "Site Reviews provides custom post_type capabilities that mirror the capabilities of your posts by default. For example, if a user role has permission to edit others posts, then that role will also have permission to edit other users reviews."
+msgstr "Site Reviews предоставляет настраиваемые возможности post_type, которые по умолчанию отражают возможности ваших записей. Например, если у роли пользователя есть разрешение на редактирование других записей, у этой роли также будет разрешение на редактирование отзывов других пользователей."
+
+#: views/pages/tools/general/optimise-db-tables.php:27
+msgctxt "admin-text"
+msgid "Engine"
+msgstr "Движок"
+
+#: views/pages/tools/general/optimise-db-tables.php:26
+msgctxt "admin-text"
+msgid "Table"
+msgstr "Таблица"
+
+#: views/pages/tools/general/optimise-db-tables.php:43
+msgctxt "admin-text"
+msgid "Converting, please wait..."
+msgstr "Преобразование, подождите..."
+
+#: views/pages/tools/general/optimise-db-tables.php:54
+msgctxt "admin-text"
+msgid "Optimisation is unnecessary because your database tables already use the InnoDB engine!"
+msgstr "Оптимизация не нужна, потому что ваши таблицы базы данных уже используют движок InnoDB!"
+
+#: views/pages/tools/general/optimise-db-tables.php:44
+msgctxt "admin-text"
+msgid "Convert table engine to InnoDB"
+msgstr "Преобразование движка таблиц в InnoDB"
+
+#: views/pages/tools/general/optimise-db-tables.php:22
+msgctxt "admin-text"
+msgid "Site Reviews makes use of specific InnoDB engine features in order to perform faster database queries. However, some of your database tables (shown below) are still using the old MyISAM engine. If you convert these tables to use the InnoDB engine, it will make Site Reviews perform faster."
+msgstr "Site Reviews использует специальные функции движка InnoDB для более быстрого выполнения запросов к базе данных. Однако некоторые из ваших таблиц базы данных (показаны ниже) по-прежнему используют старый движок MyISAM. Если вы преобразуете эти таблицы для использования движка InnoDB, это ускорит работу Site Reviews."
+
+#: views/pages/tools/general/reset-assigned-meta.php:7
+msgctxt "admin-text"
+msgid "Reset Assigned Meta Values"
+msgstr "Сбросить назначенные мета-значения"
+
+#: views/pages/tools/general/export-reviews.php:20
+#: views/pages/tools/general/import-reviews.php:24
+msgctxt "admin-text"
+msgid "Export"
+msgstr "Экспорт"
+
+#: views/pages/tools/general/export-reviews.php:21
+#: views/pages/tools/general/import-reviews.php:25
+msgctxt "admin-text"
+msgid "Import"
+msgstr "Импорт"
+
+#: plugin/Commands/DownloadCsvTemplate.php:38
+msgctxt "admin-text"
+msgid "The title of the review"
+msgstr "Заголовок отзыва"
+
+#: plugin/Commands/DownloadCsvTemplate.php:33
+msgctxt "admin-text"
+msgid "The reviewer's name"
+msgstr "Имя рецензента"
+
+#: plugin/Commands/DownloadCsvTemplate.php:24
+msgctxt "admin-text"
+msgid "The reviewer's email"
+msgstr "Email рецензента"
+
+#: plugin/Commands/DownloadCsvTemplate.php:35
+msgctxt "admin-text"
+msgid "The review response"
+msgstr "Ответ на отзыв"
+
+#: plugin/Commands/DownloadCsvTemplate.php:21
+msgctxt "admin-text"
+msgid "The review"
+msgstr "Отзыв"
+
+#: views/pages/tools/general/optimise-db-tables.php:21
+msgctxt "admin-text"
+msgid "The old MyISAM table engine in MySQL was replaced by the InnoDB engine as the default over 10 years ago! If your database tables still use the MyISAM engine, you are missing out on substantial performance and reliability gains that the InnoDB engine provides."
+msgstr "Старый движок таблиц MyISAM в MySQL был заменен движком InnoDB по умолчанию более 10 лет назад! Если в ваших таблицах базы данных по-прежнему используется движок MyISAM, вы упускаете существенный выигрыш в производительности и надежности, который обеспечивает движок InnoDB."
+
+#: plugin/Commands/DownloadCsvTemplate.php:20
+msgctxt "admin-text"
+msgid "The avatar URL of the reviewer"
+msgstr "URL аватара рецензента"
+
+#: views/pages/tools/general/migrate-plugin.php:12
+msgctxt "admin-text"
+msgid "Run this tool if your reviews stopped working correctly after upgrading the plugin to the latest version (i.e. read-only reviews, zero-star ratings, missing role capabilities, etc.)."
+msgstr "Запустите этот инструмент, если ваши отзывы перестали работать правильно после обновления плагина до последней версии (например, отзывы только для чтения, нулевые рейтинги, отсутствующие возможности ролей и т. д.)."
+
+#: plugin/Commands/DownloadCsvTemplate.php:25
+msgctxt "admin-text"
+msgid "The IP address of the reviewer"
+msgstr "IP-адрес автора отзыва"
+
+#: views/pages/tools/general/optimise-db-tables.php:9
+#: views/pages/tools/general/repair-review-relations.php:18
+msgctxt "admin-text"
+msgid "Optimise Your Database Tables"
+msgstr "Оптимизировать таблицы БД"
+
+#: views/pages/tools/general/import-reviews.php:14
+#: views/pages/tools/general/optimise-db-tables.php:17
+msgctxt "admin-text"
+msgid "Please backup your database before running this tool! You can use the %s plugin to do this."
+msgstr "Пожалуйста, сделайте резервную копию вашей БД перед запуском этого инструмента! Для этого вы можете использовать плагин %s."
+
+#: views/partials/modal.php:6
+msgid "Close modal"
+msgstr "Закрыть модальное окно"
+
+#: config/settings.php:381
+msgctxt "admin-text"
+msgid "Collapse/Expand the review"
+msgstr "Свернуть/развернуть отзыв"
+
+#: config/settings.php:382
+msgctxt "admin-text"
+msgid "Display the review in a modal"
+msgstr "Отображать отзывы в модальном окне"
+
+#: views/pages/settings/general.php:3
+msgctxt "admin-text"
+msgid "General Settings"
+msgstr "Основные настройки"
+
+#: views/pages/settings/reviews.php:3
+msgctxt "admin-text"
+msgid "Review Settings"
+msgstr "Просмотр настроек"
+
+#: views/pages/settings/forms.php:3
+msgctxt "admin-text"
+msgid "Review Form Settings"
+msgstr "Настройки формы отзыва"
+
+#: config/settings.php:754
+msgctxt "admin-text"
+msgid "Assigned Terms"
+msgstr "Назначенные условия"
+
+#: config/settings.php:760
+msgctxt "admin-text"
+msgid "The review limits use strict assignment, i.e. <code>restrict limits to reviews assigned to this AND this</code>."
+msgstr "Ограничения на отзывы используют строгое назначение, т.е. <code>ограничить лимиты на отзывы, назначенные этому И этому</code>."
+
+#: config/settings.php:759
+msgctxt "admin-text"
+msgid "Select which assignments the review limits should be restricted to."
+msgstr "Выбрать, для каких назначений следует ограничить лимиты отзыва."
+
+#: config/settings.php:751
+msgctxt "admin-text"
+msgid "Restrict Limits To"
+msgstr "Ограничить лимиты до"
+
+#: views/pages/settings/schema.php:3
+msgctxt "admin-text"
+msgid "JSON-LD Schema Settings"
+msgstr "Настройки JSON-LD Schema"
+
+#: views/pages/settings/schema.php:26
+msgctxt "admin-text"
+msgid "In some cases it may be useful to link the Site Reviews schema with other schema on your page, this is done by adding the %s unique identifier property to each schema that you wish to link. If you are using Woocommerce and have set the Schema Type to \"Product\", Site Reviews will automatically do this for you. In all other cases, either use the <code>schema_identifier</code> Custom Field name in the %s, or use the %s hook."
+msgstr "В некоторых случаях может быть полезно связать схему Site Reviews с другой схемой на вашей странице. Это делается путем добавления свойства уникального идентификатора %s к каждой схеме, которую вы хотите связать. Если вы используете Woocommerce и установили для типа схемы значение «Товар», обзоры сайтов автоматически сделают это за вас. Во всех остальных случаях либо используйте имя пользовательского поля <code>schema_identifier</code> в %s, либо используйте hook %s."
+
+#: config/settings.php:355
+msgctxt "avatar size (admin-text)"
+msgid "pixels"
+msgstr "пикселей"
+
+#: config/settings.php:389
+msgctxt "exceprt length (admin-text)"
+msgid "words"
+msgstr "слова"
+
+#: config/settings.php:363
+msgctxt "admin-text"
+msgid "Set the height/width of the avatar in pixels."
+msgstr "Установите высоту/ширину аватара в пикселях."
+
+#: plugin/Controllers/Api/Version1/Schema/ReviewSchema.php:160
+msgctxt "admin-text"
+msgid "Custom fields."
+msgstr "Пользовательские поля."
+
+#: views/pages/settings/schema.php:21
+msgctxt "admin-text"
+msgid "The schema is used to display rich review snippets in Google's search results. If the schema has been enabled, you can use the %s tool to test your pages for valid schema."
+msgstr "Схема используется для отображения отзывов в расширенных сниппетов поиска Google. Если схема включена, вы можете использовать инструмент %s для проверки ваших страниц на корректность схемы."
+
+#: views/pages/settings/schema.php:22
+msgctxt "admin-text"
+msgid "Google Rich Results"
+msgstr "Расширенные результаты Google"
+
+#: views/partials/addons/support-notice.php:6
+msgctxt "admin-text"
+msgid "login"
+msgstr "вход"
+
+#: plugin/Commands/MigratePlugin.php:34
+msgctxt "admin-text"
+msgid "All plugin migrations have been run successfully, please %s the page."
+msgstr "Все миграции плагинов успешно выполнены, перезагрузите страницу."
+
+#: config/settings.php:293
+msgctxt "admin-text"
+msgid "This setting determines how the assigned options work in the reviews and summary shortcodes and blocks."
+msgstr "Эта настройка определяет, как назначенные параметры работают в шорткодах и блоках отзывов и анонсах."
+
+#: plugin/Commands/MigratePlugin.php:40
+msgctxt "admin-text"
+msgid "The plugin has been migrated sucessfully, please %s the page."
+msgstr "Плагин успешно перенесен, перезагрузите страницу."
+
+#: views/partials/notices/migration.php:8
+msgctxt "admin-text"
+msgid "Common Problems and Solutions"
+msgstr "Общие проблемы и решения"
+
+#: views/partials/addons/addon.php:24
+msgctxt "admin-text"
+msgid "Activate"
+msgstr "Активировать"
+
+#: plugin/Commands/EnqueueAdminAssets.php:128
+#: plugin/Overrides/ScheduledActionsTable.php:114
+#: views/partials/editor/pinned.php:29 views/partials/editor/verified.php:30
+#: views/partials/screen/inline-edit.php:31
+#: views/partials/screen/inline-edit.php:130
+msgctxt "admin-text"
+msgid "Cancel"
+msgstr "Отмена"
+
+#: views/pages/tools/console.php:31
+msgctxt "admin-text"
+msgid "Clear"
+msgstr "Очистить"
+
+#: plugin/Overrides/ScheduledActionsTable.php:86
+#: plugin/Overrides/ScheduledActionsTable.php:119
+#: views/partials/strings/plural.php:13 views/partials/strings/single.php:12
+msgctxt "admin-text"
+msgid "Delete"
+msgstr "Удалить"
+
+#: views/pages/tools/sync.php:25
+msgctxt "admin-text"
+msgid "Documentation"
+msgstr "Документация"
+
+#: views/pages/tools/general/export-settings.php:7
+#: views/pages/tools/general/export-settings.php:21
+msgctxt "admin-text"
+msgid "Export Settings"
+msgstr "Экспорт настроек"
+
+#: views/pages/tools/sync.php:24
+msgctxt "admin-text"
+msgid "License"
+msgstr "Лицензия"
+
+#: views/pages/tools/console.php:57 views/pages/tools/sync.php:43
+msgctxt "admin-text"
+msgid "Please wait..."
+msgstr "Подождите..."
+
+#: views/pages/tools/console.php:21
+msgctxt "admin-text"
+msgid "Reload"
+msgstr "Перезагрузка"
+
+#: views/pages/tools/sync.php:9
+msgctxt "admin-text"
+msgid "Service"
+msgstr "Сервис"
+
+#: plugin/Modules/Notice.php:134 views/pages/tools/sync.php:28
+msgctxt "admin-text"
+msgid "Show more details"
+msgstr "Показать больше информации"
+
+#: plugin/Addons/Addon.php:99
+msgctxt "admin-text"
+msgid "Untitled"
+msgstr "Без заголовка"
+
+#: config/settings.php:1042
+msgctxt "admin-text"
+msgid "Blacklist"
+msgstr "Чёрный список"
+
+#: views/pages/tools/sync.php:45 views/pages/tools/sync.php:48
+msgctxt "admin-text"
+msgid "Inactive"
+msgstr "Неактивно"
+
+#: views/pages/tools/sync.php:57
+msgctxt "admin-text"
+msgid "Syncing..."
+msgstr "Синхронизация..."
+
+#: views/pages/tools/system-info.php:8
+msgctxt "admin-text"
+msgid "Download System Info"
+msgstr "Скачать системную информацию"
+
+#: config/settings.php:1044
+msgctxt "admin-text"
+msgid "Use the Site Reviews Blacklist"
+msgstr "Использовать черный список отзывов о сайте"
+
+#: config/settings.php:1058
+msgctxt "admin-text"
+msgid "Review Blacklist"
+msgstr "Смотреть чёрный список"
+
+#: config/settings.php:1067
+msgctxt "admin-text"
+msgid "Blacklist Action"
+msgstr "Действие чёрного списка"
+
+#: config/settings.php:1069
+msgctxt "admin-text"
+msgid "Require approval"
+msgstr "Требуется одобрение"
+
+#: views/pages/tools/console.php:20
+msgctxt "admin-text"
+msgid "Reloading..."
+msgstr "Перезагрузка..."
+
+#: views/partials/addons/addon.php:20
+msgctxt "admin-text"
+msgid "Installed"
+msgstr "Установленные"
+
+#: views/partials/editor/metabox-categories.php:9
+msgctxt "admin-text"
+msgid "Most Used"
+msgstr "Часто используемые"
+
+#: views/partials/editor/pinned.php:26 views/partials/editor/verified.php:27
+msgctxt "admin-text"
+msgid "OK"
+msgstr "OK"
+
+#: views/partials/editor/pinned.php:10
+msgctxt "admin-text"
+msgid "Edit pinned status"
+msgstr "Изменить статут прикрепления"
+
+#: views/pages/tools/sync.php:11 views/pages/tools/sync.php:34
+msgctxt "admin-text"
+msgid "Last Sync"
+msgstr "Последняя синхронизация"
+
+#: views/partials/strings/plural.php:13 views/partials/strings/single.php:12
+msgctxt "admin-text"
+msgid "Delete translation string"
+msgstr "Удалить строку перевода"
+
+#: config/settings.php:1070
+msgctxt "admin-text"
+msgid "Reject submission"
+msgstr "Отклонить отзыв"
+
+#: views/partials/notices/upgraded.php:12
+msgctxt "admin-text"
+msgid "See What's New"
+msgstr "Посмотреть, что новое"
+
+#: views/partials/addons/license-missing.php:4
+msgctxt "admin-text"
+msgid "Enter a valid license key for automatic updates."
+msgstr "Введите действительный лицензионный ключ для автоматических обновлений."
+
+#: views/partials/strings/plural.php:6 views/partials/strings/single.php:6
+msgctxt "admin-text"
+msgid "Show custom translation"
+msgstr "Показывать пользовательский перевод"
+
+#: views/partials/strings/plural.php:22
+msgctxt "admin-text"
+msgid "plural"
+msgstr "множественный"
+
+#: views/integrations/woocommerce/tools/import-product-reviews.php:33
+#: views/pages/tools/general/import-reviews.php:112
+msgctxt "admin-text"
+msgid "Importing reviews, please wait..."
+msgstr "Импорт отзывов, подождите..."
+
+#: config/integrations/woocommerce.php:9
+#: views/integrations/woocommerce/tools/import-product-reviews.php:34
+#: views/pages/tools/general/import-reviews.php:6
+#: views/pages/tools/general/import-reviews.php:113
+msgctxt "admin-text"
+msgid "Import Reviews"
+msgstr "Импорт отзывов"
+
+#: views/integrations/woocommerce/tools/import-product-reviews.php:50
+#: views/pages/tools/general/migrate-plugin.php:21
+#: views/pages/tools/general/migrate-plugin.php:29
+#: views/partials/notices/migration.php:20
+msgctxt "admin-text"
+msgid "Migrating, please wait..."
+msgstr "Миграция, подождите..."
+
+#: views/partials/notices/migration.php:21
+msgctxt "admin-text"
+msgid "Run Migration"
+msgstr "Запустить миграцию"
+
+#: views/pages/tools/general/reset-assigned-meta.php:19
+msgctxt "admin-text"
+msgid "Resetting values, please wait..."
+msgstr "Сброс значений, подождите..."
+
+#: views/pages/tools/general/reset-assigned-meta.php:20
+msgctxt "admin-text"
+msgid "Reset Meta Values"
+msgstr "Сбросить мета-значения"
+
+#: views/pages/tools/general/configure-ip-detection.php:80
+msgctxt "admin-text"
+msgid "Testing, please wait..."
+msgstr "Тестирование, подождите..."
+
+#: views/pages/tools/console.php:30
+msgctxt "admin-text"
+msgid "Clearing..."
+msgstr "Очистка..."
+
+#: views/pages/settings/strings.php:28
+msgctxt "admin-text"
+msgid "Original Text"
+msgstr "Исходный текст"
+
+#: config/settings.php:1049
+msgctxt "admin-text"
+msgid "Disallowed Comment Keys"
+msgstr "Запрещённые ключевые слова комментариев"
+
+#: config/settings.php:1045
+msgctxt "admin-text"
+msgid "Use the WordPress Disallowed Comment Keys"
+msgstr "Используйте запрещённые ключевые слова комментариев WordPress"
+
+#: views/partials/editor/assigned-entry.php:7
+msgctxt "admin-text"
+msgid "Remove assignment"
+msgstr "Удалить прикрепление"
+
+#: views/partials/editor/metabox-assigned-users.php:8
+#: views/partials/screen/inline-edit.php:121
+msgctxt "admin-text"
+msgid "Search by ID or name..."
+msgstr "Поиск по ID или имени..."
+
+#: views/partials/strings/plural.php:21
+msgctxt "admin-text"
+msgid "singular"
+msgstr "одиночная"
+
+#: views/partials/editor/metabox-assigned-users.php:12
+msgctxt "admin-text"
+msgid "Search for a user that you would like to assign this review to."
+msgstr "Поиск пользователя, которому вы хотите назначить этот отзыв."
+
+#: views/partials/editor/metabox-assigned-posts.php:12
+msgctxt "admin-text"
+msgid "Search for a Page, Post, or <abbr title=\"Custom Post Type\">CPT</abbr> that you would like to assign this review to."
+msgstr "Поиск страницы, записи или <abbr title=\"Пользовательский тип записи\">CPT</abbr>, которой вы хотите присвоить этот отзыв."
+
+#: views/partials/editor/metabox-assigned-posts.php:8
+#: views/partials/screen/inline-edit.php:110
+msgctxt "admin-text"
+msgid "Search by ID or title..."
+msgstr "Поиск по ID или заголовку..."
+
+#: views/pages/tools/general/import-settings.php:7
+#: views/pages/tools/general/import-settings.php:26
+msgctxt "admin-text"
+msgid "Import Settings"
+msgstr "Импорт настроек"
+
+#: views/pages/tools/general/import-settings.php:25
+msgctxt "admin-text"
+msgid "Importing settings, please wait..."
+msgstr "Импорт настроек, подождите..."
+
+#: views/pages/tools/general/import-reviews.php:82
+#: views/pages/tools/general/import-reviews.php:90
+#: views/pages/tools/general/import-reviews.php:98
+msgctxt "admin-text"
+msgid "Day"
+msgstr "День"
+
+#: config/settings.php:972
+msgctxt "admin-text"
+msgid "Bottom Left"
+msgstr "Внизу слева"
+
+#: config/settings.php:973
+msgctxt "admin-text"
+msgid "Bottom Right"
+msgstr "Внизу справа"
+
+#: config/settings.php:974
+msgctxt "admin-text"
+msgid "Inline"
+msgstr "Встроить"
+
+#: config/settings.php:819 config/settings.php:839 config/settings.php:859
+#: config/settings.php:895 config/settings.php:915 config/settings.php:949
+msgctxt "admin-text"
+msgid "Site Key"
+msgstr "Ключ сайта"
+
+#: config/settings.php:808
+msgctxt "admin-text"
+msgid "Use reCAPTCHA v3"
+msgstr "Использовать reCAPTCHA v3"
+
+#: config/settings.php:592
+msgctxt "admin-text"
+msgid "Address"
+msgstr "Адрес"
+
+#: config/settings.php:553
+msgctxt "admin-text"
+msgid "Custom URL"
+msgstr "Произвольный URL"
+
+#: config/settings.php:227 views/pages/tools/general/import-reviews.php:79
+msgctxt "admin-text"
+msgid "Date Format"
+msgstr "Формат даты"
+
+#: config/settings.php:564
+msgctxt "admin-text"
+msgid "Default Image"
+msgstr "Изображение по умолчанию"
+
+#: config/settings.php:725
+msgctxt "admin-text"
+msgid "No Limit"
+msgstr "Не ограничено"
+
+#: config/settings.php:638
+msgctxt "admin-text"
+msgid "Offer"
+msgstr "Предложение"
+
+#: config/settings.php:653
+msgctxt "admin-text"
+msgid "Price"
+msgstr "Цена"
+
+#: config/settings.php:697
+msgctxt "admin-text"
+msgid "Price Currency"
+msgstr "Валюта"
+
+#: config/settings.php:620
+msgctxt "admin-text"
+msgid "Price Range"
+msgstr "Диапазон цен"
+
+#: config/settings.php:451
+msgctxt "admin-text"
+msgid "Product"
+msgstr "Товар"
+
+#: config/forms/metabox-fields.php:30 config/settings.php:714
+#: plugin/Controllers/ListTableColumns/ColumnFilterTerms.php:27
+msgctxt "admin-text"
+msgid "Terms"
+msgstr "Условия"
+
+#: config/settings.php:698
+msgctxt "admin-text"
+msgid "USD"
+msgstr "USD - Доллар"
+
+#: config/settings.php:450
+msgctxt "admin-text"
+msgid "Local Business"
+msgstr "Местный бизнес"
+
+#: config/settings.php:452
+msgctxt "admin-text"
+msgid "Custom"
+msgstr "Пользовательский"
+
+#: config/settings.php:621
+msgctxt "admin-text"
+msgid "$$-$$$"
+msgstr "$$-$$$"
+
+#: config/settings.php:394
+msgctxt "admin-text"
+msgid "Excerpt Length"
+msgstr "Длина отрывка"
+
+#: config/settings.php:252
+msgctxt "admin-text"
+msgid "Name Format"
+msgstr "Формат имени"
+
+#: config/settings.php:229
+msgctxt "admin-text"
+msgid "Use the default date format"
+msgstr "Использовать формат даты по умолчанию"
+
+#: config/settings.php:593
+msgctxt "admin-text"
+msgid "60 29th Street #343, San Francisco, CA 94110, US"
+msgstr "60 29th Street #343, San Francisco, CA 94110, US"
+
+#: config/settings.php:606
+msgctxt "admin-text"
+msgid "Telephone Number"
+msgstr "Номер телефона"
+
+#: config/settings.php:607
+msgctxt "admin-text"
+msgid "+1 (877) 273-3049"
+msgstr "+1 (877) 273-3049"
+
+#: config/settings.php:635
+msgctxt "admin-text"
+msgid "Offer Type"
+msgstr "Тип предложения"
+
+#: config/settings.php:668
+msgctxt "admin-text"
+msgid "Low Price"
+msgstr "Низкая цена"
+
+#: config/settings.php:683
+msgctxt "admin-text"
+msgid "High Price"
+msgstr "Высокая цена"
+
+#: config/settings.php:723
+msgctxt "admin-text"
+msgid "Limit Reviews"
+msgstr "Лимит отзывов"
+
+#: config/settings.php:305
+msgctxt "admin-text"
+msgid "Enable Avatars"
+msgstr "Включить аватары"
+
+#: config/settings.php:360
+msgctxt "admin-text"
+msgid "Avatar Size"
+msgstr "Размер аватара"
+
+#: config/settings.php:370
+msgctxt "admin-text"
+msgid "Display an excerpt instead of the full review."
+msgstr "Отображать отрывок вместо полного отзыва."
+
+#: config/settings.php:368
+msgctxt "admin-text"
+msgid "Enable Excerpts"
+msgstr "Включить отрывки"
+
+#: config/settings.php:215
+msgctxt "admin-text"
+msgid "Notification Template"
+msgstr "Шаблон уведомления"
+
+#: config/settings.php:235
+msgctxt "admin-text"
+msgid "WordPress settings"
+msgstr "Настройки WordPress"
+
+#: config/settings.php:254
+msgctxt "admin-text"
+msgid "Use the name as given"
+msgstr "Используйте имя по назначению"
+
+#: config/settings.php:255
+msgctxt "admin-text"
+msgid "Use the first name only"
+msgstr "Используйте только имя"
+
+#: config/settings.php:256
+msgctxt "admin-text"
+msgid "Convert first name to an initial"
+msgstr "Преобразовать имя в инициалы"
+
+#: config/settings.php:257
+msgctxt "admin-text"
+msgid "Convert last name to an initial"
+msgstr "Преобразовать фамилию в инициалы"
+
+#: config/settings.php:258
+msgctxt "admin-text"
+msgid "Convert to all initials"
+msgstr "Преобразовать все в инициалы"
+
+#: config/settings.php:277
+msgctxt "admin-text"
+msgid "Choose how the initial is displayed."
+msgstr "Выбрать, как отображать инициалы."
+
+#: config/settings.php:270
+msgctxt "admin-text"
+msgid "Initial Format"
+msgstr "Формат инициалов"
+
+#: config/settings.php:272
+msgctxt "admin-text"
+msgid "Initial with a space"
+msgstr "Инициалы через пробел"
+
+#: config/settings.php:273
+msgctxt "admin-text"
+msgid "Initial with a period"
+msgstr "Инициалы с точкой"
+
+#: config/settings.php:274
+msgctxt "admin-text"
+msgid "Initial with a period and a space"
+msgstr "Инициалы с точкой и пробелом"
+
+#: config/settings.php:300
+msgctxt "admin-text"
+msgid "This will display a link to the assigned posts of a review."
+msgstr "Отображать ссылку на запись, к которой привязан отзыв."
+
+#: config/settings.php:349
+msgctxt "admin-text"
+msgid "Regenerate Avatars"
+msgstr "Регенерация аватаров"
+
+#: config/settings.php:396
+msgctxt "admin-text"
+msgid "Set the excerpt word length."
+msgstr "Установите длину слова отрывка."
+
+#: config/settings.php:567 config/settings.php:583
+msgctxt "admin-text"
+msgid "Enter a custom image URL"
+msgstr "Введите URL пользовательского изображения"
+
+#: config/settings.php:717
+msgctxt "admin-text"
+msgid "Choose which fields should be required in the review form."
+msgstr "Выберите, какие поля должны быть обязательными в форме отзыва."
+
+#: config/settings.php:707
+msgctxt "admin-text"
+msgid "Required Fields"
+msgstr "Обязательные поля"
+
+#: config/settings.php:726
+msgctxt "admin-text"
+msgid "By Email Address"
+msgstr "По электронному адресу"
+
+#: config/settings.php:727
+msgctxt "admin-text"
+msgid "By IP Address"
+msgstr "По IP адресу"
+
+#: config/settings.php:728
+msgctxt "admin-text"
+msgid "By Username (will only work for registered users)"
+msgstr "По имени пользователя (работает только для зарегистрированных)"
+
+#: config/settings.php:780
+msgctxt "admin-text"
+msgid "IP Address Whitelist"
+msgstr "Белый список IP адресов"
+
+#: config/settings.php:791
+msgctxt "admin-text"
+msgid "Username Whitelist"
+msgstr "Белый список пользователей"
+
+#: config/settings.php:769
+msgctxt "admin-text"
+msgid "Email Whitelist"
+msgstr "Белый список email"
+
+#: config/settings.php:244
+msgctxt "admin-text"
+msgid "Custom Date Format"
+msgstr "Собственный формат даты"
+
+#: config/settings.php:231
+msgctxt "admin-text"
+msgid "Use a custom date format"
+msgstr "Использовать собственный формат даты"
+
+#: config/settings.php:230
+msgctxt "admin-text"
+msgid "Use a relative date format"
+msgstr "Использовать относительный формат даты"
+
+#: config/settings.php:261
+msgctxt "admin-text"
+msgid "Choose how author names are shown in your reviews."
+msgstr "Выберите, как имена авторов будут отображаться в ваших отзывах."
+
+#: config/settings.php:480
+msgctxt "admin-text"
+msgid "Default Name"
+msgstr "Имя по умолчанию"
+
+#: config/settings.php:482
+msgctxt "admin-text"
+msgid "Use the assigned or current page title"
+msgstr "Использовать назначенный или текущий заголовок страницы"
+
+#: config/settings.php:404
+msgctxt "admin-text"
+msgid "Enable Fallback Text"
+msgstr "Включить резервный текст"
+
+#: config/settings.php:508
+msgctxt "admin-text"
+msgid "Default Description"
+msgstr "Описание по умолчанию"
+
+#: config/settings.php:510
+msgctxt "admin-text"
+msgid "Use the assigned or current page excerpt"
+msgstr "Использовать отрывок назначенной или текущей страницы"
+
+#: config/settings.php:511 config/settings.php:527
+msgctxt "admin-text"
+msgid "Enter a custom description"
+msgstr "Введите произвольное описание"
+
+#: config/settings.php:525
+msgctxt "admin-text"
+msgid "Custom Description"
+msgstr "Произвольное описание"
+
+#: config/settings.php:536
+msgctxt "admin-text"
+msgid "Default URL"
+msgstr "URL по умолчанию"
+
+#: config/settings.php:539 config/settings.php:555
+msgctxt "admin-text"
+msgid "Enter a custom URL"
+msgstr "Введите пользовательский URL-адрес"
+
+#: config/settings.php:448
+msgctxt "admin-text"
+msgid "Default Schema Type"
+msgstr "Тип Схемы по умолчанию"
+
+#: config/settings.php:466
+msgctxt "admin-text"
+msgid "Custom Schema Type"
+msgstr "Произвольный тип Схемы"
+
+#: config/settings.php:483 config/settings.php:499
+msgctxt "admin-text"
+msgid "Enter a custom title"
+msgstr "Введите произвольный заголовок"
+
+#: config/settings.php:497
+msgctxt "admin-text"
+msgid "Custom Name"
+msgstr "Произвольное имя"
+
+#: config/settings.php:637
+msgctxt "admin-text"
+msgid "AggregateOffer"
+msgstr "AggregateOffer"
+
+#: config/settings.php:318 config/settings.php:581
+msgctxt "admin-text"
+msgid "Custom Image URL"
+msgstr "URL пользовательского изображения"
+
+#: config/settings.php:538
+msgctxt "admin-text"
+msgid "Use the assigned or current page URL"
+msgstr "Использовать назначенный или текущий URL страницы"
+
+#: config/settings.php:298
+msgctxt "admin-text"
+msgid "Enable Assigned Links"
+msgstr "Вкл. присвоенные ссылки"
+
+#: config/settings.php:140
+msgctxt "admin-text"
+msgid "Multilingual"
+msgstr "Многоязычность"
+
+#: config/settings.php:152
+msgctxt "admin-text"
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: config/settings.php:21
+msgctxt "admin-text"
+msgid "Plugin Style"
+msgstr "Стиль плагина"
+
+#: config/settings.php:24
+msgctxt "admin-text"
+msgid "Site Reviews (default)"
+msgstr "Site Reviews (по умолчанию)"
+
+#: config/settings.php:92
+msgctxt "admin-text"
+msgid "Require Login"
+msgstr "Требуется авторизация"
+
+#: config/settings.php:154
+msgctxt "admin-text"
+msgid "Send to administrator"
+msgstr "Отправить администратору"
+
+#: config/settings.php:156
+msgctxt "admin-text"
+msgid "Send to one or more email addresses"
+msgstr "Отправить на один или несколько email-адресов"
+
+#: config/settings.php:25
+msgctxt "admin-text"
+msgid "Site Reviews (minimal)"
+msgstr "Site Reviews (минимум)"
+
+#: config/settings.php:73
+msgctxt "admin-text"
+msgid "Require Approval"
+msgstr "Требуется одобрение"
+
+#: config/settings.php:118
+msgctxt "admin-text"
+msgid "Anyone can register"
+msgstr "Любой может зарегистрироваться"
+
+#: config/settings.php:115
+msgctxt "admin-text"
+msgid "Show Registration Link"
+msgstr "Отображать ссылку для регистрации"
+
+#: config/settings.php:142 config/settings.php:432
+msgctxt "admin-text"
+msgid "No Integration"
+msgstr "Без интеграции"
+
+#: config/settings.php:143
+msgctxt "admin-text"
+msgid "Integrate with Polylang"
+msgstr "Интегрировать с Polylang"
+
+#: config/settings.php:144
+msgctxt "admin-text"
+msgid "Integrate with WPML"
+msgstr "Интегрировать с WPML"
+
+#: config/settings.php:196
+msgctxt "admin-text"
+msgid "If emails are not sending, make sure that this email address uses the same domain as your website."
+msgstr "Если электронные письма не отправляются, убедитесь, что этот адрес электронной почты использует тот же домен, что и ваш веб-сайт."
+
+#: config/settings.php:193
+msgctxt "admin-text"
+msgid "Send Emails From"
+msgstr "Отправлять письма от"
+
+#: config/settings.php:204
+msgctxt "admin-text"
+msgid "Send Emails To"
+msgstr "Отправить электронные письма"
+
+#: config/settings.php:205 config/settings.php:207
+msgctxt "admin-text"
+msgid "Separate multiple emails with a comma"
+msgstr "Разделяйте несколько эл.адресов запятой"
+
+#: config/settings.php:181
+msgctxt "admin-text"
+msgid "Slack Webhook URL"
+msgstr "URL-адрес Slack Webhook"
+
+#: config/settings.php:14
+msgctxt "admin-text"
+msgid "Delete data on uninstall"
+msgstr "Удалить данные при удалении"
+
+#: config/settings.php:11
+msgctxt "admin-text"
+msgid "Delete everything (including all reviews and categories)"
+msgstr "Удалить все (включая все отзывы и рубрики)"
+
+#: plugin/Deprecated.php:19
+msgctxt "admin-text"
+msgid "The [%s] method has been deprecated and will be soon be removed, please use the [%s] method instead."
+msgstr "Метод [%s] устарел и скоро будет удален. Используйте вместо него метод [%s]."
+
+#: deprecated.php:179
+msgid "%s is <strong>deprecated</strong> since version %s with no alternative available."
+msgstr "%s <strong>устарел</strong>, поскольку версия %s не имеет альтернативы."
+
+#: deprecated.php:194
+msgid "%s is <strong>deprecated</strong> since version %s! Use %s instead."
+msgstr "%s <strong>устарел</strong>, начиная с версии %s! Вместо этого используйте %s."
+
+#: config/settings.php:13
+msgctxt "admin-text"
+msgid "Site Reviews will not delete anything when uninstalled unless you change this setting."
+msgstr "При удалении Site Reviews ничего не будут удалены, если этот параметр не изменен."
+
+#: config/settings.php:9
+msgctxt "admin-text"
+msgid "Do not delete anything"
+msgstr "Ничего не удаляйте"
+
+#: config/settings.php:10
+msgctxt "admin-text"
+msgid "Delete all plugin settings, widgets settings, and caches"
+msgstr "Удаление всех настроек плагина, настройки виджетов и кеши"
+
+#: plugin/Controllers/MainController.php:126
+msgctxt "admin-text"
+msgid "Local Review"
+msgstr "Местный отзыв"
+
+#: plugin/Helpers/Str.php:111
+msgid "and"
+msgstr "и"
+
+#: plugin/Controllers/MenuController.php:53
+#: plugin/Controllers/MenuController.php:115
+#: plugin/Controllers/MenuController.php:140
+msgctxt "admin-text"
+msgid "Addons"
+msgstr "Дополнения"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterAuthor.php:22
+#: plugin/Metaboxes/AuthorMetabox.php:22 plugin/Metaboxes/AuthorMetabox.php:42
+#: views/partials/screen/inline-edit.php:76
+msgctxt "admin-text"
+msgid "Author"
+msgstr "Автор"
+
+#: config/forms/metabox-fields.php:26
+#: plugin/Defaults/RevisionFieldsDefaults.php:16
+msgctxt "admin-text"
+msgid "Avatar"
+msgstr "Аватар"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:43
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:46
+#: plugin/Tinymce/SiteReviewsTinymce.php:81
+#: plugin/Tinymce/SiteReviewTinymce.php:28
+msgctxt "admin-text"
+msgid "Classes"
+msgstr "Классы"
+
+#: plugin/Tinymce/TinymceGenerator.php:26
+msgctxt "admin-text"
+msgid "Close"
+msgstr "Закрыть"
+
+#: plugin/Tinymce/SiteReviewsTinymce.php:22
+msgctxt "admin-text"
+msgid "Display"
+msgstr "Отображать"
+
+#: config/forms/metabox-fields.php:18 config/settings.php:713
+#: plugin/Controllers/PrivacyController.php:115
+#: plugin/Defaults/PostTypeColumnDefaults.php:16
+#: plugin/Defaults/RevisionFieldsDefaults.php:14
+msgctxt "admin-text"
+msgid "Email"
+msgstr "Эл. почта"
+
+#: plugin/Controllers/WelcomeController.php:76
+msgctxt "admin-text"
+msgid "Getting Started"
+msgstr "Приступаем к работе"
+
+#: plugin/Addons/Controller.php:80 plugin/Controllers/AdminController.php:80
+#: views/partials/dashboard-widget.php:28
+msgctxt "admin-text"
+msgid "Help"
+msgstr "Помощь"
+
+#: config/forms/metabox-fields.php:22
+#: plugin/Controllers/PrivacyController.php:116
+#: plugin/Defaults/PostTypeColumnDefaults.php:17
+#: plugin/Defaults/RevisionFieldsDefaults.php:15
+msgctxt "admin-text"
+msgid "IP Address"
+msgstr "IP-адрес"
+
+#: plugin/Tinymce/TinymceGenerator.php:27
+msgctxt "admin-text"
+msgid "Insert Shortcode"
+msgstr "Вставить шорткод"
+
+#: plugin/Controllers/MenuController.php:141
+msgctxt "admin-text"
+msgid "Licenses"
+msgstr "Лицензии"
+
+#: plugin/Controllers/AdminController.php:303
+#: plugin/Controllers/AdminController.php:321
+#: plugin/Controllers/AdminController.php:334
+msgctxt "admin-text"
+msgid "Nothing found."
+msgstr "Ничего не найдено."
+
+#: plugin/Controllers/EditorController.php:105
+msgctxt "admin-text"
+msgid "Okay"
+msgstr "Хорошо"
+
+#: config/forms/metabox-fields.php:5 config/settings.php:709
+#: plugin/Controllers/ListTableColumns/ColumnFilterRating.php:36
+#: plugin/Defaults/PostTypeColumnDefaults.php:20
+#: plugin/Defaults/RevisionFieldsDefaults.php:11
+#: plugin/Integrations/Elementor/ElementorWidget.php:129
+#: plugin/Integrations/GamiPress/Controller.php:133
+#: plugin/Tinymce/SiteReviewsTinymce.php:31
+msgctxt "admin-text"
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: plugin/Defaults/PostTypeColumnDefaults.php:18
+#: plugin/Defaults/RevisionFieldsDefaults.php:10
+msgctxt "admin-text"
+msgid "Response"
+msgstr "Ответ"
+
+#: config/settings.php:711 plugin/Defaults/PostTypeLabelDefaults.php:22
+msgctxt "admin-text"
+msgid "Review"
+msgstr "Отзыв"
+
+#: plugin/Controllers/MenuController.php:135
+#: plugin/Controllers/PrivacyController.php:130
+#: plugin/Defaults/PostTypeLabelDefaults.php:17
+#: plugin/Integrations/WooCommerce/Metaboxes/ReviewsMetabox.php:15
+#: views/integrations/woocommerce/bulk-edit.php:6 views/pages/tools/sync.php:10
+#: views/pages/tools/sync.php:31
+msgctxt "admin-text"
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: plugin/Commands/ImportSettings.php:29
+msgctxt "admin-text"
+msgid "Settings imported."
+msgstr "Настройки импортированы."
+
+#: plugin/Controllers/SettingsController.php:49
+msgctxt "admin-text"
+msgid "Settings updated."
+msgstr "Настройки сохранены."
+
+#: plugin/Controllers/MenuController.php:109
+#: plugin/Controllers/WelcomeController.php:79
+msgctxt "admin-text"
+msgid "Support"
+msgstr "Поддержка"
+
+#: plugin/Controllers/MenuController.php:52
+msgctxt "admin-text"
+msgid "Tools"
+msgstr "Инструменты"
+
+#: plugin/Controllers/ListTableColumns/ColumnValueAuthorName.php:17
+#: plugin/Review.php:346
+msgctxt "admin-text"
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: plugin/Controllers/WelcomeController.php:46
+msgctxt "admin-text"
+msgid "Welcome to %s"
+msgstr "Добро пожаловать в %s"
+
+#: plugin/Controllers/WelcomeController.php:77
+msgctxt "admin-text"
+msgid "What's New"
+msgstr "Что нового"
+
+#: plugin/Commands/DownloadCsvTemplate.php:98
+#: plugin/Controllers/ListTableColumns/ColumnValueResponse.php:14
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:118
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:97
+#: views/partials/editor/pinned.php:6 views/partials/editor/pinned.php:18
+#: views/partials/editor/verified.php:7 views/partials/editor/verified.php:19
+msgctxt "admin-text"
+msgid "Yes"
+msgstr "Да"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterCategory.php:36
+#: plugin/Tinymce/TinymceGenerator.php:46
+msgctxt "admin-text"
+msgid "Category"
+msgstr "Рубрика"
+
+#: config/forms/metabox-fields.php:9
+#: plugin/Controllers/ListTableColumns/ColumnFilterType.php:24
+#: plugin/Defaults/PostTypeColumnDefaults.php:19
+#: plugin/Defaults/RevisionFieldsDefaults.php:12
+#: plugin/Tinymce/TinymceGenerator.php:60
+msgctxt "admin-text"
+msgid "Type"
+msgstr "Тип"
+
+#: plugin/Tinymce/TinymceGenerator.php:156
+msgctxt "admin-text"
+msgid "- Select -"
+msgstr "- Выбрать -"
+
+#: plugin/Tinymce/TinymceGenerator.php:224
+msgctxt "admin-text"
+msgid "Some of the shortcode options are required."
+msgstr "Некоторые параметры шорткода обязательны."
+
+#: plugin/Tinymce/TinymceGenerator.php:229
+msgctxt "the option label (admin-text)"
+msgid "The \"%s\" option is required."
+msgstr "Опция \"%s\" необходима."
+
+#: plugin/Commands/ToggleStatus.php:66 views/partials/editor/pinned.php:9
+#: views/partials/editor/verified.php:10
+msgctxt "admin-text"
+msgid "Edit"
+msgstr "Изменить"
+
+#: compatibility.php:124
+msgctxt "admin-text"
+msgid "Delete Reviews"
+msgstr "Удалить отзывы"
+
+#: plugin/Tinymce/SiteReviewsTinymce.php:34
+#: plugin/Tinymce/SiteReviewsTinymce.php:35
+#: plugin/Tinymce/SiteReviewsTinymce.php:36
+#: plugin/Tinymce/SiteReviewsTinymce.php:37
+#: plugin/Tinymce/SiteReviewsTinymce.php:38
+#: plugin/Widgets/SiteReviewsWidget.php:35
+#: plugin/Widgets/SiteReviewsWidget.php:36
+#: plugin/Widgets/SiteReviewsWidget.php:37
+#: plugin/Widgets/SiteReviewsWidget.php:38
+#: plugin/Widgets/SiteReviewsWidget.php:39
+#: plugin/Widgets/SiteReviewsWidget.php:40
+msgctxt "admin-text"
+msgid "%s star"
+msgid_plural "%s stars"
+msgstr[0] "%s звезда"
+msgstr[1] "%s звезды"
+msgstr[2] "%s звезд"
+
+#: plugin/Tinymce/SiteReviewsTinymce.php:39
+msgctxt "admin-text"
+msgid "Unrated"
+msgstr "Без рейтинга"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:21
+#: plugin/Widgets/SiteReviewsFormWidget.php:26
+#: views/pages/tools/general/import-reviews.php:47
+msgctxt "admin-text"
+msgid "Description"
+msgstr "Описание"
+
+#: config/forms/metabox-fields.php:14 config/settings.php:712
+#: plugin/Controllers/PrivacyController.php:114
+#: plugin/Defaults/PostTypeColumnDefaults.php:15
+#: plugin/Defaults/RevisionFieldsDefaults.php:13
+msgctxt "admin-text"
+msgid "Name"
+msgstr "Имя"
+
+#: plugin/Defaults/RevisionFieldsDefaults.php:17
+msgctxt "admin-text"
+msgid "Url"
+msgstr "URL"
+
+#: plugin/Addons/Controller.php:73 plugin/Controllers/AdminController.php:74
+#: plugin/Controllers/MenuController.php:51
+#: plugin/Integrations/Elementor/ElementorWidget.php:119
+#: views/pages/tools/sync.php:23 views/partials/addons/addon.php:16
+msgctxt "admin-text"
+msgid "Settings"
+msgstr "Настройки"
+
+#: plugin/Commands/DownloadCsvTemplate.php:99
+#: plugin/Controllers/ListTableColumns/ColumnValueResponse.php:13
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:74
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:117
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:74
+#: plugin/Integrations/FusionBuilder/FusionRatingSummary.php:96
+#: views/partials/editor/pinned.php:6 views/partials/editor/pinned.php:21
+#: views/partials/editor/verified.php:7 views/partials/editor/verified.php:22
+msgctxt "admin-text"
+msgid "No"
+msgstr "Нет"
+
+#: plugin/Commands/DetectIpAddress.php:17
+#: plugin/Controllers/MenuController.php:110
+msgctxt "admin-text"
+msgid "FAQ"
+msgstr "FAQ"
+
+#: plugin/Controllers/MenuController.php:111
+msgctxt "admin-text"
+msgid "Shortcodes"
+msgstr "Шорткоды"
+
+#: plugin/Controllers/MenuController.php:134
+#: plugin/Controllers/MenuController.php:161
+msgctxt "admin-text"
+msgid "General"
+msgstr "Основные"
+
+#: plugin/Controllers/WelcomeController.php:25
+msgctxt "admin-text"
+msgid "About"
+msgstr "О плагине"
+
+#: plugin/Controllers/MenuController.php:165
+msgctxt "admin-text"
+msgid "System Info"
+msgstr "Системная информация"
+
+#: compatibility.php:123
+msgctxt "admin-text"
+msgid "Delete Others' Reviews"
+msgstr "Удалить чужие отзывы"
+
+#: compatibility.php:125
+msgctxt "admin-text"
+msgid "Delete Private Reviews"
+msgstr "Удалить частные отзывы"
+
+#: compatibility.php:126
+msgctxt "admin-text"
+msgid "Delete Approved Reviews"
+msgstr "Удалить одобренные отзывы"
+
+#: compatibility.php:127
+msgctxt "admin-text"
+msgid "Edit Others' Reviews"
+msgstr "Изменить чужие отзывы"
+
+#: compatibility.php:128
+msgctxt "admin-text"
+msgid "Edit Reviews"
+msgstr "Изменить отзывы"
+
+#: compatibility.php:129
+msgctxt "admin-text"
+msgid "Edit Private Reviews"
+msgstr "Изменить частные отзывы"
+
+#: compatibility.php:130
+msgctxt "admin-text"
+msgid "Edit Approved Reviews"
+msgstr "Изменить одобренные отзывы"
+
+#: compatibility.php:131
+msgctxt "admin-text"
+msgid "Approve Reviews"
+msgstr "Одобрить отзывы"
+
+#: compatibility.php:132
+msgctxt "admin-text"
+msgid "Read Private Reviews"
+msgstr "Читать частные отзывы"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:12
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:11
+#: plugin/Tinymce/SiteReviewsTinymce.php:11
+#: plugin/Tinymce/SiteReviewTinymce.php:11
+msgctxt "admin-text"
+msgid "All settings are optional."
+msgstr "Все настройки необязательны."
+
+#: config/settings.php:710 plugin/Tinymce/SiteReviewsFormTinymce.php:15
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:16
+#: plugin/Tinymce/SiteReviewsTinymce.php:16
+#: plugin/Tinymce/SiteReviewTinymce.php:16
+#: plugin/Widgets/SiteReviewsFormWidget.php:22
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:22
+#: plugin/Widgets/SiteReviewsWidget.php:22
+#: plugin/Widgets/SiteReviewWidget.php:19
+msgctxt "admin-text"
+msgid "Title"
+msgstr "Заголовок"
+
+#: plugin/Controllers/PrivacyController.php:112
+msgctxt "admin-text"
+msgid "Review Title"
+msgstr "Заголовок отзыва"
+
+#: plugin/Controllers/PrivacyController.php:113
+msgctxt "admin-text"
+msgid "Review Content"
+msgstr "Содержимое отзыва"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterRating.php:11
+msgctxt "admin-text"
+msgid "Filter by rating"
+msgstr "Фильтр по рейтингу"
+
+#: plugin/Controllers/ListTableColumns/ColumnFilterAuthor.php:9
+msgctxt "admin-text"
+msgid "Filter by author"
+msgstr "Фильтр по автору"
+
+#: plugin/Commands/DetectIpAddress.php:21
+msgctxt "admin-text"
+msgid "Site Reviews was unable to detect an IP address. To fix this, please see the %s."
+msgstr "Site Reviews не смог определить IP-адрес. Чтобы исправить это, см. %s."
+
+#: plugin/Commands/DetectIpAddress.php:27
+msgctxt "admin-text"
+msgid "Your detected IP address is %s. If this looks incorrect, please see the %s."
+msgstr "Ваш обнаруженный IP-адрес - %s. Если это выглядит некорректно, см. %s."
+
+#: plugin/Commands/ResetAssignedMeta.php:21
+msgctxt "admin-text"
+msgid "The assigned meta values have been reset."
+msgstr "Назначенные мета-значения были сброшены."
+
+#: plugin/Controllers/ToolsController.php:322
+msgctxt "admin-text"
+msgid "reload the page"
+msgstr "перезагрузить страницу"
+
+#: plugin/Tinymce/SiteReviewsTinymce.php:56
+#: plugin/Widgets/SiteReviewsWidget.php:45
+msgctxt "admin-text"
+msgid "Which type of review would you like to display?"
+msgstr "Какой тип отзыва вы хотите отобразить?"
+
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:22
+#: plugin/Tinymce/SiteReviewsTinymce.php:57
+msgctxt "admin-text"
+msgid "Limit reviews to this category."
+msgstr "Ограничить отзывы этой рубрики."
+
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:39
+#: plugin/Tinymce/SiteReviewsTinymce.php:74
+msgctxt "admin-text"
+msgid "Enable rich snippets"
+msgstr "Включить расширенные сниппеты"
+
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:40
+#: plugin/Tinymce/SiteReviewsTinymce.php:75
+msgctxt "admin-text"
+msgid "Disable rich snippets"
+msgstr "Отключить расширенные сниппеты"
+
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:42
+#: plugin/Tinymce/SiteReviewsTinymce.php:77
+msgctxt "admin-text"
+msgid "Rich snippets are disabled by default."
+msgstr "Расширенные сниппеты по умолчанию отключены."
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:45
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:48
+#: plugin/Tinymce/SiteReviewsTinymce.php:83
+#: plugin/Tinymce/SiteReviewTinymce.php:30
+msgctxt "admin-text"
+msgid "Add custom CSS classes to the shortcode."
+msgstr "Добавить произвольные CSS-стили в шорткод."
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:51
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:54
+#: plugin/Tinymce/SiteReviewsTinymce.php:89
+#: plugin/Tinymce/SiteReviewTinymce.php:36
+msgctxt "admin-text"
+msgid "Hide"
+msgstr "Скрыть"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:26
+msgctxt "admin-text"
+msgid "Enter a custom shortcode description."
+msgstr "Введите произвольное описание шорткода."
+
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:21
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:27
+msgctxt "admin-text"
+msgid "Which type of review would you like to use?"
+msgstr "Какой тип отзыва вы хотели бы использовать?"
+
+#: plugin/Commands/ImportReviewsCleanup.php:54
+#: plugin/Integrations/WooCommerce/Commands/ImportProductReviewsCleanup.php:52
+msgctxt "admin-text"
+msgid "%s entry was skipped."
+msgid_plural "%s entries were skipped."
+msgstr[0] "%s запись пропущена."
+msgstr[1] "%s записи пропущены."
+msgstr[2] "%s записей пропущены."
+
+#: plugin/Commands/ImportReviewsCleanup.php:46
+#: plugin/Integrations/WooCommerce/Commands/ImportProductReviewsCleanup.php:44
+msgctxt "admin-text"
+msgid "%s review was imported."
+msgid_plural "%s reviews were imported."
+msgstr[0] "%s отзыв импортирован."
+msgstr[1] "%s отзыва импортированы."
+msgstr[2] "%s отзывов импортированы."
+
+#: plugin/Commands/TogglePinned.php:37
+msgctxt "admin-text"
+msgid "Review pinned."
+msgstr "Отзыв закреплён."
+
+#: plugin/Commands/TogglePinned.php:38
+msgctxt "admin-text"
+msgid "Review unpinned."
+msgstr "Отзыв откреплён."
+
+#: plugin/Commands/EnqueueAdminAssets.php:26
+msgctxt "admin-text"
+msgid "Pin Your Reviews"
+msgstr "Закрепите свои отзывы"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:128
+msgctxt "admin-text"
+msgid "Hide the rating field"
+msgstr "Скрыть поле рейтинга"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:129
+msgctxt "admin-text"
+msgid "Hide the title field"
+msgstr "Скрыть поле заголовка"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:130
+msgctxt "admin-text"
+msgid "Hide the review field"
+msgstr "Скрыть поле отзыва"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:131
+msgctxt "admin-text"
+msgid "Hide the name field"
+msgstr "Скрыть поле имени"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:132
+msgctxt "admin-text"
+msgid "Hide the email field"
+msgstr "Скрыть поле эл.почты"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:133
+msgctxt "admin-text"
+msgid "Hide the terms field"
+msgstr "Скрыть поле условий"
+
+#: plugin/Shortcodes/SiteReviewShortcode.php:32
+#: plugin/Shortcodes/SiteReviewsShortcode.php:54
+#: plugin/Shortcodes/SiteReviewsSummaryShortcode.php:71
+msgctxt "admin-text"
+msgid "Hide the rating"
+msgstr "Скрыть рейтинг"
+
+#: plugin/Shortcodes/SiteReviewsSummaryShortcode.php:72
+msgctxt "admin-text"
+msgid "Hide the stars"
+msgstr "Скрыть звёзды"
+
+#: plugin/Shortcodes/SiteReviewsSummaryShortcode.php:73
+msgctxt "admin-text"
+msgid "Hide the summary"
+msgstr "Скрыть сводку"
+
+#: plugin/Shortcodes/SiteReviewsSummaryShortcode.php:74
+msgctxt "admin-text"
+msgid "Hide the percentage bars"
+msgstr "Скрыть процентную шкалу"
+
+#: plugin/Shortcodes/SiteReviewsSummaryShortcode.php:75
+msgctxt "admin-text"
+msgid "Hide if no reviews are found"
+msgstr "Скрыть, если отзывы не найдены"
+
+#: plugin/Shortcodes/SiteReviewShortcode.php:31
+#: plugin/Shortcodes/SiteReviewsShortcode.php:53
+msgctxt "admin-text"
+msgid "Hide the title"
+msgstr "Скрыть заголовок"
+
+#: plugin/Shortcodes/SiteReviewShortcode.php:33
+#: plugin/Shortcodes/SiteReviewsShortcode.php:55
+msgctxt "admin-text"
+msgid "Hide the date"
+msgstr "Скрыть дату"
+
+#: plugin/Shortcodes/SiteReviewShortcode.php:35
+#: plugin/Shortcodes/SiteReviewsShortcode.php:57
+msgctxt "admin-text"
+msgid "Hide the content"
+msgstr "Скрыть содержимое"
+
+#: plugin/Shortcodes/SiteReviewShortcode.php:36
+#: plugin/Shortcodes/SiteReviewsShortcode.php:58
+msgctxt "admin-text"
+msgid "Hide the avatar (if shown)"
+msgstr "Скрыть аватар (если есть)"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:31
+msgctxt "admin-text"
+msgid "Assign to Post ID"
+msgstr "Назначить ID записи"
+
+#: plugin/Controllers/ListTableController.php:176
+#: plugin/Controllers/TranslationController.php:173
+msgctxt "admin-text"
+msgid "Approve"
+msgstr "Одобрить"
+
+#: plugin/Controllers/TranslationController.php:126
+#: plugin/Controllers/TranslationController.php:147
+#: plugin/Controllers/TranslationController.php:174
+#: views/partials/screen/inline-edit.php:70
+msgctxt "admin-text"
+msgid "Approved"
+msgstr "Одобрен"
+
+#: plugin/Shortcodes/SiteReviewShortcode.php:37
+#: plugin/Shortcodes/SiteReviewsShortcode.php:59
+msgctxt "admin-text"
+msgid "Hide the author"
+msgstr "Скрыть автора"
+
+#: plugin/Modules/Console.php:68
+msgctxt "admin-text"
+msgid "Console is empty"
+msgstr "Консоль пуста"
+
+#: plugin/Modules/Console.php:249
+msgctxt "admin-text"
+msgid "Console was automatically cleared (512KB maximum size)"
+msgstr "Консоль была автоматически очищена (максимальный размер 512 KB)"
+
+#: plugin/Controllers/MenuController.php:112
+msgctxt "admin-text"
+msgid "Hooks"
+msgstr "Hooks"
+
+#: plugin/Controllers/MenuController.php:113
+msgctxt "admin-text"
+msgid "Functions"
+msgstr "Функции"
+
+#: plugin/Controllers/MenuController.php:164
+msgctxt "admin-text"
+msgid "Console"
+msgstr "Консоль"
+
+#: plugin/Controllers/MenuController.php:163 views/pages/tools/sync.php:58
+msgctxt "admin-text"
+msgid "Sync Reviews"
+msgstr "Синхронизация отзывов"
+
+#: plugin/Controllers/WelcomeController.php:36
+msgctxt "admin-text"
+msgid "Welcome to %s &#8212; WordPress"
+msgstr "Добро пожаловать в %s &#8212; WordPress"
+
+#: plugin/Defaults/PostTypeColumnDefaults.php:21
+#: views/partials/editor/pinned.php:4
+msgctxt "admin-text"
+msgid "Pinned"
+msgstr "Закреплено"
+
+#: plugin/Controllers/WelcomeController.php:78
+msgctxt "admin-text"
+msgid "Upgrade Guide"
+msgstr "Руководство по обновлению"
+
+#: plugin/Controllers/TranslationController.php:36
+msgctxt "admin-text"
+msgid "%s review updated."
+msgid_plural "%s reviews updated."
+msgstr[0] "%s отзыв обновлен."
+msgstr[1] "%s отзыва обновлено."
+msgstr[2] "%s отзывов обновлено."
+
+#: plugin/Controllers/TranslationController.php:37
+msgctxt "admin-text"
+msgid "%s review not updated, somebody is editing it."
+msgid_plural "%s reviews not updated, somebody is editing them."
+msgstr[0] "%s отзыв не обновлен, кто-то его редактирует."
+msgstr[1] "%s отзыва не обновлены, кто-то редактирует их."
+msgstr[2] "%s отзывов не обновлены, кто-то редактирует их."
+
+#: plugin/Controllers/TranslationController.php:38
+msgctxt "admin-text"
+msgid "%s review permanently deleted."
+msgid_plural "%s reviews permanently deleted."
+msgstr[0] "%s отзыв удален навсегда."
+msgstr[1] "%s отзыва удалены навсегда."
+msgstr[2] "%s отзывов удалены навсегда."
+
+#: plugin/Controllers/TranslationController.php:39
+msgctxt "admin-text"
+msgid "%s review moved to the Trash."
+msgid_plural "%s reviews moved to the Trash."
+msgstr[0] "%s отзыв перемещен в корзину."
+msgstr[1] "%s отзыва перемещены в корзину."
+msgstr[2] "%s отзывов перемещены в корзину."
+
+#: plugin/Controllers/TranslationController.php:40
+msgctxt "admin-text"
+msgid "%s review restored from the Trash."
+msgid_plural "%s reviews restored from the Trash."
+msgstr[0] "%s отзыв восстановлен из корзины."
+msgstr[1] "%s отзыва восстановлено из корзины."
+msgstr[2] "%s отзывов восстановлено из корзины."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:20
+msgctxt "admin-text"
+msgid "Review updated."
+msgstr "Отзыв обновлён."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:10
+msgctxt "admin-text"
+msgid "Review has been approved and published."
+msgstr "Отзыв был одобрен и опубликован."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:11
+msgctxt "admin-text"
+msgid "Review draft updated."
+msgstr "Черновик отзыва обновлён."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:12
+msgctxt "admin-text"
+msgid "Preview review"
+msgstr "Предпросмотр отзыва"
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:13
+msgctxt "admin-text"
+msgid "Review approved and published."
+msgstr "Отзыв одобрен и опубликован."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:14
+msgctxt "admin-text"
+msgid "Review restored to revision from %s."
+msgstr "Отзыв восстановлен из редакции от %s."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:16
+msgctxt "admin-text"
+msgid "Review saved."
+msgstr "Отзыв сохранён."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:17
+msgctxt "admin-text"
+msgid "Review scheduled for: %s."
+msgstr "Отзыв запланирована на: %s."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:18
+msgctxt "admin-text"
+msgid "Review submitted."
+msgstr "Отзыв отправлен."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:19
+msgctxt "admin-text"
+msgid "Review has been unapproved and is now pending."
+msgstr "Отзыв не был одобрен и ожидает модерации."
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:21
+msgctxt "admin-text"
+msgid "View review"
+msgstr "Смотреть отзыв"
+
+#: plugin/Controllers/TranslationController.php:108
+#: plugin/Controllers/TranslationController.php:124
+#: plugin/Controllers/TranslationController.php:125
+#: plugin/Controllers/TranslationController.php:143
+#: views/partials/screen/inline-edit.php:72
+msgctxt "admin-text"
+msgid "Unapproved"
+msgstr "Не одобрен"
+
+#: plugin/Controllers/TranslationController.php:172
+msgctxt "admin-text"
+msgid "Privately Approved"
+msgstr "Одобрено в частном порядке"
+
+#: config/settings.php:755 plugin/Defaults/PostTypeColumnDefaults.php:14
+#: plugin/Metaboxes/AssignedUsersMetabox.php:19
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:30
+#: plugin/Tinymce/SiteReviewsTinymce.php:65
+#: views/integrations/mycred/preferences.php:186
+#: views/partials/screen/inline-edit.php:116
+msgctxt "admin-text"
+msgid "Assigned Users"
+msgstr "Назначенные пользователи"
+
+#: plugin/Defaults/ValidationStringsDefaults.php:27
+msgid "The review could not be submitted because this browser is too old. Please try again with a modern browser."
+msgstr "Не удалось отправить отзыв, так как этот браузер устарел. Повторите попытку в современном браузере."
+
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:29
+msgctxt "admin-text"
+msgid "All review types"
+msgstr "Все типы отзывов"
+
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:34
+msgctxt "admin-text"
+msgid "Limit summary to this category"
+msgstr "Ограничить сводку этой рубрики"
+
+#: plugin/Widgets/SiteReviewsFormWidget.php:33
+#: plugin/Widgets/SiteReviewsWidget.php:54
+msgctxt "admin-text"
+msgid "Do not assign a category"
+msgstr "Не присваивать рубрику"
+
+#: plugin/Controllers/ToolsController.php:173
+msgctxt "admin-text"
+msgid "Console reloaded."
+msgstr "Консоль перезагружена."
+
+#: config/settings.php:753 plugin/Defaults/PostTypeColumnDefaults.php:13
+#: plugin/Metaboxes/AssignedPostsMetabox.php:19
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:24
+#: plugin/Tinymce/SiteReviewsTinymce.php:59
+#: views/partials/screen/inline-edit.php:105
+msgctxt "admin-text"
+msgid "Assigned Posts"
+msgstr "Назначенные записи"
+
+#: plugin/Commands/ClearConsole.php:20
+msgctxt "admin-text"
+msgid "Console cleared."
+msgstr "Консоль очищена."
+
+#: plugin/Controllers/MenuController.php:137
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:36
+#: plugin/Tinymce/SiteReviewsTinymce.php:71
+msgctxt "admin-text"
+msgid "Schema"
+msgstr "Схема"
+
+#: plugin/Shortcodes/SiteReviewShortcode.php:39
+#: plugin/Shortcodes/SiteReviewsShortcode.php:61
+msgctxt "admin-text"
+msgid "Hide the response"
+msgstr "Скрыть ответ"
+
+#: plugin/Controllers/TranslationController.php:127
+#: plugin/Controllers/TranslationController.php:177
+msgctxt "admin-text"
+msgid "Save as Unapproved"
+msgstr "Сохранить как не одобренный"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:17
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:18
+#: plugin/Tinymce/SiteReviewsTinymce.php:18
+#: plugin/Tinymce/SiteReviewTinymce.php:18
+msgctxt "admin-text"
+msgid "Enter a custom shortcode title."
+msgstr "Введите произвольный заголовок шорткода."
+
+#: plugin/Widgets/SiteReviewsFormWidget.php:49
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:52
+#: plugin/Widgets/SiteReviewsWidget.php:70
+#: plugin/Widgets/SiteReviewWidget.php:23
+msgctxt "admin-text"
+msgid "Enter any custom CSS classes here"
+msgstr "Введите сюда произвольные CSS-классы"
+
+#: plugin/Widgets/SiteReviewsWidget.php:32
+msgctxt "admin-text"
+msgid "What is the minimum rating to display?"
+msgstr "Каков минимальный рейтинг для отображения?"
+
+#: plugin/Widgets/SiteReviewsWidget.php:27
+msgctxt "admin-text"
+msgid "How many reviews would you like to display?"
+msgstr "Сколько отзывов для отображения?"
+
+#: plugin/Widgets/SiteReviewsWidget.php:47
+msgctxt "admin-text"
+msgid "All Reviews"
+msgstr "Все отзывы"
+
+#: plugin/Controllers/TranslationController.php:175
+msgctxt "admin-text"
+msgid "Approve on:"
+msgstr "Одобрить в:"
+
+#: plugin/Controllers/TranslationController.php:176
+msgctxt "admin-text"
+msgid "Approved on:"
+msgstr "Одобрено в:"
+
+#: plugin/Widgets/SiteReviewsFormWidget.php:31
+msgctxt "admin-text"
+msgid "Automatically assign a category"
+msgstr "Автоматически назначить рубрику"
+
+#: plugin/Widgets/SiteReviewsFormWidget.php:39
+msgctxt "admin-text"
+msgid "Automatically assign reviews to a Post ID"
+msgstr "Автоматически назначать отзывы ID записи"
+
+#: plugin/Widgets/SiteReviewsFormWidget.php:45
+msgctxt "admin-text"
+msgid "Automatically assign reviews to a User ID"
+msgstr "Автоматически назначать отзывы ID пользователю"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:33
+msgctxt "admin-text"
+msgid "Automatically assign reviews to a Post ID. You may also enter \"%s\" to use the Post ID of the current page."
+msgstr "Автоматическое назначение отзывам ID записи. Вы также можете ввести \"%s\", чтобы использовать ID записи текущей страницы."
+
+#: plugin/Shortcodes/SiteReviewShortcode.php:34
+#: plugin/Shortcodes/SiteReviewsShortcode.php:56
+msgctxt "admin-text"
+msgid "Hide the assigned links (if shown)"
+msgstr "Скрыть назначенные ссылки (если есть)"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:37
+msgctxt "admin-text"
+msgid "Assign to User ID"
+msgstr "Назначить ID пользователю"
+
+#: plugin/Widgets/SiteReviewsWidget.php:52
+msgctxt "admin-text"
+msgid "Limit reviews to this category"
+msgstr "Ограничить отзывы в этой рубрике"
+
+#: plugin/Widgets/SiteReviewsFormWidget.php:38
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:41
+#: plugin/Widgets/SiteReviewsWidget.php:59
+msgctxt "admin-text"
+msgid "You may also enter %s to use the Post ID of the current page."
+msgstr "Вы также можете ввести %s, чтобы использовать ID записи текущей страницы."
+
+#: plugin/Widgets/SiteReviewsFormWidget.php:44
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:47
+#: plugin/Widgets/SiteReviewsWidget.php:65
+msgctxt "admin-text"
+msgid "You may also enter %s to use the ID of the logged-in user."
+msgstr "Вы также можете ввести %s, чтобы использовать ID вошедшего в систему пользователя."
+
+#: plugin/Controllers/ListTableController.php:182
+msgctxt "admin-text"
+msgid "Unapprove"
+msgstr "Отклонить"
+
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:74
+msgctxt "admin-text"
+msgid "Summary of Reviews"
+msgstr "Сводка отзывов"
+
+#: plugin/Controllers/ListTableController.php:91
+msgctxt "admin-text"
+msgid "Submitted"
+msgstr "Отправлено"
+
+#: plugin/Modules/Html/Partials/Pagination.php:48
+msgctxt "screen reader text"
+msgid "Site Reviews navigation"
+msgstr "Site Reviews навигация"
+
+#: plugin/Blocks/SiteReviewBlock.php:48 plugin/Blocks/SiteReviewsBlock.php:88
+#: plugin/Blocks/SiteReviewsFormBlock.php:63
+#: plugin/Blocks/SiteReviewsSummaryBlock.php:84
+msgctxt "admin-text"
+msgid "You have hidden all of the fields for this block."
+msgstr "Вы скрыли все поле этого блока."
+
+#: plugin/Metaboxes/DetailsMetabox.php:17
+msgctxt "admin-text"
+msgid "Review Details"
+msgstr "Детали отзыва"
+
+#: plugin/Metaboxes/ResponseMetabox.php:22
+#: views/partials/editor/metabox-response.php:4
+msgctxt "admin-text"
+msgid "Respond Publicly"
+msgstr "Ответить публично"
+
+#: plugin/Widgets/SiteReviewsWidget.php:107
+msgctxt "admin-text"
+msgid "Recent Reviews"
+msgstr "Свежие отзывы"
+
+#: plugin/Widgets/SiteReviewsWidget.php:102
+msgctxt "admin-text"
+msgid "Site Reviews: Display your recent reviews."
+msgstr "Site Reviews: Отображать свежие отзывы."
+
+#: plugin/Widgets/SiteReviewsFormWidget.php:66
+msgctxt "admin-text"
+msgid "Site Reviews: Display a form to submit reviews."
+msgstr "Site Reviews: Отображать форму для отправки отзывов."
+
+#: plugin/Widgets/SiteReviewsSummaryWidget.php:69
+msgctxt "admin-text"
+msgid "Site Reviews: Display a summary of your reviews."
+msgstr "Site Reviews: Отображать сводку ваших отзывов."
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:39
+msgctxt "admin-text"
+msgid "Automatically assign reviews to a User ID. You may also enter \"%s\" to use the ID of the logged-in user."
+msgstr "Автоматически назначать отзывы ID пользователя. Вы также можете ввести \"%s\", чтобы использовать ID вошедшего в систему пользователя."
+
+#: plugin/Controllers/PrivacyController.php:25
+msgctxt "admin-text"
+msgid "The email and associated name and IP address has been removed from all reviews, but the reviews themselves were not removed."
+msgstr "Электронная почта, связанное с ней имя и IP-адрес были удалены из всех отзывов, но сами отзывы не были удалены."
+
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:26
+#: plugin/Tinymce/SiteReviewsTinymce.php:61
+msgctxt "admin-text"
+msgid "Limit reviews to those assigned to a Post ID. You may also enter \"%s\" to use the Post ID of the current page."
+msgstr "Ограничить отзывы только теми, которые назначены на ID записи. Вы также можете ввести \"%s\", чтобы использовать ID записи текущей страницы."
+
+#: plugin/Tinymce/SiteReviewsSummaryTinymce.php:32
+#: plugin/Tinymce/SiteReviewsTinymce.php:67
+msgctxt "admin-text"
+msgid "Limit reviews to those assigned to a User ID. You may also enter \"%s\" to use the ID of the logged-in user."
+msgstr "Ограничить отзывы только теми, которые назначены на ID пользователя. Вы также можете ввести \"%s\", чтобы использовать ID вошедшего в систему пользователя."
+
+#: plugin/Commands/RepairPermissions.php:33
+msgctxt "admin-text"
+msgid "The permissions have been repaired."
+msgstr "Разрешения были восстановлены."
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:12
+msgctxt "All Posts (admin-text)"
+msgid "All Reviews"
+msgstr "Все отзывы"
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:14
+msgctxt "Edit Post (admin-text)"
+msgid "Edit Review"
+msgstr "Редактировать отзыв"
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:15
+msgctxt "Insert into Post (admin-text)"
+msgid "Insert into Review"
+msgstr "Вставить в отзыв"
+
+#: plugin/Integrations/Elementor/ElementorReviewsWidget.php:99
+#: plugin/Integrations/FusionBuilder/FusionLatestReviews.php:86
+#: plugin/Tinymce/SiteReviewsTinymce.php:48
+msgctxt "admin-text"
+msgid "No Pagination"
+msgstr "Без пагинации"
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:19
+msgctxt "No Posts found (admin-text)"
+msgid "No Reviews found"
+msgstr "Отзывов не найдено"
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:21
+msgctxt "Search Posts (admin-text)"
+msgid "Search Reviews"
+msgstr "Поиск отзывов"
+
+#: config/settings.php:420
+msgctxt "admin-text"
+msgid "Enable Paginated URLs"
+msgstr "Включить пагинацию URL-адресов"
+
+#: plugin/Modules/Validator/PermissionValidator.php:18
+msgid "You must be logged in to submit a review."
+msgstr "Чтобы оставить отзыв, вы должны войти."
+
+#: plugin/Modules/Validator/ReviewLimitsValidator.php:25
+msgid "You have already submitted a review."
+msgstr "Вы уже опубликовали отзыв."
+
+#: config/settings.php:772
+msgctxt "admin-text"
+msgid "One Email per line. All emails in the whitelist will be excluded from the review submission limit."
+msgstr "Один email на строку. Все сообщения электронной почты в белом списке будут исключены из лимита отправки отзыва."
+
+#: config/settings.php:783
+msgctxt "admin-text"
+msgid "One IP Address per line. All IP Addresses in the whitelist will be excluded from the review submission limit.."
+msgstr "По одному IP адресу на строку. Все IP адреса в белом списке будут исключены из лимита отправки отзыва."
+
+#: config/settings.php:794
+msgctxt "admin-text"
+msgid "One Username per line. All registered users with a Username in the whitelist will be excluded from the review submission limit."
+msgstr "По одному имени пользователя на строку.  Все зарегистрированные пользователи в белом списке будут исключены из лимита отправки отзыва."
+
+#: config/settings.php:1048
+msgctxt "admin-text"
+msgid "Choose which Blacklist you would prefer to use for reviews. The %s option can be found in the WordPress Discussion Settings page."
+msgstr "Выберите какой из Чёрных списков вы предпочитаете использовать для отзывов. Параметр %s находится на странице WordPress Настройки Обсуждения."
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_AdminView.php:270
+msgid "About"
+msgstr "О нас"
+
+#: plugin/Defaults/UpdatedMessageDefaults.php:15
+msgctxt "admin-text"
+msgid "Review has been reverted to its original submission state (title, content, and submission date)."
+msgstr "Отзыв был возвращен в исходное состояние отправки (название, содержимое и дата отправки)."
+
+#: config/settings.php:1061
+msgctxt "admin-text"
+msgid "One entry or IP address per line. When a review contains any of these entries in its title, content, name, email, or IP address, it will be rejected. It is case-insensitive and will match partial words, so \"press\" will match \"WordPress\"."
+msgstr "Одна запись или IP-адрес в строке. Если отзыв содержит любую из этих записей в названии, содержимое, имени, электронной почте или IP-адресе, он будет отклонен. Это нечувствительно к регистру и будет соответствовать частичным словам, поэтому \"press\" будет соответствовать \"WordPress\"."
+
+#: config/settings.php:402
+#: plugin/Integrations/UltimateMember/Controllers/ProfileController.php:64
+#: plugin/Modules/Html/ReviewsHtml.php:119
+msgid "There are no reviews yet. Be the first one to write one."
+msgstr "Отзывов ещё нет. Напишите первым."
+
+#: config/settings.php:406
+msgctxt "admin-text"
+msgid "Display the fallback text when there are no reviews to display. This can be changed on the %s page. You may also override this by using the \"fallback\" option on the shortcode."
+msgstr "Отображение резервного текста в случае отсутствия отзывов. Это можно изменить на странице %s. Вы также можете переопределить это, используя опцию \"fallback\" в шорткоде."
+
+#: plugin/Modules/Validator/AkismetValidator.php:41
+#: plugin/Modules/Validator/HoneypotValidator.php:20
+#: views/pages/documentation/support/common-problems-and-solutions.php:83
+msgid "This review has been flagged as possible spam and cannot be submitted."
+msgstr "Отзыв помечен как спам и не может быть отправлен."
+
+#: plugin/Modules/Rating.php:87
+msgid "%s Star"
+msgid_plural "%s Stars"
+msgstr[0] "%s звезда"
+msgstr[1] "%s звезды"
+msgstr[2] "%s звёзд"
+
+#: plugin/Router.php:210
+#: views/pages/documentation/support/common-problems-and-solutions.php:62
+msgid "The form could not be submitted. Please notify the site administrator."
+msgstr "Форму невозможно отправить. Пожалуйста, сообщите администратору сайта."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:21
+msgid "This field requires a number."
+msgstr "Следует указать число."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:20
+msgid "This field requires a minimum of %s characters."
+msgstr "Следует ввести как минимум %s символов."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:17
+msgid "This field allows a maximum of %s characters."
+msgstr "Поле позволяет ввести максимум %s символов."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:18
+msgid "Minimum value for this field is %s."
+msgstr "Наименьшее значение этого поля: %s."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:15
+msgid "Maximum value for this field is %s."
+msgstr "Наибольшее значение этого поля: %s."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:13
+msgid "This field requires a valid e-mail address."
+msgstr "Требуется действительный адрес эл.почты."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:12
+msgid "This field must have between %s and %s characters."
+msgstr "Значение должно быть в пределах от %s до %s символов."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:11
+msgid "This field value must be between %s and %s."
+msgstr "Значение должно быть в пределах от %s до %s."
+
+#: views/partials/editor/metabox-response.php:9
+msgctxt "admin-text"
+msgid "If you need to publicly respond to this review, enter your response here."
+msgstr "Если хотите публично ответить на этот отзыв – введите ваш ответ тут."
+
+#: plugin/Commands/EnqueueAdminAssets.php:23
+msgctxt "admin-text"
+msgid "You can pin exceptional reviews so that they are always shown first."
+msgstr "Вы можете закрепить исключительные отзывы, чтобы они всегда отображались первыми."
+
+#: config/settings.php:351
+msgctxt "admin-text"
+msgid "This will regenerate the avatar whenever a local review is shown."
+msgstr "При этом аватар будет обновляться каждый раз, когда будет показан местный отзыв."
+
+#: views/pages/documentation/index.php:6
+msgctxt "admin-text"
+msgid "Click an active tab to expand/collapse all sections."
+msgstr "Щёлкните на активной вкладке, чтобы развернуть/свернуть все разделы."
+
+#: config/settings.php:1028
+msgctxt "admin-text"
+msgid "The <a href=\"https://akismet.com\" target=\"_blank\">Akismet plugin</a> integration provides spam-filtering for your reviews. In order for this setting to have any affect, you will need to first install and activate the Akismet plugin and set up a WordPress.com API key."
+msgstr "Интеграция <a href=\"https://akismet.com\" target=\"_blank\">плагина Akismet</a> обеспечивает фильтрацию спама для ваших отзывов. Чтобы этот параметр имел какое-либо влияние, вам необходимо сначала установить и активировать плагин Akismet и настроить ключ API WordPress.com."
+
+#: plugin/Modules/Translation.php:103
+msgctxt "admin-text"
+msgid "This custom translation is no longer valid as the original text has been changed or removed."
+msgstr "Этот пользовательский перевод уже не действителен, поскольку исходный текст изменён либо удалён."
+
+#: plugin/Modules/Html/ReviewForm.php:16
+msgid "Submit Review"
+msgstr "Отправить отзыв"
+
+#: config/settings.php:155
+msgctxt "admin-text"
+msgid "Send to author of the page that the review is assigned to"
+msgstr "Отправить автору страницы к которой привязан отзыв"
+
+#. Description of the plugin
+#: site-reviews.php
+msgid "Receive and display reviews on your website"
+msgstr "Получайте и отображайте отзывы на Вашем сайте"
+
+#: config/settings.php:46
+msgctxt "admin-text"
+msgid "Site Reviews relies on the CSS of your theme to style the review form. If your theme does not provide proper CSS rules for form elements and you are using a WordPress plugin/theme or CSS Framework listed here, please try selecting it, otherwise choose \"Site Reviews (default)\"."
+msgstr "Site Reviews использует CSS вашей темы для оформления формы отзыва. Если ваша тема не обеспечивает надлежащих правил CSS для элементов формы и вы используете перечисленные здесь плагин/тему WordPress или CSS Framework, попробуйте выбрать их, в противном случае выберите \"Site Reviews (по умолчанию)\"."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:10
+msgid "This field must be accepted."
+msgstr "Необходимо принять это условие."
+
+#: plugin/Defaults/ValidationStringsDefaults.php:24
+msgid "This field is required."
+msgstr "Обязательное поле."
+
+#: config/settings.php:1073
+msgctxt "admin-text"
+msgid "Choose the action that should be taken when a review is blacklisted."
+msgstr "Выберите действие после попадания отзыва в черный список."
+
+#: plugin/Modules/Validator/BlacklistValidator.php:30
+#: views/pages/documentation/support/common-problems-and-solutions.php:77
+msgid "Your review cannot be submitted at this time."
+msgstr "В данный момент Ваш отзыв не может быть опубликован."
+
+#: plugin/Modules/Discord.php:90
+#: plugin/Modules/Html/Tags/ReviewAssignedLinksTag.php:21
+#: plugin/Modules/Html/Tags/ReviewAssignedPostsTag.php:20
+#: plugin/Modules/Html/Tags/ReviewAssignedTermsTag.php:18
+#: plugin/Modules/Html/Tags/ReviewAssignedUsersTag.php:29
+#: plugin/Modules/Slack.php:90
+msgid "Review of %s"
+msgstr "Отзыв из %s"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:95
+msgid "register"
+msgstr "регистрация"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:70
+msgid "You may also %s for an account."
+msgstr "Вы также можете %s для учетной записи."
+
+#: config/settings.php:117
+msgctxt "admin-text"
+msgid "Show a link for a new user to register. The %s Membership option must be enabled in General Settings for this to work."
+msgstr "Показать ссылку для регистрации нового пользователя. Чтобы это работало, параметр %s Membership должен быть включен в общих настройках."
+
+#: plugin/Modules/Validator/CustomValidator.php:21
+#: views/pages/documentation/support/common-problems-and-solutions.php:125
+msgid "The review submission failed. Please notify the site administrator."
+msgstr "Ошибка публикации отзыва. Пожалуйста, обратитесь к администратору сайта."
+
+#: plugin/Modules/Html/Tags/ReviewResponseTag.php:20
+#: views/pages/documentation/faq/change-response-name.php:11
+msgid "Response from %s"
+msgstr "Ответ из %s"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:92
+msgid "Delete"
+msgstr "Удалить"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:66
+msgid "You must be %s to submit a review."
+msgstr "Вы должны быть %s перед публикацией отзыва."
+
+#: plugin/Tinymce/SiteReviewsTinymce.php:41
+msgctxt "admin-text"
+msgid "What is the minimum rating to display (default: 1 star)?"
+msgstr "Какой минимальный рейтинг выводимых отзывов (по умолчанию: 1 звезда)?"
+
+#: plugin/Helpers/Text.php:165
+msgid "Show less"
+msgstr "Показать меньше"
+
+#: plugin/Blocks/SiteReviewsBlock.php:101 plugin/Helpers/Text.php:166
+msgid "Show more"
+msgstr "Показать больше"
+
+#: plugin/Shortcodes/SiteReviewsFormShortcode.php:60
+msgid "logged in"
+msgstr "вошёл"
+
+#: plugin/Modules/Html/Tags/SummaryTextTag.php:25
+msgctxt "Do not translate {rating}, {max}, and {num}, they are template tags."
+msgid "{rating} out of {max} stars (based on {num} review)"
+msgid_plural "{rating} out of {max} stars (based on {num} reviews)"
+msgstr[0] "{rating} из {max} звёзд (основано на {num} отзыве)"
+msgstr[1] "{rating} из {max} звёзд (основано на {num} отзывах)"
+msgstr[2] "{rating} из {max} звёзд (основано на {num} отзывах)"
+
+#: config/settings.php:234
+msgctxt "admin-text"
+msgid "The default date format is the one set in your %s."
+msgstr "По умолчанию используется формат даты, установленный в вашем %s."
+
+#: plugin/Tinymce/SiteReviewsTinymce.php:53
+msgctxt "admin-text"
+msgid "When using pagination this shortcode can only be used once on a page. (default: disable)"
+msgstr "При использовании пагинации этот шорткод может быть использован только один раз на странице. (по умолчанию: отключить)"
+
+#: config/settings.php:566
+msgctxt "admin-text"
+msgid "Use the featured image of the assigned or current page"
+msgstr "Используйте изображение записи назначенной или текущей страницы"
+
+#: plugin/Defaults/PaginationDefaults.php:42
+msgid "Next"
+msgstr "Следующий"
+
+#: plugin/Defaults/PaginationDefaults.php:43
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:124
+msgid "Count"
+msgstr "Количество"
+
+#: plugin/Tinymce/SiteReviewsTinymce.php:27
+msgctxt "admin-text"
+msgid "How many reviews would you like to display (default: 10)?"
+msgstr "Сколько отзывов вы хотите отобразить (по умолчанию: 10)?"
+
+#: plugin/Tinymce/SiteReviewsFormTinymce.php:29
+msgctxt "admin-text"
+msgid "Automatically assign a category to reviews submitted with this shortcode."
+msgstr "Автоматическое присвоение рубрики отзывам, представленным с помощью этого шорткода."
+
+#. Author of the plugin
+#: site-reviews.php
+msgid "Paul Ryley"
+msgstr "Paul Ryley"
+
+#. Plugin URI of the plugin
+#: site-reviews.php
+msgid "https://wordpress.org/plugins/site-reviews"
+msgstr "https://wordpress.org/plugins/site-reviews"
+
+#: plugin/Modules/Discord.php:144 plugin/Modules/Html/TemplateTags.php:184
+#: plugin/Modules/Slack.php:164
+msgid "Edit Review"
+msgstr "Изменить отзыв"
+
+#. Author URI of the plugin
+#: site-reviews.php
+msgid "https://geminilabs.io"
+msgstr "https://geminilabs.io"
+
+#: plugin/Shortcodes/Shortcode.php:215
+msgid "Poor"
+msgstr "Плохо"
+
+#: plugin/Shortcodes/Shortcode.php:213
+msgid "Very good"
+msgstr "Очень хорошо"
+
+#: plugin/Shortcodes/Shortcode.php:216
+msgid "Terrible"
+msgstr "Ужасно"
+
+#: plugin/Shortcodes/Shortcode.php:212
+msgid "Excellent"
+msgstr "Отлично"
+
+#: vendors/woocommerce/action-scheduler/classes/ActionScheduler_ListTable.php:133
+msgid "Cancel"
+msgstr "Отмена"
+
+#: vendors/woocommerce/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:39
+msgid "Edit"
+msgstr "Изменить"
+
+#: config/forms/review-form.php:21
+msgid "Tell us your name"
+msgstr "Ваше имя"
+
+#: config/forms/review-form.php:15
+msgid "Tell people your review"
+msgstr "Ваш отзыв"
+
+#: config/forms/review-form.php:25
+msgid "Your email"
+msgstr "Ваша эл.почта"
+
+#: config/forms/review-form.php:20
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: config/forms/review-form.php:14 plugin/Modules/Honeypot.php:15
+msgid "Your review"
+msgstr "Ваш отзыв"
+
+#: plugin/Modules/Html/FieldElements/YesNo.php:23
+msgid "Yes"
+msgstr "Да"
+
+#: plugin/Modules/Html/FieldElements/YesNo.php:22
+msgid "No"
+msgstr "Нет"
+
+#: plugin/Modules/Html/Tags/ReviewTitleTag.php:17
+msgid "No Title"
+msgstr "Нет заголовка"
+
+#: plugin/Integrations/UltimateMember/Controllers/ProfileController.php:41
+#: templates/woocommerce/reviews.php:11
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: plugin/Commands/CreateReview.php:171
+msgid "Your review has been submitted!"
+msgstr "Ваш отзыв отправлен!"
+
+#: config/forms/review-form.php:10
+msgid "Summarize your review or highlight an interesting detail"
+msgstr "Подведите итог Вашего отзыва или выделите его особенности"
+
+#: config/forms/review-form.php:30
+msgid "This review is based on my own experience and is my genuine opinion."
+msgstr "Этот отзыв основан на моём опыте и выражает моё личное мнение."
+
+#: config/forms/review-form.php:5
+msgid "Your overall rating"
+msgstr "Ваша общая оценка"
+
+#. Plugin Name of the plugin
+#: site-reviews.php
+msgid "Site Reviews"
+msgstr "Site Reviews"
+
+#: plugin/Modules/Notification.php:124
+msgid "New %s-star review"
+msgstr "Новый отзыв с оценкой %s-звезда"
+
+#: plugin/Defaults/ValidationStringsDefaults.php:14
+msgid "Please fix the submission errors."
+msgstr "Исправьте ошибки при отправке."
+
+#: plugin/Shortcodes/Shortcode.php:214
+msgid "Average"
+msgstr "Средне"
+
+#: config/forms/review-form.php:26
+msgid "Tell us your email"
+msgstr "Ваш email"
+
+#: plugin/Modules/Avatar.php:80 plugin/Review.php:156
+msgid "Anonymous"
+msgstr "Аноним"
+
+#: config/settings.php:74
+msgctxt "admin-text"
+msgid "This will set the status of new review submissions to \"unapproved\"."
+msgstr "Это установит статус новых отправленных отзывов на \"Не одобрен\"."
+
+#: plugin/Defaults/PaginationDefaults.php:37
+msgid "Page"
+msgstr "Страница"
+
+#: config/forms/review-form.php:9
+msgid "Title of your review"
+msgstr "Заголовок вашего отзыва"
+
+#: plugin/Commands/EnqueuePublicAssets.php:69
+#: plugin/Modules/Html/FieldElements/Rating.php:15
+msgid "Select a Rating"
+msgstr "Выбрать рейтинг"
