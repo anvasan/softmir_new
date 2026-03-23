@@ -1,9 +1,9 @@
 <?php
 // Partnership CTA Module — "Есть готовый софт?"
-$title_line1 = 'Есть готовый софт?';
-$title_line2 = 'Мы найдём для него клиентов.';
-$subtitle = 'Разместите ваш продукт в нашем каталоге и получите доступ к тысячам потенциальных клиентов, которые уже ищут решения.';
-$btn_text = 'Обсудить сотрудничество';
+$title_line1 = __('Есть готовый софт?', 'softmir');
+$title_line2 = __('Мы найдём для него клиентов.', 'softmir');
+$subtitle = __('Разместите ваш продукт в нашем каталоге и получите доступ к тысячам потенциальных клиентов, которые уже ищут решения.', 'softmir');
+$btn_text = __('Обсудить сотрудничество', 'softmir');
 $btn_link = home_url('/contacts/');
 ?>
 <section class="section partnership-section">
@@ -16,29 +16,29 @@ $btn_link = home_url('/contacts/');
                 <div class="partnership-float-card card-1">
                     <div class="pfc-logo">💼</div>
                     <div class="pfc-info">
-                        <div class="pfc-name">Ваш продукт</div>
+                        <div class="pfc-name"><?php esc_html_e('Ваш продукт', 'softmir'); ?></div>
                         <div class="pfc-stars">★★★★★ <span>5.0</span></div>
                     </div>
                 </div>
                 <div class="partnership-float-card card-2">
                     <div class="pfc-logo">📊</div>
                     <div class="pfc-info">
-                        <div class="pfc-name">CRM система</div>
+                        <div class="pfc-name"><?php esc_html_e('CRM система', 'softmir'); ?></div>
                         <div class="pfc-stars">★★★★☆ <span>4.5</span></div>
                     </div>
                 </div>
                 <div class="partnership-float-card card-3">
                     <div class="pfc-logo">🚀</div>
                     <div class="pfc-info">
-                        <div class="pfc-name">SaaS платформа</div>
+                        <div class="pfc-name"><?php esc_html_e('SaaS платформа', 'softmir'); ?></div>
                         <div class="pfc-stars">★★★★★ <span>4.8</span></div>
                     </div>
                 </div>
                 <!-- Avatars -->
                 <div class="partnership-avatars">
-                    <span class="p-avatar" style="background: #6366f1;">АК</span>
-                    <span class="p-avatar" style="background: #10b981;">МП</span>
-                    <span class="p-avatar" style="background: #f59e0b;">ДС</span>
+                    <span class="p-avatar">АК</span>
+                    <span class="p-avatar">МП</span>
+                    <span class="p-avatar">ДС</span>
                 </div>
             </div>
             <!-- Right: text + button -->

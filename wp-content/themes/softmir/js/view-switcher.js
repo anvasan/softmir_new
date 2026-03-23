@@ -10,7 +10,7 @@
     if (!wrapper || !buttons.length) return;
 
     // Restore saved view
-    const saved = localStorage.getItem(STORAGE_KEY) || 'grid';
+    const saved = localStorage.getItem(STORAGE_KEY) || 'list';
     setView(saved);
 
     // Button click handlers

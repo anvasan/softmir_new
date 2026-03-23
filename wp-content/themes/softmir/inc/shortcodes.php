@@ -14,17 +14,17 @@ function softmir_sc_categories($atts)
 {
     $atts = shortcode_atts([
         'count' => 15,
-        'title' => 'Категории программного обеспечения',
-        'view_all_text' => 'Посмотреть все',
+        'title' => __('Категории программного обеспечения', 'softmir'),
+        'view_all_text' => __('Посмотреть все', 'softmir'),
         'view_all_link' => get_post_type_archive_link('software'), // Default to archive
     ], $atts);
 
     // Get categories
-    $terms = get_terms([
+    $terms = softmir_pll_get_terms([
         'taxonomy' => 'software_category',
         'hide_empty' => false,
         'number' => intval($atts['count']),
-        'parent' => 0, // Top level only
+        'parent' => 0,
     ]);
 
     if (empty($terms) || is_wp_error($terms)) {
@@ -33,10 +33,10 @@ function softmir_sc_categories($atts)
 
     ob_start();
 ?>
-    <section class="home-categories alignfull" style="padding: 3rem 0; background: #fff;">
+    <section class="home-categories alignfull">
         <div class="container">
             <div class="categories-header">
-                <h2 class="section-title" style="margin: 0; font-size: 1.75rem;"><?php echo esc_html($atts['title']); ?></h2>
+                <h2 class="section-title mb-0"><?php echo esc_html($atts['title']); ?></h2>
                 <?php if ($atts['view_all_text']): ?>
                     <a href="<?php echo esc_url($atts['view_all_link']); ?>" class="btn-view-all">
                         <?php echo esc_html($atts['view_all_text']); ?> ≡
@@ -64,95 +64,6 @@ function softmir_sc_categories($atts)
         </div>
     </section>
 
-    <style>
-        .categories-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .btn-view-all {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--brand, #0ea5e9);
-            border: 1px solid var(--brand, #0ea5e9);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-
-        .btn-view-all:hover {
-            background: var(--brand, #0ea5e9);
-            color: #fff;
-        }
-
-        .categories-list-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-
-        @media (min-width: 640px) {
-            .categories-list-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .categories-list-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .cat-list-card {
-            display: flex;
-            align-items: center; /* Center arrow vertically */
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 1rem;
-            text-decoration: none;
-            color: #334155;
-            transition: all 0.2s;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-
-        .cat-list-card:hover {
-            border-color: var(--brand, #0ea5e9);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px);
-            color: #0f172a;
-        }
-
-        .cat-arrow {
-            color: var(--brand, #0ea5e9);
-            font-size: 0.7rem;
-            margin-right: 0.75rem;
-            flex-shrink: 0; /* Prevent arrow from shrinking */
-        }
-        
-        .cat-name-wrap {
-            display: block;
-        }
-
-        .cat-name {
-            font-weight: 600;
-        }
-
-        .cat-count-simple {
-            color: #64748b;
-            margin-left: 0.25rem;
-            font-weight: 400;
-        }
-    </style>
     <?php
     return ob_get_clean();
 }
@@ -187,7 +98,8 @@ function softmir_sc_popular_products($atts)
             ],
             // Order by Featured/Pinned first, then Rating/Date
             'orderby' => 'date',
-            'order' => 'DESC'
+            'order' => 'DESC',
+            'lang' => '',
         ];
 
         $products = new WP_Query($query_args);
@@ -212,7 +124,7 @@ function softmir_sc_popular_products($atts)
 
     // MODE 2: Tabs (Default) - Only if no category specified
     // Get 4 most populated categories for tabs
-    $categories = get_terms([
+    $categories = softmir_pll_get_terms([
         'taxonomy' => 'software_category',
         'hide_empty' => true,
         'number' => 4,
@@ -226,10 +138,10 @@ function softmir_sc_popular_products($atts)
 
     ob_start();
 ?>
-    <section class="home-popular alignfull" style="padding: 4rem 0;">
+    <section class="home-popular alignfull">
         <div class="container">
             <?php if ($atts['title']): ?>
-                <div class="section-header text-center" style="margin-bottom: 2rem;">
+                <div class="section-header text-center">
                     <h2 class="section-title"><?php echo esc_html($atts['title']); ?></h2>
                 </div>
             <?php
@@ -254,6 +166,7 @@ function softmir_sc_popular_products($atts)
         $products = new WP_Query([
             'post_type' => 'software',
             'posts_per_page' => $atts['count'],
+            'lang' => '',
             'tax_query' => [
                 [
                     'taxonomy' => 'software_category',
@@ -274,14 +187,14 @@ function softmir_sc_popular_products($atts)
                 get_template_part('template-parts/card', 'software-horizontal');
             endwhile; ?>
                                 </div>
-                                <div class="tab-footer text-center" style="margin-top: 2rem;">
+                                <div class="tab-footer text-center mt-section">
                                     <a href="<?php echo get_term_link($cat); ?>" class="btn btn-outline">
-                                        Показать все в <?php echo esc_html($cat->name); ?>
+                                        <?php printf(esc_html__('Показать все в %s', 'softmir'), esc_html($cat->name)); ?>
                                     </a>
                                 </div>
                             <?php
         else: ?>
-                                <p class="text-center">В этой категории пока нет программ.</p>
+                                <p class="text-center"><?php esc_html_e('В этой категории пока нет программ.', 'softmir'); ?></p>
                             <?php
         endif;
         wp_reset_postdata(); ?>
@@ -293,58 +206,6 @@ function softmir_sc_popular_products($atts)
         </div>
     </section>
     
-    <style>
-        .popular-tabs-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .tab-btn {
-            background: none;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.2s;
-            background: #f5f5f7;
-        }
-        
-        .tab-btn.active, .tab-btn:hover {
-            background: var(--primary-color, #007bff);
-            color: #fff;
-            transform: translateY(-2px);
-        }
-        
-        .tab-pane {
-            display: none;
-        }
-        
-        .tab-pane.active {
-            display: block;
-        }
-        
-        /* Fade animation */
-        .fade-in {
-            animation: fadeIn 0.4s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Ensure horizontal cards look good in grid/list */
-        .software-grid {
-             display: flex;
-             flex-direction: column;
-             gap: 1.5rem;
-        }
-    </style>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {

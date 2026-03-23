@@ -1,14 +1,36 @@
 <?php
 // Popular Products Module — reads selected categories from ACF, fallback to top by count
-$title = '🔥 Популярные подборки';
+$title = '🔥 ' . __('Популярные подборки', 'softmir');
+// Always read popular categories from the default language front page
+// so all translations show the same set of categories
+$default_lang = function_exists('pll_default_language') ? pll_default_language() : '';
+$current_lang = function_exists('pll_current_language') ? pll_current_language() : '';
 $page_id = get_option('page_on_front');
 
-// 1. Try ACF field (admin picks categories)
+// Get the default-language front page ID
+if ($default_lang && function_exists('pll_get_post')) {
+    $default_page_id = pll_get_post($page_id, $default_lang);
+    if ($default_page_id) {
+        $page_id = $default_page_id;
+    }
+}
+
+// 1. Try ACF field from the default language front page
 $selected = get_field('popular_categories', $page_id);
+
+// Translate term IDs to the current language
+if (!empty($selected) && is_array($selected) && $current_lang && $current_lang !== $default_lang && function_exists('pll_get_term')) {
+    $translated_selected = [];
+    foreach ($selected as $cat_id) {
+        $trans_id = pll_get_term($cat_id, $current_lang);
+        $translated_selected[] = $trans_id ?: $cat_id;
+    }
+    $selected = $translated_selected;
+}
 
 // 2. Fallback: top 4 categories by post count
 if (empty($selected) || !is_array($selected)) {
-    $top_cats = get_terms([
+    $top_cats = softmir_pll_get_terms([
         'taxonomy' => 'software_category',
         'hide_empty' => true,
         'number' => 4,
@@ -29,7 +51,7 @@ if ($selected):
 ?>
 <section class="section">
     <div class="container">
-        <h2 class="section-title" style="margin-bottom: 2rem;"><?php echo esc_html($title); ?></h2>
+        <h2 class="section-title mt-section"><?php echo esc_html($title); ?></h2>
         
         <div class="popular-tabs-layout">
             <!-- Menu -->
@@ -44,7 +66,7 @@ if ($selected):
                         <span class="tab-icon"><?php echo esc_html($icons[$index % 6]); ?></span>
                         <span class="tab-info">
                             <span class="tab-name"><?php echo esc_html($term->name); ?></span>
-                            <span class="tab-count"><?php echo $term->count; ?> решений</span>
+                            <span class="tab-count"><?php echo $term->count; ?> <?php esc_html_e('решений', 'softmir'); ?></span>
                         </span>
                     </div>
                 <?php
@@ -62,6 +84,7 @@ if ($selected):
         $products = new WP_Query([
             'post_type' => 'software',
             'posts_per_page' => 6,
+            'lang' => '',
             'tax_query' => [['taxonomy' => 'software_category', 'field' => 'term_id', 'terms' => $cat_id]],
             'orderby' => 'date',
             'order' => 'DESC',
@@ -70,7 +93,7 @@ if ($selected):
                     <div id="tab-<?php echo esc_attr($index); ?>" class="popular-tab-content <?php echo $active; ?>">
                         <div class="tab-header-mobile">
                             <h3><?php echo esc_html($term->name); ?></h3>
-                            <a href="<?php echo esc_url(add_query_arg('sw_cat', $term->term_id, get_post_type_archive_link('software'))); ?>">Смотреть все</a>
+                            <a href="<?php echo esc_url(add_query_arg('sw_cat', $term->term_id, get_post_type_archive_link('software'))); ?>"><?php esc_html_e('Смотреть все', 'softmir'); ?></a>
                         </div>
                         <?php if ($products->have_posts()): ?>
                             <div class="software-grid-horizontal">
@@ -82,14 +105,14 @@ if ($selected):
                             </div>
                             <div class="tab-footer-action">
                                 <a href="<?php echo esc_url(add_query_arg('sw_cat', $term->term_id, get_post_type_archive_link('software'))); ?>" class="btn btn-light btn-block-mobile">
-                                    Смотреть все предложения в категории «<?php echo esc_html($term->name); ?>» →
+                                    <?php printf(esc_html__('Смотреть все предложения в категории «%s»', 'softmir'), esc_html($term->name)); ?> →
                                 </a>
                             </div>
                         <?php
         else: ?>
-                            <div class="empty-state" style="text-align: center; padding: 3rem;">
-                                <div class="empty-icon" style="font-size: 3rem;">📭</div>
-                                <p>В этой категории пока нет продуктов.</p>
+                            <div class="empty-state">
+                                <div class="empty-state__icon">📭</div>
+                                <p><?php esc_html_e('В этой категории пока нет продуктов.', 'softmir'); ?></p>
                             </div>
                         <?php
         endif; ?>

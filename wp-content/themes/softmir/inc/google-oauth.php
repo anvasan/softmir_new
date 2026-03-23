@@ -44,7 +44,7 @@ function softmir_handle_google_callback()
 
     // Handle user cancellation
     if ($error) {
-        softmir_flash_set('warning', 'Вход через Google отменён.');
+        softmir_flash_set('warning', __('Вход через Google отменён.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -56,13 +56,13 @@ function softmir_handle_google_callback()
     unset($_SESSION['softmir_google_state']);
 
     if (empty($state) || $state !== $stored_state) {
-        softmir_flash_set('error', 'Ошибка безопасности OAuth. Попробуйте снова.');
+        softmir_flash_set('error', __('Ошибка безопасности OAuth. Попробуйте снова.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
 
     if (empty($code)) {
-        softmir_flash_set('error', 'Ошибка авторизации Google.');
+        softmir_flash_set('error', __('Ошибка авторизации Google.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -84,7 +84,7 @@ function softmir_handle_google_callback()
     ]);
 
     if (is_wp_error($token_response)) {
-        softmir_flash_set('error', 'Ошибка связи с Google. Попробуйте позже.');
+        softmir_flash_set('error', __('Ошибка связи с Google. Попробуйте позже.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -92,7 +92,7 @@ function softmir_handle_google_callback()
     $token_data = json_decode(wp_remote_retrieve_body($token_response), true);
 
     if (empty($token_data['access_token'])) {
-        softmir_flash_set('error', 'Ошибка получения токена Google.');
+        softmir_flash_set('error', __('Ошибка получения токена Google.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -106,7 +106,7 @@ function softmir_handle_google_callback()
     ]);
 
     if (is_wp_error($profile_response)) {
-        softmir_flash_set('error', 'Ошибка получения профиля Google.');
+        softmir_flash_set('error', __('Ошибка получения профиля Google.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -114,7 +114,7 @@ function softmir_handle_google_callback()
     $profile = json_decode(wp_remote_retrieve_body($profile_response), true);
 
     if (empty($profile['email'])) {
-        softmir_flash_set('error', 'Не удалось получить email от Google.');
+        softmir_flash_set('error', __('Не удалось получить email от Google.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -163,7 +163,7 @@ function softmir_handle_google_callback()
     $user_id = wp_create_user($username, $random_password, $google_email);
 
     if (is_wp_error($user_id)) {
-        softmir_flash_set('error', 'Ошибка создания аккаунта: ' . $user_id->get_error_message());
+        softmir_flash_set('error', sprintf(__('Ошибка создания аккаунта: %s', 'softmir'), $user_id->get_error_message()));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -194,7 +194,7 @@ function softmir_google_login_user($user, $avatar_url = '')
     wp_set_auth_cookie($user->ID, true);
     do_action('wp_login', $user->user_login, $user);
 
-    softmir_flash_set('success', 'Добро пожаловать, ' . esc_html($user->display_name) . '!');
+    softmir_flash_set('success', sprintf(__('Добро пожаловать, %s!', 'softmir'), esc_html($user->display_name)));
     wp_redirect(home_url('/profile/'));
     exit;
 }

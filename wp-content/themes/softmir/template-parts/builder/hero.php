@@ -1,9 +1,9 @@
 <?php
 // Hero Module — uses ACF page fields (registered in acf-home-options.php)
 $page_id = get_option('page_on_front');
-$title = get_field('home_header_title', $page_id) ?: 'Найдите идеальное ПО для вашего бизнеса';
-$text = get_field('home_header_subtitle', $page_id) ?: 'Каталог проверенных CRM-систем, инструментов управления проектами и решений для e-commerce.';
-$btn_text = get_field('home_header_btn_text', $page_id) ?: 'Перейти в каталог';
+$title = get_field('home_header_title', $page_id) ?: __('Найдите идеальное ПО для вашего бизнеса', 'softmir');
+$text = get_field('home_header_subtitle', $page_id) ?: __('Каталог проверенных CRM-систем, инструментов управления проектами и решений для e-commerce.', 'softmir');
+$btn_text = get_field('home_header_btn_text', $page_id) ?: __('Перейти в каталог', 'softmir');
 $btn_link = get_field('home_header_btn_url', $page_id) ?: get_post_type_archive_link('software');
 ?>
 <section class="hero">
@@ -13,7 +13,7 @@ $btn_link = get_field('home_header_btn_url', $page_id) ?: get_post_type_archive_
                 <h1><?php echo wp_kses_post($title); ?></h1>
                 <p><?php echo esc_html($text); ?></p>
                 <?php if ($btn_link): ?>
-                    <a href="<?php echo esc_url($btn_link); ?>" class="btn btn-primary" style="padding: 0.875rem 2rem; font-size: 1rem; box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);">
+                    <a href="<?php echo esc_url($btn_link); ?>" class="btn btn-primary hero-btn-cta">
                         <?php echo esc_html($btn_text); ?> →
                     </a>
                 <?php

@@ -9,7 +9,7 @@ function softmir_register_custom_roles()
 {
     // Add vendor role for integrators
     if (!get_role('vendor')) {
-        add_role('vendor', 'Интегратор (Vendor)', [
+        add_role('vendor', __('Интегратор (Vendor)', 'softmir'), [
             'read' => true,
             'edit_posts' => true,
             'upload_files' => true,
@@ -67,10 +67,10 @@ add_action('init', 'softmir_start_session', 1);
 function softmir_create_auth_pages()
 {
     $pages = [
-        'login' => ['title' => 'Вход', 'template' => 'page-login.php'],
-        'register' => ['title' => 'Регистрация', 'template' => 'page-register.php'],
-        'profile' => ['title' => 'Личный кабинет', 'template' => 'page-profile.php'],
-        'reset-password' => ['title' => 'Сброс пароля', 'template' => 'page-reset-password.php'],
+        'login' => ['title' => __('Вход', 'softmir'), 'template' => 'page-login.php'],
+        'register' => ['title' => __('Регистрация', 'softmir'), 'template' => 'page-register.php'],
+        'profile' => ['title' => __('Личный кабинет', 'softmir'), 'template' => 'page-profile.php'],
+        'reset-password' => ['title' => __('Сброс пароля', 'softmir'), 'template' => 'page-reset-password.php'],
     ];
 
     foreach ($pages as $slug => $data) {
@@ -119,7 +119,7 @@ function softmir_redirect_guests()
     if (is_user_logged_in())
         return;
     if (is_page('profile')) {
-        softmir_flash_set('warning', 'Пожалуйста, войдите в систему.');
+        softmir_flash_set('warning', __('Пожалуйста, войдите в систему.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -132,7 +132,7 @@ function softmir_handle_register()
     if (!isset($_POST['softmir_register_nonce']))
         return;
     if (!wp_verify_nonce($_POST['softmir_register_nonce'], 'softmir_register')) {
-        softmir_flash_set('error', 'Ошибка безопасности. Попробуйте снова.');
+        softmir_flash_set('error', __('Ошибка безопасности. Попробуйте снова.', 'softmir'));
         wp_redirect(home_url('/register/'));
         exit;
     }
@@ -145,43 +145,43 @@ function softmir_handle_register()
 
     // Validate
     if (empty($username) || empty($email) || empty($password)) {
-        softmir_flash_set('error', 'Все поля обязательны для заполнения.');
+        softmir_flash_set('error', __('Все поля обязательны для заполнения.', 'softmir'));
         wp_redirect(home_url('/register/'));
         exit;
     }
 
     if (strlen($username) < 3) {
-        softmir_flash_set('error', 'Имя пользователя должно содержать минимум 3 символа.');
+        softmir_flash_set('error', __('Имя пользователя должно содержать минимум 3 символа.', 'softmir'));
         wp_redirect(home_url('/register/'));
         exit;
     }
 
     if (!is_email($email)) {
-        softmir_flash_set('error', 'Введите корректный email адрес.');
+        softmir_flash_set('error', __('Введите корректный email адрес.', 'softmir'));
         wp_redirect(home_url('/register/'));
         exit;
     }
 
     if (strlen($password) < 8) {
-        softmir_flash_set('error', 'Пароль должен содержать минимум 8 символов.');
+        softmir_flash_set('error', __('Пароль должен содержать минимум 8 символов.', 'softmir'));
         wp_redirect(home_url('/register/'));
         exit;
     }
 
     if ($password !== $password2) {
-        softmir_flash_set('error', 'Пароли не совпадают.');
+        softmir_flash_set('error', __('Пароли не совпадают.', 'softmir'));
         wp_redirect(home_url('/register/'));
         exit;
     }
 
     if (username_exists($username)) {
-        softmir_flash_set('error', 'Это имя пользователя уже занято.');
+        softmir_flash_set('error', __('Это имя пользователя уже занято.', 'softmir'));
         wp_redirect(home_url('/register/'));
         exit;
     }
 
     if (email_exists($email)) {
-        softmir_flash_set('error', 'Этот email уже зарегистрирован.');
+        softmir_flash_set('error', __('Этот email уже зарегистрирован.', 'softmir'));
         wp_redirect(home_url('/register/'));
         exit;
     }
@@ -219,7 +219,7 @@ function softmir_handle_register()
     // Send verification email
     softmir_send_verification_email($user_id, $email, $token);
 
-    softmir_flash_set('success', 'Регистрация успешна! Проверьте вашу почту для подтверждения email.');
+    softmir_flash_set('success', __('Регистрация успешна! Проверьте вашу почту для подтверждения email.', 'softmir'));
     wp_redirect(home_url('/login/'));
     exit;
 }
@@ -231,7 +231,7 @@ function softmir_handle_login()
     if (!isset($_POST['softmir_login_nonce']))
         return;
     if (!wp_verify_nonce($_POST['softmir_login_nonce'], 'softmir_login')) {
-        softmir_flash_set('error', 'Ошибка безопасности. Попробуйте снова.');
+        softmir_flash_set('error', __('Ошибка безопасности. Попробуйте снова.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -241,7 +241,7 @@ function softmir_handle_login()
     $remember = !empty($_POST['remember']);
 
     if (empty($login) || empty($password)) {
-        softmir_flash_set('error', 'Заполните все поля.');
+        softmir_flash_set('error', __('Заполните все поля.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -255,7 +255,7 @@ function softmir_handle_login()
     }
 
     if (!$user || !wp_check_password($password, $user->data->user_pass, $user->ID)) {
-        softmir_flash_set('error', 'Неверный логин или пароль.');
+        softmir_flash_set('error', __('Неверный логин или пароль.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -266,7 +266,7 @@ function softmir_handle_login()
         // Check if user registered via Google (auto-verified)
         $google_id = get_user_meta($user->ID, 'softmir_google_id', true);
         if (!$google_id) {
-            softmir_flash_set('warning', 'Пожалуйста, подтвердите ваш email. <a href="' . esc_url(home_url('/login/?resend_verification=' . $user->ID)) . '">Отправить повторно</a>');
+            softmir_flash_set('warning', __('Пожалуйста, подтвердите ваш email.', 'softmir') . ' <a href="' . esc_url(home_url('/login/?resend_verification=' . $user->ID)) . '">' . __('Отправить повторно', 'softmir') . '</a>');
             wp_redirect(home_url('/login/'));
             exit;
         }
@@ -277,7 +277,7 @@ function softmir_handle_login()
     wp_set_auth_cookie($user->ID, $remember);
     do_action('wp_login', $user->user_login, $user);
 
-    softmir_flash_set('success', 'Добро пожаловать, ' . esc_html($user->display_name) . '!');
+    softmir_flash_set('success', sprintf(__('Добро пожаловать, %s!', 'softmir'), esc_html($user->display_name)));
     wp_redirect(home_url('/profile/'));
     exit;
 }
@@ -293,7 +293,7 @@ function softmir_handle_logout()
         exit;
     }
     wp_logout();
-    softmir_flash_set('success', 'Вы успешно вышли из системы.');
+    softmir_flash_set('success', __('Вы успешно вышли из системы.', 'softmir'));
     wp_redirect(home_url('/'));
     exit;
 }
@@ -308,7 +308,7 @@ function softmir_send_verification_email($user_id, $email, $token)
     ], home_url('/'));
 
     $site_name = get_bloginfo('name');
-    $subject = "[$site_name] Подтвердите ваш email";
+    $subject = sprintf(__('[%s] Подтвердите ваш email', 'softmir'), $site_name);
     $message = softmir_get_email_template('verify', [
         'site_name' => $site_name,
         'verify_url' => $verify_url,
@@ -328,7 +328,7 @@ function softmir_handle_email_verification()
     $user_id = intval($_GET['user_id'] ?? 0);
 
     if (!$user_id || !$token) {
-        softmir_flash_set('error', 'Неверная ссылка подтверждения.');
+        softmir_flash_set('error', __('Неверная ссылка подтверждения.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -337,14 +337,14 @@ function softmir_handle_email_verification()
     $token_time = get_user_meta($user_id, 'softmir_email_token_time', true);
 
     if ($token !== $stored_token) {
-        softmir_flash_set('error', 'Неверный или устаревший токен подтверждения.');
+        softmir_flash_set('error', __('Неверный или устаревший токен подтверждения.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
 
     // Check token expiry (24 hours)
     if (time() - intval($token_time) > 86400) {
-        softmir_flash_set('error', 'Ссылка подтверждения истекла. Запросите новую.');
+        softmir_flash_set('error', __('Ссылка подтверждения истекла. Запросите новую.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -354,7 +354,7 @@ function softmir_handle_email_verification()
     delete_user_meta($user_id, 'softmir_email_token');
     delete_user_meta($user_id, 'softmir_email_token_time');
 
-    softmir_flash_set('success', 'Email подтверждён! Теперь вы можете войти.');
+    softmir_flash_set('success', __('Email подтверждён! Теперь вы можете войти.', 'softmir'));
     wp_redirect(home_url('/login/'));
     exit;
 }
@@ -370,14 +370,14 @@ function softmir_handle_resend_verification()
     $user = get_userdata($user_id);
 
     if (!$user) {
-        softmir_flash_set('error', 'Пользователь не найден.');
+        softmir_flash_set('error', __('Пользователь не найден.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
 
     $verified = get_user_meta($user_id, 'softmir_email_verified', true);
     if ($verified && $verified !== 'false') {
-        softmir_flash_set('info', 'Email уже подтверждён.');
+        softmir_flash_set('info', __('Email уже подтверждён.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -385,7 +385,7 @@ function softmir_handle_resend_verification()
     // Rate limit: 1 resend per 2 minutes
     $last_sent = get_user_meta($user_id, 'softmir_email_token_time', true);
     if ($last_sent && (time() - intval($last_sent)) < 120) {
-        softmir_flash_set('warning', 'Подождите 2 минуты перед повторной отправкой.');
+        softmir_flash_set('warning', __('Подождите 2 минуты перед повторной отправкой.', 'softmir'));
         wp_redirect(home_url('/login/'));
         exit;
     }
@@ -396,7 +396,7 @@ function softmir_handle_resend_verification()
 
     softmir_send_verification_email($user_id, $user->user_email, $token);
 
-    softmir_flash_set('success', 'Письмо с подтверждением отправлено повторно.');
+    softmir_flash_set('success', __('Письмо с подтверждением отправлено повторно.', 'softmir'));
     wp_redirect(home_url('/login/'));
     exit;
 }
@@ -408,14 +408,14 @@ function softmir_handle_reset_request()
     if (!isset($_POST['softmir_reset_request_nonce']))
         return;
     if (!wp_verify_nonce($_POST['softmir_reset_request_nonce'], 'softmir_reset_request')) {
-        softmir_flash_set('error', 'Ошибка безопасности.');
+        softmir_flash_set('error', __('Ошибка безопасности.', 'softmir'));
         wp_redirect(home_url('/reset-password/'));
         exit;
     }
 
     $email = sanitize_email(trim($_POST['email'] ?? ''));
     if (empty($email) || !is_email($email)) {
-        softmir_flash_set('error', 'Введите корректный email.');
+        softmir_flash_set('error', __('Введите корректный email.', 'softmir'));
         wp_redirect(home_url('/reset-password/'));
         exit;
     }
@@ -424,7 +424,7 @@ function softmir_handle_reset_request()
 
     // Always show success to prevent email enumeration
     if (!$user) {
-        softmir_flash_set('success', 'Если аккаунт с таким email существует, вы получите письмо со ссылкой для сброса пароля.');
+        softmir_flash_set('success', __('Если аккаунт с таким email существует, вы получите письмо со ссылкой для сброса пароля.', 'softmir'));
         wp_redirect(home_url('/reset-password/'));
         exit;
     }
@@ -441,7 +441,7 @@ function softmir_handle_reset_request()
     ], home_url('/reset-password/'));
 
     $site_name = get_bloginfo('name');
-    $subject = "[$site_name] Сброс пароля";
+    $subject = sprintf(__('[%s] Сброс пароля', 'softmir'), $site_name);
     $message = softmir_get_email_template('reset', [
         'site_name' => $site_name,
         'reset_url' => $reset_url,
@@ -451,7 +451,7 @@ function softmir_handle_reset_request()
     $headers = ['Content-Type: text/html; charset=UTF-8'];
     wp_mail($email, $subject, $message, $headers);
 
-    softmir_flash_set('success', 'Если аккаунт с таким email существует, вы получите письмо со ссылкой для сброса пароля.');
+    softmir_flash_set('success', __('Если аккаунт с таким email существует, вы получите письмо со ссылкой для сброса пароля.', 'softmir'));
     wp_redirect(home_url('/reset-password/'));
     exit;
 }
@@ -463,7 +463,7 @@ function softmir_handle_reset_password()
     if (!isset($_POST['softmir_reset_password_nonce']))
         return;
     if (!wp_verify_nonce($_POST['softmir_reset_password_nonce'], 'softmir_reset_password')) {
-        softmir_flash_set('error', 'Ошибка безопасности.');
+        softmir_flash_set('error', __('Ошибка безопасности.', 'softmir'));
         wp_redirect(home_url('/reset-password/'));
         exit;
     }
@@ -474,7 +474,7 @@ function softmir_handle_reset_password()
     $password2 = $_POST['password_confirm'] ?? '';
 
     if (!$user_id || !$token) {
-        softmir_flash_set('error', 'Неверные данные.');
+        softmir_flash_set('error', __('Неверные данные.', 'softmir'));
         wp_redirect(home_url('/reset-password/'));
         exit;
     }
@@ -483,26 +483,26 @@ function softmir_handle_reset_password()
     $token_time = get_user_meta($user_id, 'softmir_reset_token_time', true);
 
     if ($token !== $stored_token) {
-        softmir_flash_set('error', 'Неверный или устаревший токен.');
+        softmir_flash_set('error', __('Неверный или устаревший токен.', 'softmir'));
         wp_redirect(home_url('/reset-password/'));
         exit;
     }
 
     // 1 hour expiry
     if (time() - intval($token_time) > 3600) {
-        softmir_flash_set('error', 'Ссылка для сброса пароля истекла. Запросите новую.');
+        softmir_flash_set('error', __('Ссылка для сброса пароля истекла. Запросите новую.', 'softmir'));
         wp_redirect(home_url('/reset-password/'));
         exit;
     }
 
     if (strlen($password) < 8) {
-        softmir_flash_set('error', 'Пароль должен содержать минимум 8 символов.');
+        softmir_flash_set('error', __('Пароль должен содержать минимум 8 символов.', 'softmir'));
         wp_redirect(home_url('/reset-password/?softmir_reset=' . $token . '&user_id=' . $user_id));
         exit;
     }
 
     if ($password !== $password2) {
-        softmir_flash_set('error', 'Пароли не совпадают.');
+        softmir_flash_set('error', __('Пароли не совпадают.', 'softmir'));
         wp_redirect(home_url('/reset-password/?softmir_reset=' . $token . '&user_id=' . $user_id));
         exit;
     }
@@ -512,7 +512,7 @@ function softmir_handle_reset_password()
     delete_user_meta($user_id, 'softmir_reset_token');
     delete_user_meta($user_id, 'softmir_reset_token_time');
 
-    softmir_flash_set('success', 'Пароль успешно изменён! Войдите с новым паролем.');
+    softmir_flash_set('success', __('Пароль успешно изменён! Войдите с новым паролем.', 'softmir'));
     wp_redirect(home_url('/login/'));
     exit;
 }
@@ -524,7 +524,7 @@ function softmir_handle_profile_update()
     if (!isset($_POST['softmir_profile_nonce']))
         return;
     if (!wp_verify_nonce($_POST['softmir_profile_nonce'], 'softmir_profile_update')) {
-        softmir_flash_set('error', 'Ошибка безопасности.');
+        softmir_flash_set('error', __('Ошибка безопасности.', 'softmir'));
         wp_redirect(home_url('/profile/'));
         exit;
     }
@@ -547,12 +547,12 @@ function softmir_handle_profile_update()
 
     if (!empty($new_password)) {
         if (strlen($new_password) < 8) {
-            softmir_flash_set('error', 'Новый пароль должен содержать минимум 8 символов.');
+            softmir_flash_set('error', __('Новый пароль должен содержать минимум 8 символов.', 'softmir'));
             wp_redirect(home_url('/profile/'));
             exit;
         }
         if ($new_password !== $new_password2) {
-            softmir_flash_set('error', 'Пароли не совпадают.');
+            softmir_flash_set('error', __('Пароли не совпадают.', 'softmir'));
             wp_redirect(home_url('/profile/'));
             exit;
         }
@@ -564,7 +564,7 @@ function softmir_handle_profile_update()
         softmir_flash_set('error', $result->get_error_message());
     }
     else {
-        softmir_flash_set('success', 'Профиль обновлён.');
+        softmir_flash_set('success', __('Профиль обновлён.', 'softmir'));
     }
 
     wp_redirect(home_url('/profile/'));
@@ -590,16 +590,21 @@ function softmir_get_email_template($type, $data)
     ';
 
     if ($type === 'verify') {
+        $hello = __('Здравствуйте,', 'softmir');
+        $thanks = sprintf(__('Спасибо за регистрацию на %s. Для завершения регистрации подтвердите ваш email:', 'softmir'), $site_name);
+        $btn_label = __('Подтвердить email', 'softmir');
+        $copy_link = __('Или скопируйте ссылку:', 'softmir');
+        $expiry = __('Ссылка действительна 24 часа.', 'softmir');
         return "
         <html><head><style>{$styles}</style></head><body>
         <div class='email-wrap'>
             <div class='email-header'><h1>{$site_name}</h1></div>
             <div class='email-body'>
-                <p>Здравствуйте, <strong>{$data['user_name']}</strong>!</p>
-                <p>Спасибо за регистрацию на {$site_name}. Для завершения регистрации подтвердите ваш email:</p>
-                <p style='text-align:center'><a href='{$data['verify_url']}' class='email-btn'>Подтвердить email</a></p>
-                <p>Или скопируйте ссылку: <br><small style='color:#94a3b8;word-break:break-all'>{$data['verify_url']}</small></p>
-                <p>Ссылка действительна 24 часа.</p>
+                <p>{$hello} <strong>{$data['user_name']}</strong>!</p>
+                <p>{$thanks}</p>
+                <p style='text-align:center'><a href='{$data['verify_url']}' class='email-btn'>{$btn_label}</a></p>
+                <p>{$copy_link} <br><small style='color:#94a3b8;word-break:break-all'>{$data['verify_url']}</small></p>
+                <p>{$expiry}</p>
             </div>
             <div class='email-footer'><p>&copy; " . date('Y') . " {$site_name}</p></div>
         </div>
@@ -607,16 +612,21 @@ function softmir_get_email_template($type, $data)
     }
 
     if ($type === 'reset') {
+        $hello = __('Здравствуйте,', 'softmir');
+        $reset_msg = __('Мы получили запрос на сброс пароля для вашего аккаунта. Нажмите кнопку ниже:', 'softmir');
+        $btn_label = __('Сбросить пароль', 'softmir');
+        $copy_link = __('Или скопируйте ссылку:', 'softmir');
+        $expiry = __('Ссылка действительна 1 час. Если вы не запрашивали сброс пароля — проигнорируйте это письмо.', 'softmir');
         return "
         <html><head><style>{$styles}</style></head><body>
         <div class='email-wrap'>
             <div class='email-header'><h1>{$site_name}</h1></div>
             <div class='email-body'>
-                <p>Здравствуйте, <strong>{$data['user_name']}</strong>!</p>
-                <p>Мы получили запрос на сброс пароля для вашего аккаунта. Нажмите кнопку ниже:</p>
-                <p style='text-align:center'><a href='{$data['reset_url']}' class='email-btn'>Сбросить пароль</a></p>
-                <p>Или скопируйте ссылку: <br><small style='color:#94a3b8;word-break:break-all'>{$data['reset_url']}</small></p>
-                <p>Ссылка действительна 1 час. Если вы не запрашивали сброс пароля — проигнорируйте это письмо.</p>
+                <p>{$hello} <strong>{$data['user_name']}</strong>!</p>
+                <p>{$reset_msg}</p>
+                <p style='text-align:center'><a href='{$data['reset_url']}' class='email-btn'>{$btn_label}</a></p>
+                <p>{$copy_link} <br><small style='color:#94a3b8;word-break:break-all'>{$data['reset_url']}</small></p>
+                <p>{$expiry}</p>
             </div>
             <div class='email-footer'><p>&copy; " . date('Y') . " {$site_name}</p></div>
         </div>
@@ -655,12 +665,12 @@ function softmir_get_role_label($user = null)
         return '';
 
     $roles = [
-        'administrator' => 'Администратор',
-        'editor' => 'Редактор',
-        'author' => 'Автор',
-        'contributor' => 'Участник',
-        'subscriber' => 'Подписчик',
-        'vendor' => 'Интегратор',
+        'administrator' => __('Администратор', 'softmir'),
+        'editor' => __('Редактор', 'softmir'),
+        'author' => __('Автор', 'softmir'),
+        'contributor' => __('Участник', 'softmir'),
+        'subscriber' => __('Подписчик', 'softmir'),
+        'vendor' => __('Интегратор', 'softmir'),
     ];
 
     $user_role = $user->roles[0] ?? 'subscriber';

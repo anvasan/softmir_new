@@ -8,26 +8,26 @@ get_header();
 
 <div class="container">
     <div class="breadcrumbs">
-        <a href="<?php echo home_url('/'); ?>">Главная</a>
+        <a href="<?php echo home_url('/'); ?>"><?php esc_html_e('Главная', 'softmir'); ?></a>
         <span class="sep">›</span>
-        Категории ПО
+        <?php esc_html_e('Категории ПО', 'softmir'); ?>
     </div>
 </div>
 
 <div class="container">
     <div class="categories-page">
-        <h1 class="categories-page-title">Список категорий и подкатегорий</h1>
+        <h1 class="categories-page-title"><?php esc_html_e('Список категорий и подкатегорий', 'softmir'); ?></h1>
 
         <!-- Search -->
         <div class="categories-search-box">
-            <input type="text" id="catSearch" class="categories-search-input" placeholder="🔍 Поиск по категориям..." oninput="softmirFilterCats(this.value)">
+            <input type="text" id="catSearch" class="categories-search-input" placeholder="🔍 <?php esc_attr_e('Поиск по категориям...', 'softmir'); ?>" oninput="softmirFilterCats(this.value)">
         </div>
 
         <div class="categories-full-grid" id="catGrid">
             <?php
 $parent_cats = get_terms([
     'taxonomy' => 'software_category',
-    'hide_empty' => false,
+    'hide_empty' => true,
     'parent' => 0,
     'orderby' => 'name',
     'order' => 'ASC',
@@ -38,7 +38,7 @@ if ($parent_cats && !is_wp_error($parent_cats)):
         $cat_link = add_query_arg('sw_cat', $cat->term_id, get_post_type_archive_link('software'));
         $children = get_terms([
             'taxonomy' => 'software_category',
-            'hide_empty' => false,
+            'hide_empty' => true,
             'parent' => $cat->term_id,
             'orderby' => 'name',
             'order' => 'ASC',

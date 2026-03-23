@@ -58,8 +58,8 @@ function softmir_auth_settings_init()
 {
     // SMTP Section
     add_settings_section('softmir_smtp_section', 'Gmail SMTP', function () {
-        echo '<p>Настройте Gmail SMTP для отправки Email (верификация, сброс пароля).</p>';
-        echo '<p><small>Используйте <a href="https://myaccount.google.com/apppasswords" target="_blank">App Password</a> (требуется 2FA).</small></p>';
+        echo '<p>' . esc_html__('Настройте Gmail SMTP для отправки Email (верификация, сброс пароля).', 'softmir') . '</p>';
+        echo '<p><small>' . sprintf(__('Используйте %sApp Password%s (требуется 2FA).', 'softmir'), '<a href="https://myaccount.google.com/apppasswords" target="_blank">', '</a>') . '</small></p>';
     }, 'softmir-auth');
 
     // SMTP fields
@@ -67,7 +67,7 @@ function softmir_auth_settings_init()
     register_setting('softmir_auth_settings', 'softmir_smtp_pass', ['sanitize_callback' => 'sanitize_text_field']);
     register_setting('softmir_auth_settings', 'softmir_smtp_from_name', ['sanitize_callback' => 'sanitize_text_field']);
 
-    add_settings_field('softmir_smtp_user', 'Gmail адрес', function () {
+    add_settings_field('softmir_smtp_user', __('Gmail адрес', 'softmir'), function () {
         $val = get_option('softmir_smtp_user', '');
         echo "<input type='email' name='softmir_smtp_user' value='" . esc_attr($val) . "' class='regular-text' placeholder='your@gmail.com'>";
     }, 'softmir-auth', 'softmir_smtp_section');
@@ -77,15 +77,15 @@ function softmir_auth_settings_init()
         echo "<input type='password' name='softmir_smtp_pass' value='" . esc_attr($val) . "' class='regular-text' placeholder='xxxx xxxx xxxx xxxx'>";
     }, 'softmir-auth', 'softmir_smtp_section');
 
-    add_settings_field('softmir_smtp_from_name', 'Имя отправителя', function () {
+    add_settings_field('softmir_smtp_from_name', __('Имя отправителя', 'softmir'), function () {
         $val = get_option('softmir_smtp_from_name', get_bloginfo('name'));
         echo "<input type='text' name='softmir_smtp_from_name' value='" . esc_attr($val) . "' class='regular-text'>";
     }, 'softmir-auth', 'softmir_smtp_section');
 
     // Google OAuth Section
     add_settings_section('softmir_google_section', 'Google OAuth', function () {
-        echo '<p>Настройте Google OAuth для входа через Google.</p>';
-        echo '<p><small>Создайте проект в <a href="https://console.cloud.google.com/apis/credentials" target="_blank">Google Cloud Console</a>.</small></p>';
+        echo '<p>' . esc_html__('Настройте Google OAuth для входа через Google.', 'softmir') . '</p>';
+        echo '<p><small>' . sprintf(__('Создайте проект в %sGoogle Cloud Console%s.', 'softmir'), '<a href="https://console.cloud.google.com/apis/credentials" target="_blank">', '</a>') . '</small></p>';
         echo '<p><strong>Redirect URI:</strong> <code>' . esc_html(home_url('/?softmir_google_callback=1')) . '</code></p>';
     }, 'softmir-auth');
 
@@ -118,10 +118,10 @@ function softmir_auth_settings_page()
 
         // Pre-flight checks
         if (empty($smtp_user) || empty($smtp_pass)) {
-            echo '<div class="notice notice-error"><p>❌ Сначала введите Gmail адрес и App Password выше и сохраните настройки.</p></div>';
+            echo '<div class="notice notice-error"><p>❌ ' . esc_html__('Сначала введите Gmail адрес и App Password выше и сохраните настройки.', 'softmir') . '</p></div>';
         }
         elseif (!extension_loaded('openssl')) {
-            echo '<div class="notice notice-error"><p>❌ PHP-расширение OpenSSL не включено. Оно необходимо для SMTP с TLS.</p></div>';
+            echo '<div class="notice notice-error"><p>❌ ' . esc_html__('PHP-расширение OpenSSL не включено. Оно необходимо для SMTP с TLS.', 'softmir') . '</p></div>';
         }
         else {
             // Capture PHPMailer errors
@@ -130,15 +130,15 @@ function softmir_auth_settings_page()
                 $mail_error = $wp_error->get_error_message();
                 $data = $wp_error->get_error_data();
                 if (!empty($data['phpmailer_exception_code'])) {
-                    $mail_error .= ' (код: ' . $data['phpmailer_exception_code'] . ')';
+                    $mail_error .= ' (' . __('код:', 'softmir') . ' ' . $data['phpmailer_exception_code'] . ')';
                 }
             };
             add_action('wp_mail_failed', $error_handler);
 
-            $subject = '[SoftMir] Тестовое письмо SMTP';
+            $subject = '[SoftMir] ' . __('Тестовое письмо SMTP', 'softmir');
             $message = '<html><body style="font-family:Inter,sans-serif;padding:40px;">
-                <h2 style="color:#0ea5e9;">✅ SMTP работает!</h2>
-                <p style="color:#475569;">Это тестовое письмо от SoftMir. Если вы его видите — настройки SMTP корректны.</p>
+                <h2 style="color:#0ea5e9;">✅ ' . esc_html__('SMTP работает!', 'softmir') . '</h2>
+                <p style="color:#475569;">' . esc_html__('Это тестовое письмо от SoftMir. Если вы его видите — настройки SMTP корректны.', 'softmir') . '</p>
                 <p style="color:#94a3b8;font-size:13px;">' . date('Y-m-d H:i:s') . '</p>
             </body></html>';
             $headers = ['Content-Type: text/html; charset=UTF-8'];
@@ -147,19 +147,19 @@ function softmir_auth_settings_page()
             remove_action('wp_mail_failed', $error_handler);
 
             if ($sent) {
-                echo '<div class="notice notice-success"><p>✅ Тестовое письмо отправлено на ' . esc_html($to) . '</p></div>';
+                echo '<div class="notice notice-success"><p>✅ ' . sprintf(esc_html__('Тестовое письмо отправлено на %s', 'softmir'), esc_html($to)) . '</p></div>';
             }
             else {
-                echo '<div class="notice notice-error"><p>❌ Ошибка отправки.</p>';
+                echo '<div class="notice notice-error"><p>❌ ' . esc_html__('Ошибка отправки.', 'softmir') . '</p>';
                 if ($mail_error) {
-                    echo '<p><strong>Причина:</strong> ' . esc_html($mail_error) . '</p>';
+                    echo '<p><strong>' . esc_html__('Причина:', 'softmir') . '</strong> ' . esc_html($mail_error) . '</p>';
                 }
-                echo '<p><strong>Проверьте:</strong></p><ul style="list-style:disc;margin-left:20px;">';
-                echo '<li>Включена ли 2FA в Google аккаунте</li>';
-                echo '<li>Правильно ли введён App Password (16 символов, без пробелов)</li>';
-                echo '<li>Не заблокирован ли SMTP порт 587 (фаервол/антивирус)</li>';
+                echo '<p><strong>' . esc_html__('Проверьте:', 'softmir') . '</strong></p><ul style="list-style:disc;margin-left:20px;">';
+                echo '<li>' . esc_html__('Включена ли 2FA в Google аккаунте', 'softmir') . '</li>';
+                echo '<li>' . esc_html__('Правильно ли введён App Password (16 символов, без пробелов)', 'softmir') . '</li>';
+                echo '<li>' . esc_html__('Не заблокирован ли SMTP порт 587 (фаервол/антивирус)', 'softmir') . '</li>';
                 echo '</ul>';
-                echo '<p><small>SMTP хост: smtp.gmail.com:587 | Пользователь: ' . esc_html($smtp_user) . ' | Пароль: ' . str_repeat('•', min(strlen($smtp_pass), 16)) . '</small></p>';
+                echo '<p><small>SMTP ' . esc_html__('хост:', 'softmir') . ' smtp.gmail.com:587 | ' . esc_html__('Пользователь:', 'softmir') . ' ' . esc_html($smtp_user) . ' | ' . esc_html__('Пароль:', 'softmir') . ' ' . str_repeat('•', min(strlen($smtp_pass), 16)) . '</small></p>';
                 echo '</div>';
             }
         }
@@ -167,21 +167,21 @@ function softmir_auth_settings_page()
 
 ?>
     <div class="wrap">
-        <h1>SoftMir Auth — Настройки</h1>
+        <h1>SoftMir Auth — <?php esc_html_e('Настройки', 'softmir'); ?></h1>
         <form method="post" action="options.php">
             <?php
     settings_fields('softmir_auth_settings');
     do_settings_sections('softmir-auth');
-    submit_button('Сохранить настройки');
+    submit_button(__('Сохранить настройки', 'softmir'));
 ?>
         </form>
 
         <hr>
-        <h2>Тестовое письмо</h2>
-        <p>Отправить тестовое письмо на <strong><?php echo esc_html(get_option('softmir_smtp_user', get_option('admin_email'))); ?></strong></p>
+        <h2><?php esc_html_e('Тестовое письмо', 'softmir'); ?></h2>
+        <p><?php echo sprintf(esc_html__('Отправить тестовое письмо на %s', 'softmir'), '<strong>' . esc_html(get_option('softmir_smtp_user', get_option('admin_email'))) . '</strong>'); ?></p>
         <form method="post">
             <?php wp_nonce_field('softmir_test_email'); ?>
-            <button type="submit" name="softmir_test_email" class="button button-secondary">📧 Отправить тестовое письмо</button>
+            <button type="submit" name="softmir_test_email" class="button button-secondary">📧 <?php esc_html_e('Отправить тестовое письмо', 'softmir'); ?></button>
         </form>
     </div>
     <?php

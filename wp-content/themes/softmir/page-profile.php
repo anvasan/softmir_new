@@ -42,10 +42,10 @@ endif; ?>
                 <div class="profile-badges">
                     <span class="badge badge-role"><?php echo esc_html($role_label); ?></span>
                     <?php if ($verified): ?>
-                        <span class="badge badge-verified">✓ Email подтверждён</span>
+                        <span class="badge badge-verified"><?php _e('✓ Email подтверждён', 'softmir'); ?></span>
                     <?php
 else: ?>
-                        <span class="badge badge-unverified">✗ Email не подтверждён</span>
+                        <span class="badge badge-unverified"><?php _e('✗ Email не подтверждён', 'softmir'); ?></span>
                     <?php
 endif; ?>
                     <?php if ($google_linked): ?>
@@ -60,7 +60,7 @@ endif; ?>
 
             <a href="<?php echo esc_url(softmir_logout_url()); ?>" class="profile-logout-btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-                Выйти
+                <?php _e('Выйти', 'softmir'); ?>
             </a>
         </div>
 
@@ -68,8 +68,8 @@ endif; ?>
         <div class="profile-alert profile-alert-warning">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             <div>
-                <strong>Email не подтверждён</strong>
-                <p>Подтвердите ваш email для полного доступа. <a href="<?php echo esc_url(home_url('/login/?resend_verification=' . $user->ID)); ?>">Отправить письмо повторно</a></p>
+                <strong><?php _e('Email не подтверждён', 'softmir'); ?></strong>
+                <p><?php _e('Подтвердите ваш email для полного доступа.', 'softmir'); ?> <a href="<?php echo esc_url(home_url('/login/?resend_verification=' . $user->ID)); ?>"><?php _e('Отправить письмо повторно', 'softmir'); ?></a></p>
             </div>
         </div>
         <?php
@@ -79,14 +79,14 @@ endif; ?>
         <div class="profile-section">
             <h2>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                Редактировать профиль
+                <?php _e('Редактировать профиль', 'softmir'); ?>
             </h2>
 
             <form method="post" class="profile-form">
                 <?php wp_nonce_field('softmir_profile_update', 'softmir_profile_nonce'); ?>
 
                 <div class="auth-field">
-                    <label for="display_name">Отображаемое имя</label>
+                    <label for="display_name"><?php _e('Отображаемое имя', 'softmir'); ?></label>
                     <div class="auth-input-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                         <input type="text" id="display_name" name="display_name" value="<?php echo esc_attr($user->display_name); ?>">
@@ -103,29 +103,29 @@ endif; ?>
 
                 <hr class="profile-divider">
 
-                <h3>Изменить пароль</h3>
-                <p class="auth-field-hint">Оставьте пустым, если не хотите менять пароль</p>
+                <h3><?php _e('Изменить пароль', 'softmir'); ?></h3>
+                <p class="auth-field-hint"><?php _e('Оставьте пустым, если не хотите менять пароль', 'softmir'); ?></p>
 
                 <div class="auth-field">
-                    <label for="new_password">Новый пароль</label>
+                    <label for="new_password"><?php _e('Новый пароль', 'softmir'); ?></label>
                     <div class="auth-input-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        <input type="password" id="new_password" name="new_password" placeholder="Минимум 8 символов" minlength="8" autocomplete="new-password">
-                        <button type="button" class="toggle-password" aria-label="Показать пароль">
+                        <input type="password" id="new_password" name="new_password" placeholder="<?php esc_attr_e('Минимум 8 символов', 'softmir'); ?>" minlength="8" autocomplete="new-password">
+                        <button type="button" class="toggle-password" aria-label="<?php esc_attr_e('Показать пароль', 'softmir'); ?>">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                         </button>
                     </div>
                 </div>
 
                 <div class="auth-field">
-                    <label for="new_password_confirm">Подтвердите новый пароль</label>
+                    <label for="new_password_confirm"><?php _e('Подтвердите новый пароль', 'softmir'); ?></label>
                     <div class="auth-input-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        <input type="password" id="new_password_confirm" name="new_password_confirm" placeholder="Повторите пароль" minlength="8" autocomplete="new-password">
+                        <input type="password" id="new_password_confirm" name="new_password_confirm" placeholder="<?php esc_attr_e('Повторите пароль', 'softmir'); ?>" minlength="8" autocomplete="new-password">
                     </div>
                 </div>
 
-                <button type="submit" class="auth-submit-btn">Сохранить изменения</button>
+                <button type="submit" class="auth-submit-btn"><?php _e('Сохранить изменения', 'softmir'); ?></button>
             </form>
         </div>
 
@@ -133,24 +133,24 @@ endif; ?>
         <div class="profile-section profile-section-info">
             <h2>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                Информация об аккаунте
+                <?php _e('Информация об аккаунте', 'softmir'); ?>
             </h2>
             <div class="profile-info-grid">
                 <div class="info-item">
-                    <span class="info-label">Дата регистрации</span>
+                    <span class="info-label"><?php _e('Дата регистрации', 'softmir'); ?></span>
                     <span class="info-value"><?php echo date_i18n('d.m.Y', strtotime($user->user_registered)); ?></span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Роль</span>
+                    <span class="info-label"><?php _e('Роль', 'softmir'); ?></span>
                     <span class="info-value"><?php echo esc_html($role_label); ?></span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Логин</span>
+                    <span class="info-label"><?php _e('Логин', 'softmir'); ?></span>
                     <span class="info-value"><?php echo esc_html($user->user_login); ?></span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Привязка Google</span>
-                    <span class="info-value"><?php echo $google_linked ? 'Привязан' : 'Не привязан'; ?></span>
+                    <span class="info-label"><?php _e('Привязка Google', 'softmir'); ?></span>
+                    <span class="info-value"><?php echo $google_linked ? __('Привязан', 'softmir') : __('Не привязан', 'softmir'); ?></span>
                 </div>
             </div>
         </div>

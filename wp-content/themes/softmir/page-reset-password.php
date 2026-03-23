@@ -18,12 +18,12 @@ $is_reset_step = !empty($reset_token) && $reset_user_id > 0;
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
             <?php if ($is_reset_step): ?>
-                <h1>Новый пароль</h1>
-                <p>Введите новый пароль для вашего аккаунта</p>
+                <h1><?php _e('Новый пароль', 'softmir'); ?></h1>
+                <p><?php _e('Введите новый пароль для вашего аккаунта', 'softmir'); ?></p>
             <?php
 else: ?>
-                <h1>Сброс пароля</h1>
-                <p>Введите email для получения ссылки сброса</p>
+                <h1><?php _e('Сброс пароля', 'softmir'); ?></h1>
+                <p><?php _e('Введите email для получения ссылки сброса', 'softmir'); ?></p>
             <?php
 endif; ?>
         </div>
@@ -38,11 +38,11 @@ endif; ?>
                 <input type="hidden" name="token" value="<?php echo esc_attr($reset_token); ?>">
 
                 <div class="auth-field">
-                    <label for="password">Новый пароль</label>
+                    <label for="password"><?php _e('Новый пароль', 'softmir'); ?></label>
                     <div class="auth-input-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        <input type="password" id="password" name="password" placeholder="Минимум 8 символов" required minlength="8" autocomplete="new-password">
-                        <button type="button" class="toggle-password" aria-label="Показать пароль">
+                        <input type="password" id="password" name="password" placeholder="<?php esc_attr_e('Минимум 8 символов', 'softmir'); ?>" required minlength="8" autocomplete="new-password">
+                        <button type="button" class="toggle-password" aria-label="<?php esc_attr_e('Показать пароль', 'softmir'); ?>">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                         </button>
                     </div>
@@ -50,14 +50,14 @@ endif; ?>
                 </div>
 
                 <div class="auth-field">
-                    <label for="password_confirm">Подтвердите пароль</label>
+                    <label for="password_confirm"><?php _e('Подтвердите пароль', 'softmir'); ?></label>
                     <div class="auth-input-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        <input type="password" id="password_confirm" name="password_confirm" placeholder="Повторите пароль" required minlength="8" autocomplete="new-password">
+                        <input type="password" id="password_confirm" name="password_confirm" placeholder="<?php esc_attr_e('Повторите пароль', 'softmir'); ?>" required minlength="8" autocomplete="new-password">
                     </div>
                 </div>
 
-                <button type="submit" class="auth-submit-btn">Установить новый пароль</button>
+                <button type="submit" class="auth-submit-btn"><?php _e('Установить новый пароль', 'softmir'); ?></button>
             </form>
         <?php
 else: ?>
@@ -73,13 +73,13 @@ else: ?>
                     </div>
                 </div>
 
-                <button type="submit" class="auth-submit-btn">Отправить ссылку</button>
+                <button type="submit" class="auth-submit-btn"><?php _e('Отправить ссылку', 'softmir'); ?></button>
             </form>
         <?php
 endif; ?>
 
         <p class="auth-footer-text">
-            <a href="<?php echo home_url('/login/'); ?>" class="auth-link-accent">← Вернуться к входу</a>
+            <a href="<?php echo home_url('/login/'); ?>" class="auth-link-accent"><?php _e('← Вернуться к входу', 'softmir'); ?></a>
         </p>
     </div>
 </main>

@@ -14,6 +14,10 @@ function softmir_get_attributes($args = [])
         'orderby' => 'menu_order',
         'order' => 'ASC',
     ];
+    // Always get attributes from default language (meta keys are bound to original IDs)
+    if (function_exists('pll_default_language')) {
+        $defaults['lang'] = pll_default_language();
+    }
     $query = new WP_Query(array_merge($defaults, $args));
     return $query->posts;
 }
@@ -67,6 +71,14 @@ function softmir_attr_applies_to_software($attr_id, $software_id)
         return false;
     }
 
+    // Polylang: Map post term IDs back to default language IDs to match bound_cats
+    if (function_exists('pll_get_term') && function_exists('pll_default_language')) {
+        $default_lang = pll_default_language();
+        $software_terms = array_map(function ($term_id) use ($default_lang) {
+            return pll_get_term($term_id, $default_lang) ?: $term_id;
+        }, $software_terms);
+    }
+
     return !empty(array_intersect($bound_cats, $software_terms));
 }
 
@@ -106,7 +118,16 @@ function softmir_render_attr_value($attr_id, $value)
 
     $meta = softmir_get_attr_meta($attr_id);
     $icon = $meta['icon'] ? '<span class="attr-icon">' . esc_html($meta['icon']) . '</span> ' : '';
-    $label = get_the_title($attr_id);
+
+    // Use translated attribute title for current language
+    $display_attr_id = $attr_id;
+    if (function_exists('pll_get_post') && function_exists('pll_current_language')) {
+        $trans_id = pll_get_post($attr_id, pll_current_language());
+        if ($trans_id) {
+            $display_attr_id = $trans_id;
+        }
+    }
+    $label = get_the_title($display_attr_id);
 
     switch ($meta['type']) {
         case 'checkbox':
@@ -208,7 +229,7 @@ function softmir_render_attrs_block($software_id, $position_key, $position_value
                 $output .= $render_columns($hidden_items);
                 $output .= '</div>';
                 $output .= '<button type="button" class="attrs-toggle-btn" onclick="softmirToggleAttrs(\'' . $toggle_id . '\', this)">';
-                $output .= 'Ещё ' . $hidden_count . ' атр. ▾';
+                $output .= sprintf(__('Ещё %d атр. ▾', 'softmir'), $hidden_count);
                 $output .= '</button>';
             }
             else {

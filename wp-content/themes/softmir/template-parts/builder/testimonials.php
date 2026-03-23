@@ -1,25 +1,25 @@
 <?php
 // Testimonials Module — hardcoded content (ACF Free doesn't support Flexible Content)
-$title = 'Отзывы клиентов';
-$subtitle = 'Что говорят наши клиенты о сотрудничестве';
+$title = __('Отзывы клиентов', 'softmir');
+$subtitle = __('Что говорят наши клиенты о сотрудничестве', 'softmir');
 
 $items = [
     [
-        'text' => 'Благодаря SoftMir мы нашли CRM-систему, которая идеально подошла под наши процессы. Сэкономили недели на поиск и тестирование.',
+        'text' => __('Благодаря SoftMir мы нашли CRM-систему, которая идеально подошла под наши процессы. Сэкономили недели на поиск и тестирование.', 'softmir'),
         'name' => 'Алексей Петров',
-        'role' => 'Директор по развитию, ТехноПро',
+        'role' => __('Директор по развитию, ТехноПро', 'softmir'),
         'initials' => 'АП',
     ],
     [
-        'text' => 'Очень удобный каталог с честными обзорами. Выбрали систему управления проектами за один день вместо обычных двух недель.',
+        'text' => __('Очень удобный каталог с честными обзорами. Выбрали систему управления проектами за один день вместо обычных двух недель.', 'softmir'),
         'name' => 'Мария Сидорова',
-        'role' => 'Руководитель отдела IT, ФинГрупп',
+        'role' => __('Руководитель отдела IT, ФинГрупп', 'softmir'),
         'initials' => 'МС',
     ],
     [
-        'text' => 'Консультация экспертов помогла определиться с ERP-системой. Рекомендую всем, кто ищет бизнес-софт.',
+        'text' => __('Консультация экспертов помогла определиться с ERP-системой. Рекомендую всем, кто ищет бизнес-софт.', 'softmir'),
         'name' => 'Дмитрий Козлов',
-        'role' => 'CEO, ЛогистикМастер',
+        'role' => __('CEO, ЛогистикМастер', 'softmir'),
         'initials' => 'ДК',
     ],
 ];
@@ -29,8 +29,8 @@ $text_colors = ['var(--brand)', '#be185d', '#1d4ed8'];
 ?>
 <section class="section">
     <div class="container">
-        <h2 class="section-title" style="text-align: center;"><?php echo esc_html($title); ?></h2>
-        <p class="section-subtitle" style="text-align: center;"><?php echo esc_html($subtitle); ?></p>
+        <h2 class="section-title text-center"><?php echo esc_html($title); ?></h2>
+        <p class="section-subtitle text-center"><?php echo esc_html($subtitle); ?></p>
 
         <div class="testimonials-grid">
             <?php foreach ($items as $index => $item):
@@ -40,7 +40,7 @@ $text_colors = ['var(--brand)', '#be185d', '#1d4ed8'];
                 <div class="testimonial-card">
                     <p class="testimonial-quote">"<?php echo esc_html($item['text']); ?>"</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar" style="background: <?php echo $bg; ?>; display: flex; align-items: center; justify-content: center; font-weight: 700; color: <?php echo $col; ?>;">
+                        <div class="testimonial-avatar" style="background: <?php echo $bg; ?>; color: <?php echo $col; ?>;">
                             <?php echo esc_html($item['initials']); ?>
                         </div>
                         <div>

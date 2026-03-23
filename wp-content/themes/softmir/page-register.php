@@ -13,8 +13,8 @@ $google_url = function_exists('softmir_google_auth_url') ? softmir_google_auth_u
             <div class="auth-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
             </div>
-            <h1>Регистрация</h1>
-            <p>Создайте аккаунт для доступа к платформе</p>
+            <h1><?php _e('Регистрация', 'softmir'); ?></h1>
+            <p><?php _e('Создайте аккаунт для доступа к платформе', 'softmir'); ?></p>
         </div>
 
         <?php echo softmir_flash_html(); ?>
@@ -27,11 +27,11 @@ $google_url = function_exists('softmir_google_auth_url') ? softmir_google_auth_u
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
             </svg>
-            Зарегистрироваться через Google
+            <?php _e('Зарегистрироваться через Google', 'softmir'); ?>
         </a>
 
         <div class="auth-divider">
-            <span>или</span>
+            <span><?php _e('или', 'softmir'); ?></span>
         </div>
         <?php
 endif; ?>
@@ -40,10 +40,10 @@ endif; ?>
             <?php wp_nonce_field('softmir_register', 'softmir_register_nonce'); ?>
 
             <div class="auth-field">
-                <label for="username">Имя пользователя</label>
+                <label for="username"><?php _e('Имя пользователя', 'softmir'); ?></label>
                 <div class="auth-input-wrap">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    <input type="text" id="username" name="username" placeholder="Минимум 3 символа" required minlength="3" autocomplete="username" value="<?php echo esc_attr($_POST['username'] ?? ''); ?>">
+                    <input type="text" id="username" name="username" placeholder="<?php esc_attr_e('Минимум 3 символа', 'softmir'); ?>" required minlength="3" autocomplete="username" value="<?php echo esc_attr($_POST['username'] ?? ''); ?>">
                 </div>
             </div>
 
@@ -56,11 +56,11 @@ endif; ?>
             </div>
 
             <div class="auth-field">
-                <label for="password">Пароль</label>
+                <label for="password"><?php _e('Пароль', 'softmir'); ?></label>
                 <div class="auth-input-wrap">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    <input type="password" id="password" name="password" placeholder="Минимум 8 символов" required minlength="8" autocomplete="new-password">
-                    <button type="button" class="toggle-password" aria-label="Показать пароль">
+                    <input type="password" id="password" name="password" placeholder="<?php esc_attr_e('Минимум 8 символов', 'softmir'); ?>" required minlength="8" autocomplete="new-password">
+                    <button type="button" class="toggle-password" aria-label="<?php esc_attr_e('Показать пароль', 'softmir'); ?>">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                     </button>
                 </div>
@@ -68,32 +68,32 @@ endif; ?>
             </div>
 
             <div class="auth-field">
-                <label for="password_confirm">Подтвердите пароль</label>
+                <label for="password_confirm"><?php _e('Подтвердите пароль', 'softmir'); ?></label>
                 <div class="auth-input-wrap">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    <input type="password" id="password_confirm" name="password_confirm" placeholder="Повторите пароль" required minlength="8" autocomplete="new-password">
+                    <input type="password" id="password_confirm" name="password_confirm" placeholder="<?php esc_attr_e('Повторите пароль', 'softmir'); ?>" required minlength="8" autocomplete="new-password">
                 </div>
             </div>
 
             <div class="auth-field">
-                <label for="role">Тип аккаунта</label>
+                <label for="role"><?php _e('Тип аккаунта', 'softmir'); ?></label>
                 <div class="auth-select-wrap">
                     <select id="role" name="role">
-                        <option value="subscriber">👤 Пользователь</option>
-                        <option value="vendor">🏢 Интегратор (Vendor)</option>
+                        <option value="subscriber"><?php _e('👤 Пользователь', 'softmir'); ?></option>
+                        <option value="vendor"><?php _e('🏢 Интегратор (Vendor)', 'softmir'); ?></option>
                     </select>
                 </div>
             </div>
 
-            <button type="submit" class="auth-submit-btn">Создать аккаунт</button>
+            <button type="submit" class="auth-submit-btn"><?php _e('Создать аккаунт', 'softmir'); ?></button>
 
             <p class="auth-terms">
-                Регистрируясь, вы принимаете <a href="<?php echo home_url('/terms/'); ?>">Условия использования</a> и <a href="<?php echo home_url('/privacy-policy/'); ?>">Политику конфиденциальности</a>.
+                <?php printf(__('Регистрируясь, вы принимаете %1$sУсловия использования%2$s и %3$sПолитику конфиденциальности%4$s.', 'softmir'), '<a href="' . home_url('/terms/') . '">', '</a>', '<a href="' . home_url('/privacy-policy/') . '">', '</a>'); ?>
             </p>
         </form>
 
         <p class="auth-footer-text">
-            Уже есть аккаунт? <a href="<?php echo home_url('/login/'); ?>" class="auth-link-accent">Войти</a>
+            <?php _e('Уже есть аккаунт?', 'softmir'); ?> <a href="<?php echo home_url('/login/'); ?>" class="auth-link-accent"><?php _e('Войти', 'softmir'); ?></a>
         </p>
     </div>
 </main>

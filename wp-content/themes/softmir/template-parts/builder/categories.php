@@ -1,7 +1,12 @@
 <?php
 // Categories Module — pure WP data, no ACF dependency
-$title = '🔍 Категории программного обеспечения';
-$subtitle = 'Выберите интересующую категорию';
+$title = '🔍 ' . __('Категории программного обеспечения', 'softmir');
+$subtitle = __('Выберите интересующую категорию', 'softmir');
+
+// Always fetch categories from the default language
+// so all translations show the same set, just translated
+$default_lang = function_exists('pll_default_language') ? pll_default_language() : '';
+$current_lang = function_exists('pll_current_language') ? pll_current_language() : '';
 
 $categories = get_terms([
     'taxonomy' => 'software_category',
@@ -10,32 +15,82 @@ $categories = get_terms([
     'number' => 18,
     'orderby' => 'count',
     'order' => 'DESC',
+    'lang' => $default_lang ?: '',
 ]);
+
+// Translate term IDs to the current language
+if (!empty($categories) && !is_wp_error($categories) && $current_lang && $current_lang !== $default_lang && function_exists('pll_get_term')) {
+    $translated_cats = [];
+    foreach ($categories as $cat) {
+        $trans_id = pll_get_term($cat->term_id, $current_lang);
+        if ($trans_id) {
+            $trans_term = get_term($trans_id, 'software_category');
+            if ($trans_term && !is_wp_error($trans_term)) {
+                $translated_cats[] = $trans_term;
+                continue;
+            }
+        }
+        $translated_cats[] = $cat; // fallback to original
+    }
+    $categories = $translated_cats;
+}
 ?>
 <section class="section section-alt">
     <div class="container">
         <div class="categories-header">
             <div>
-                <h2 class="section-title" style="margin-bottom: 0.5rem;"><?php echo esc_html($title); ?></h2>
-                <p class="section-subtitle" style="margin-bottom: 0;"><?php echo esc_html($subtitle); ?></p>
+                <h2 class="section-title mb-05"><?php echo esc_html($title); ?></h2>
+                <p class="section-subtitle mb-0"><?php echo esc_html($subtitle); ?></p>
             </div>
-            <a href="<?php echo get_post_type_archive_link('software'); ?>" class="categories-more-link">Все категории →</a>
+            <a href="<?php echo get_post_type_archive_link('software'); ?>"
+                class="categories-more-link"><?php esc_html_e('Все категории', 'softmir'); ?> →</a>
         </div>
 
         <?php if ($categories && !is_wp_error($categories)): ?>
-            <div class="categories-cards-grid">
-                <?php foreach ($categories as $cat):
-        $cat_link = add_query_arg('sw_cat', $cat->term_id, get_post_type_archive_link('software'));
-?>
-                    <a href="<?php echo esc_url($cat_link); ?>" class="category-card">
+            <div class="categories-cards-grid" id="homepage-categories-grid">
+                <?php foreach ($categories as $index => $cat):
+                    $cat_link = add_query_arg('sw_cat', $cat->term_id, get_post_type_archive_link('software'));
+                    ?>
+                    <a href="<?php echo esc_url($cat_link); ?>" class="category-card" data-index="<?php echo $index; ?>">
                         <span class="category-card-icon">▷</span>
                         <span class="category-card-title"><?php echo esc_html($cat->name); ?></span>
                         <span class="category-card-count">(<?php echo $cat->count; ?>)</span>
                     </a>
-                <?php
-    endforeach; ?>
+                    <?php
+                endforeach; ?>
             </div>
-        <?php
-endif; ?>
+
+            <?php if (count($categories) > 3): ?>
+                <div class="categories-mobile-toggle-wrapper">
+                    <button type="button" class="btn btn-outline mobile-categories-toggle" id="toggle-homepage-categories">
+                        <?php esc_html_e('Показать все категории', 'softmir'); ?> ▾
+                    </button>
+                </div>
+                <script>
+                    (function() {
+                        // Use event delegation in case the DOM is loaded via AJAX or builder
+                        document.body.addEventListener('click', function(e) {
+                            var toggleBtn = e.target.closest('.mobile-categories-toggle');
+                            if (!toggleBtn) return;
+                            
+                            var wrapper = toggleBtn.closest('.categories-mobile-toggle-wrapper');
+                            if (!wrapper) return;
+                            
+                            var grid = wrapper.previousElementSibling;
+                            if (!grid || !grid.classList.contains('categories-cards-grid')) return;
+
+                            grid.classList.toggle('expanded');
+                            if (grid.classList.contains('expanded')) {
+                                toggleBtn.innerHTML = '<?php echo esc_js(esc_html__('Свернуть', 'softmir')); ?> ▴';
+                            } else {
+                                toggleBtn.innerHTML = '<?php echo esc_js(esc_html__('Показать все категории', 'softmir')); ?> ▾';
+                                grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        });
+                    })();
+                </script>
+            <?php endif; ?>
+            <?php
+        endif; ?>
     </div>
 </section>

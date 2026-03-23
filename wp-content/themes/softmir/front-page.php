@@ -16,7 +16,7 @@ get_header();
 get_template_part('template-parts/builder/hero');
 ?>
 
-<div class="container" style="margin-top: -1.5rem; position: relative; z-index: 2;">
+<div class="container search-bar-overlap">
     <?php get_template_part('template-parts/search', 'bar'); ?>
 </div>
 

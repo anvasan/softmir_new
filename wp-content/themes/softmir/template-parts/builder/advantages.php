@@ -1,35 +1,35 @@
 <?php
 // Advantages Module — hardcoded content (ACF Free doesn't support Flexible Content)
-$title = 'Почему выбирают нас';
-$subtitle = 'SoftMir — ваш надёжный проводник в мире бизнес-ПО';
+$title = __('Почему выбирают нас', 'softmir');
+$subtitle = __('SoftMir — ваш надёжный проводник в мире бизнес-ПО', 'softmir');
 
 $items = [
     [
         'icon' => '🔍',
-        'title' => 'Экспертные обзоры',
-        'text' => 'Детальные обзоры каждого продукта от наших специалистов с реальным опытом использования.',
+        'title' => __('Экспертные обзоры', 'softmir'),
+        'text' => __('Детальные обзоры каждого продукта от наших специалистов с реальным опытом использования.', 'softmir'),
     ],
     [
         'icon' => '⚖️',
-        'title' => 'Сравнение решений',
-        'text' => 'Удобные таблицы сравнения функций, цен и условий для выбора лучшего варианта.',
+        'title' => __('Сравнение решений', 'softmir'),
+        'text' => __('Удобные таблицы сравнения функций, цен и условий для выбора лучшего варианта.', 'softmir'),
     ],
     [
         'icon' => '⭐',
-        'title' => 'Реальные отзывы',
-        'text' => 'Честные отзывы от пользователей, которые уже внедрили эти решения в своём бизнесе.',
+        'title' => __('Реальные отзывы', 'softmir'),
+        'text' => __('Честные отзывы от пользователей, которые уже внедрили эти решения в своём бизнесе.', 'softmir'),
     ],
     [
         'icon' => '💬',
-        'title' => 'Бесплатные консультации',
-        'text' => 'Наши эксперты помогут подобрать идеальное решение под ваши задачи и бюджет.',
+        'title' => __('Бесплатные консультации', 'softmir'),
+        'text' => __('Наши эксперты помогут подобрать идеальное решение под ваши задачи и бюджет.', 'softmir'),
     ],
 ];
 ?>
 <section class="section section-alt">
     <div class="container">
-        <h2 class="section-title" style="text-align: center;"><?php echo esc_html($title); ?></h2>
-        <p class="section-subtitle" style="text-align: center;"><?php echo esc_html($subtitle); ?></p>
+        <h2 class="section-title text-center"><?php echo esc_html($title); ?></h2>
+        <p class="section-subtitle text-center"><?php echo esc_html($subtitle); ?></p>
 
         <div class="advantages-grid">
             <?php foreach ($items as $item): ?>
