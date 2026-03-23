@@ -232,24 +232,26 @@
                         </div>
 
                         <!-- TABLE VIEW -->
-                        <table class="cards-table software-table" style="display:none;">
-                            <thead>
-                                <tr>
-                                    <th><?php esc_html_e('ПО', 'softmir'); ?></th>
-                                    <th><?php esc_html_e('Категория', 'softmir'); ?></th>
-                                    <th><?php esc_html_e('Рейтинг', 'softmir'); ?></th>
-                                    <th><?php esc_html_e('Описание', 'softmir'); ?></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $software->rewind_posts();
-                                while ($software->have_posts()):
-                                    $software->the_post();
-                                    get_template_part('template-parts/card-software', 'table');
-                                endwhile; ?>
-                            </tbody>
-                        </table>
+                        <div style="overflow-x: auto; width: 100%; display: none;" class="cards-table">
+                            <table class="software-table" style="width: 100%; min-width: 800px;">
+                                <thead>
+                                    <tr>
+                                        <th><?php esc_html_e('ПО', 'softmir'); ?></th>
+                                        <th><?php esc_html_e('Категория', 'softmir'); ?></th>
+                                        <th><?php esc_html_e('Рейтинг', 'softmir'); ?></th>
+                                        <th><?php esc_html_e('Описание', 'softmir'); ?></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $software->rewind_posts();
+                                    while ($software->have_posts()):
+                                        $software->the_post();
+                                        get_template_part('template-parts/card-software', 'table');
+                                    endwhile; ?>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
 
