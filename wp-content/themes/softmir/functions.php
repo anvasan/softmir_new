@@ -352,6 +352,12 @@ require_once get_template_directory() . '/inc/auth.php';
 require_once get_template_directory() . '/inc/smtp.php';
 require_once get_template_directory() . '/inc/google-oauth.php';
 
+// ========== Quiz System ==========
+require_once get_template_directory() . '/inc/polylang-strings.php';
+require_once get_template_directory() . '/inc/quiz-functions.php';
+require_once get_template_directory() . '/inc/quiz-frontend.php';
+require_once get_template_directory() . '/inc/quiz-rest-api.php';
+
 // ========== Register CPT: sw_attribute ==========
 function softmir_cpt_sw_attribute()
 {
