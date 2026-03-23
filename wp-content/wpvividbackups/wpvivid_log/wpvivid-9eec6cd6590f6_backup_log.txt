@@ -1,0 +1,72 @@
+Log created: 2026-03-03 13:18:44
+Type: backup
+[2026-03-03 13:18:45][notice]Start backing up.
+[2026-03-03 13:18:45][notice]server info fcgi:On max execution time: 180 wp version:6.9.1 php version:8.2.22 db version:5.7.39 php ini:safe_mode: memory_limit:512M memory_get_usage:94,28 МБ memory_get_peak_usage:94,78 МБ extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2026-03-03 13:18:45][notice]Prepare to backup backup_db files.
+[2026-03-03 13:18:46][notice]Start exporting database.
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_kb_optimizer
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_rank_math_internal_meta
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_actionscheduler_claims
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_actionscheduler_groups
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_glsr_assigned_posts
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_glsr_assigned_terms
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_glsr_assigned_users
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_glsr_tmp
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_kb_optimizer_viewport_hashes
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_links
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_commentmeta
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_rank_math_internal_links
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_usermeta
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_users
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_actionscheduler_logs
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_glsr_ratings
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_comments
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_termmeta
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_actionscheduler_actions
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_term_relationships
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_term_taxonomy
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_terms
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_options
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_posts
+[2026-03-03 13:18:46][notice]Preparing to dump table wp_postmeta
+[2026-03-03 13:18:46][notice]Exporting database finished.
+[2026-03-03 13:18:46][notice]Start compressing database
+[2026-03-03 13:18:46][notice]Prepare to zip file. file: wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_db.sql
+[2026-03-03 13:18:47][notice]Adding zip files completed.wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_db.part001.zip, filesize: 1,16 МБ
+[2026-03-03 13:18:47][notice]Compressing database completed
+[2026-03-03 13:18:47][notice]Backing up backup_db completed.
+[2026-03-03 13:18:47][notice]Prepare to backup backup_themes files.
+[2026-03-03 13:18:47][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_themes.part001.zip index:601
+[2026-03-03 13:18:51][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_themes.part001.zip success. index:601 file size:18,46 МБ
+[2026-03-03 13:18:51][notice]Backing up backup_themes completed.
+[2026-03-03 13:18:51][notice]Prepare to backup backup_plugin files.
+[2026-03-03 13:18:53][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_plugin.part001.zip index:6745
+[2026-03-03 13:19:21][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_plugin.part001.zip success. index:6745 file size:23,40 МБ
+[2026-03-03 13:19:21][notice]Backing up backup_plugin completed.
+[2026-03-03 13:19:21][notice]Prepare to backup backup_uploads files.
+[2026-03-03 13:19:22][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_uploads.part001.zip index:209
+[2026-03-03 13:19:24][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_uploads.part001.zip success. index:209 file size:22,19 МБ
+[2026-03-03 13:19:24][notice]Backing up backup_uploads completed.
+[2026-03-03 13:19:24][notice]Prepare to backup backup_content files.
+[2026-03-03 13:19:24][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_content.part001.zip index:265
+[2026-03-03 13:19:27][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_content.part001.zip success. index:265 file size:3,47 МБ
+[2026-03-03 13:19:27][notice]Backing up backup_content completed.
+[2026-03-03 13:19:27][notice]Prepare to backup backup_core files.
+[2026-03-03 13:19:28][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_core.part001.zip index:2943
+[2026-03-03 13:19:56][notice]Compressing zip file:wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_core.part001.zip success. index:2943 file size:14,84 МБ
+[2026-03-03 13:19:57][notice]Backing up backup_core completed.
+[2026-03-03 13:19:57][notice]Prepare to backup backup_merge files.
+[2026-03-03 13:19:57][notice]Prepare to zip file. file: wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_db.zip
+[2026-03-03 13:19:57][notice]Adding zip files completed.wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_all.part001.zip, filesize: 1,12 МБ
+[2026-03-03 13:19:57][notice]Prepare to zip file. file: wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_themes.zip
+[2026-03-03 13:19:57][notice]Adding zip files completed.wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_all.part001.zip, filesize: 19,49 МБ
+[2026-03-03 13:19:57][notice]Prepare to zip file. file: wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_plugin.zip
+[2026-03-03 13:19:58][notice]Adding zip files completed.wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_all.part001.zip, filesize: 41,42 МБ
+[2026-03-03 13:19:58][notice]Prepare to zip file. file: wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_uploads.zip
+[2026-03-03 13:19:59][notice]Adding zip files completed.wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_all.part001.zip, filesize: 63,57 МБ
+[2026-03-03 13:19:59][notice]Prepare to zip file. file: wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_content.zip
+[2026-03-03 13:19:59][notice]Adding zip files completed.wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_all.part001.zip, filesize: 67,01 МБ
+[2026-03-03 13:19:59][notice]Prepare to zip file. file: wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_core.zip
+[2026-03-03 13:20:00][notice]Adding zip files completed.wp_test_anti.test_wpvivid-9eec6cd6590f6_2026-03-03-13-18_backup_all.part001.zip, filesize: 81,39 МБ
+[2026-03-03 13:20:01][notice]Backing up backup_merge completed.
+[2026-03-03 13:20:01][notice]Backup completed.

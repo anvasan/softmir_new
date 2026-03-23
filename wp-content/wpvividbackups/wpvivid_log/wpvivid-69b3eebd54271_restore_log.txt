@@ -1,0 +1,176 @@
+[2026-03-13 14:02:22][notice]Start restoring themes.
+[2026-03-13 14:02:22][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip
+[2026-03-13 14:02:22][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip succeeded.
+[2026-03-13 14:02:22][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_themes.zip index:0
+[2026-03-13 14:02:29][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_themes.zip index:0 finished.
+[2026-03-13 14:02:29][notice]End restore themes.
+[2026-03-13 14:02:33][notice]Start restoring plugin.
+[2026-03-13 14:02:33][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip
+[2026-03-13 14:02:34][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip succeeded.
+[2026-03-13 14:02:34][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:0
+[2026-03-13 14:02:34][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:0 finished.
+[2026-03-13 14:02:34][notice]End restore plugin.
+[2026-03-13 14:02:36][notice]Start restoring plugin.
+[2026-03-13 14:02:36][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:1000
+[2026-03-13 14:02:39][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:1000 finished.
+[2026-03-13 14:02:39][notice]End restore plugin.
+[2026-03-13 14:02:41][notice]Start restoring plugin.
+[2026-03-13 14:02:41][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:2000
+[2026-03-13 14:02:53][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:2000 finished.
+[2026-03-13 14:02:53][notice]End restore plugin.
+[2026-03-13 14:02:56][notice]Start restoring plugin.
+[2026-03-13 14:02:56][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:3000
+[2026-03-13 14:03:07][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:3000 finished.
+[2026-03-13 14:03:07][notice]End restore plugin.
+[2026-03-13 14:03:12][notice]Start restoring plugin.
+[2026-03-13 14:03:12][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:4000
+[2026-03-13 14:03:27][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:4000 finished.
+[2026-03-13 14:03:27][notice]End restore plugin.
+[2026-03-13 14:03:29][notice]Start restoring plugin.
+[2026-03-13 14:03:29][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:5000
+[2026-03-13 14:03:44][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:5000 finished.
+[2026-03-13 14:03:44][notice]End restore plugin.
+[2026-03-13 14:03:47][notice]Start restoring plugin.
+[2026-03-13 14:03:47][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:6000
+[2026-03-13 14:04:02][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:6000 finished.
+[2026-03-13 14:04:02][notice]End restore plugin.
+[2026-03-13 14:04:06][notice]Start restoring plugin.
+[2026-03-13 14:04:06][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:7000
+[2026-03-13 14:04:20][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_plugin.zip index:7000 finished.
+[2026-03-13 14:04:20][notice]End restore plugin.
+[2026-03-13 14:04:24][notice]Start restoring wp-content.
+[2026-03-13 14:04:24][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip
+[2026-03-13 14:04:24][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip succeeded.
+[2026-03-13 14:04:25][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_content.zip index:0
+[2026-03-13 14:04:26][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_content.zip index:0 finished.
+[2026-03-13 14:04:26][notice]End restore wp-content.
+[2026-03-13 14:04:31][notice]Start restoring upload.
+[2026-03-13 14:04:31][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip
+[2026-03-13 14:04:31][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip succeeded.
+[2026-03-13 14:04:31][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_uploads.zip index:0
+[2026-03-13 14:04:32][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_uploads.zip index:0 finished.
+[2026-03-13 14:04:32][notice]End restore upload.
+[2026-03-13 14:04:38][notice]Start restoring wp-core.
+[2026-03-13 14:04:38][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip
+[2026-03-13 14:04:38][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip succeeded.
+[2026-03-13 14:04:38][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_core.zip
+[2026-03-13 14:05:23][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_core.zip succeeded.
+[2026-03-13 14:05:23][notice]End restore wp-core.
+[2026-03-13 14:05:37][notice]Start restoring databases.
+[2026-03-13 14:05:37][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip
+[2026-03-13 14:05:37][notice]Extracting file:softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_all.zip finished.
+[2026-03-13 14:05:37][notice]Extracting file:D:\laragon\www\SoftZor/wp-content\wpvividbackups\softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_db.zip
+[2026-03-13 14:05:37][notice]Extracting file:D:\laragon\www\SoftZor/wp-content\wpvividbackups\softzor.test_wpvivid-e22116eb6cd5a_2026-03-12-10-21_backup_db.zip finished.
+[2026-03-13 14:05:37][notice]End restore databases.
+[2026-03-13 14:05:40][notice]Start restoring databases.
+[2026-03-13 14:05:40][notice]Start restoring sql file offset:0
+[2026-03-13 14:05:40][notice]The test to drop table succeeds.
+[2026-03-13 14:05:40][notice]Drop table if exist tmpc6ef6f_kb_optimizer
+[2026-03-13 14:05:40][notice]Creating table tmpc6ef6f_kb_optimizer
+[2026-03-13 14:05:40][notice]Drop table if exist tmpc6ef6f_rank_math_internal_meta
+[2026-03-13 14:05:40][notice]Creating table tmpc6ef6f_rank_math_internal_meta
+[2026-03-13 14:05:40][notice]Drop table if exist tmpc6ef6f_actionscheduler_claims
+[2026-03-13 14:05:40][notice]Creating table tmpc6ef6f_actionscheduler_claims
+[2026-03-13 14:05:40][notice]Drop table if exist tmpc6ef6f_actionscheduler_groups
+[2026-03-13 14:05:40][notice]Creating table tmpc6ef6f_actionscheduler_groups
+[2026-03-13 14:05:40][notice]Drop table if exist tmpc6ef6f_glsr_assigned_posts
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_glsr_assigned_posts
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_glsr_assigned_terms
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_glsr_assigned_terms
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_glsr_assigned_users
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_glsr_assigned_users
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_glsr_tmp
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_glsr_tmp
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_kb_optimizer_viewport_hashes
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_kb_optimizer_viewport_hashes
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_links
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_links
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_commentmeta
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_commentmeta
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_rank_math_internal_links
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_rank_math_internal_links
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_usermeta
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_usermeta
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_users
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_users
+[2026-03-13 14:05:41][notice]Drop table if exist tmpc6ef6f_actionscheduler_logs
+[2026-03-13 14:05:41][notice]Creating table tmpc6ef6f_actionscheduler_logs
+[2026-03-13 14:05:42][notice]Drop table if exist tmpc6ef6f_glsr_ratings
+[2026-03-13 14:05:42][notice]Creating table tmpc6ef6f_glsr_ratings
+[2026-03-13 14:05:42][notice]Drop table if exist tmpc6ef6f_comments
+[2026-03-13 14:05:42][notice]Creating table tmpc6ef6f_comments
+[2026-03-13 14:05:42][notice]Drop table if exist tmpc6ef6f_termmeta
+[2026-03-13 14:05:42][notice]Creating table tmpc6ef6f_termmeta
+[2026-03-13 14:05:42][notice]Drop table if exist tmpc6ef6f_term_relationships
+[2026-03-13 14:05:42][notice]Creating table tmpc6ef6f_term_relationships
+[2026-03-13 14:05:43][notice]Drop table if exist tmpc6ef6f_actionscheduler_actions
+[2026-03-13 14:05:43][notice]Creating table tmpc6ef6f_actionscheduler_actions
+[2026-03-13 14:05:43][notice]Drop table if exist tmpc6ef6f_term_taxonomy
+[2026-03-13 14:05:43][notice]Creating table tmpc6ef6f_term_taxonomy
+[2026-03-13 14:05:44][notice]Drop table if exist tmpc6ef6f_terms
+[2026-03-13 14:05:44][notice]Creating table tmpc6ef6f_terms
+[2026-03-13 14:05:45][notice]Drop table if exist tmpc6ef6f_options
+[2026-03-13 14:05:45][notice]Creating table tmpc6ef6f_options
+[2026-03-13 14:05:46][notice]Drop table if exist tmpc6ef6f_posts
+[2026-03-13 14:05:46][notice]Creating table tmpc6ef6f_posts
+[2026-03-13 14:05:47][notice]Drop table if exist tmpc6ef6f_postmeta
+[2026-03-13 14:05:47][notice]Creating table tmpc6ef6f_postmeta
+[2026-03-13 14:05:48][notice]Reading sql file completed offset:5243826
+[2026-03-13 14:05:48][notice]End restore databases.
+[2026-03-13 14:05:50][notice]Start restoring databases.
+[2026-03-13 14:05:50][notice]Start restoring sql file offset:5243826
+[2026-03-13 14:05:50][notice]The test to drop table succeeds.
+[2026-03-13 14:05:51][notice]Start replacing table tmpc6ef6f_postmeta offset:0
+[2026-03-13 14:05:51][notice]
+[2026-03-13 14:05:51][notice]
+[2026-03-13 14:05:51][notice]UPDATE tmpc6ef6f_options SET option_value="http://softzor.test" WHERE option_name="siteurl";
+[2026-03-13 14:05:51][notice]update query len:92
+[2026-03-13 14:05:51][notice]UPDATE tmpc6ef6f_options SET option_value="http://softzor.test" WHERE option_name="home";
+[2026-03-13 14:05:51][notice]update query len:89
+[2026-03-13 14:05:51][notice]Restore db success
+[2026-03-13 14:05:51][notice]End restore databases.
+[2026-03-13 14:05:53][notice]Restore db success,now start rename temp table name prefix to new site prefix.
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_actionscheduler_actions
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_actionscheduler_claims
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_actionscheduler_groups
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_actionscheduler_logs
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_commentmeta
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_comments
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_glsr_tmp
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_kb_optimizer
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_kb_optimizer_viewport_hashes
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_links
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_options
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_postmeta
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_posts
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_rank_math_internal_links
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_rank_math_internal_meta
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_term_relationships
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_term_taxonomy
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_termmeta
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_terms
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_usermeta
+[2026-03-13 14:05:53][notice]DROP TABLE IF EXISTS wp_users
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_actionscheduler_actions TO wp_actionscheduler_actions
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_actionscheduler_claims TO wp_actionscheduler_claims
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_actionscheduler_groups TO wp_actionscheduler_groups
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_actionscheduler_logs TO wp_actionscheduler_logs
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_commentmeta TO wp_commentmeta
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_comments TO wp_comments
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_glsr_tmp TO wp_glsr_tmp
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_kb_optimizer TO wp_kb_optimizer
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_kb_optimizer_viewport_hashes TO wp_kb_optimizer_viewport_hashes
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_links TO wp_links
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_options TO wp_options
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_postmeta TO wp_postmeta
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_posts TO wp_posts
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_rank_math_internal_links TO wp_rank_math_internal_links
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_rank_math_internal_meta TO wp_rank_math_internal_meta
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_term_relationships TO wp_term_relationships
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_term_taxonomy TO wp_term_taxonomy
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_termmeta TO wp_termmeta
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_terms TO wp_terms
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_usermeta TO wp_usermeta
+[2026-03-13 14:05:53][notice]RENAME TABLE tmpc6ef6f_users TO wp_users
+[2026-03-13 14:05:53][notice]Replacing table prefix succeeded.
+[2026-03-13 14:05:53][notice]Deleting temp files.
