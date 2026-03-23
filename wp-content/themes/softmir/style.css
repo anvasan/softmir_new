@@ -3542,18 +3542,18 @@ img {
 }
 
 .table-logo {
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
     border-radius: 0.375rem;
     object-fit: contain;
     flex-shrink: 0;
     background: #f3f5f9;
-    padding: 4px;
+    padding: 6px;
 }
 
 .table-logo-placeholder {
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
     display: flex;
     align-items: center;
     justify-content: center;
