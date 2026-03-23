@@ -984,3 +984,123 @@ function softmir_go_redirect_template()
     exit;
 }
 add_action('template_redirect', 'softmir_go_redirect_template');
+
+// ========== Admin: Scout Source Column & Filter ==========
+
+/**
+ * Add "Источник" (Source) column to software list table
+ */
+function softmir_software_source_column($columns)
+{
+    $new = [];
+    foreach ($columns as $key => $label) {
+        $new[$key] = $label;
+        if ($key === 'title') {
+            $new['sw_source'] = '📦 Источник';
+        }
+    }
+    return $new;
+}
+add_filter('manage_software_posts_columns', 'softmir_software_source_column');
+
+/**
+ * Render source column content
+ */
+function softmir_software_source_column_content($column, $post_id)
+{
+    if ($column !== 'sw_source')
+        return;
+
+    $status = get_post_meta($post_id, 'software_status', true);
+    if ($status === 'external_scout') {
+        echo '<span style="display:inline-flex;align-items:center;gap:4px;padding:3px 8px;background:#fff3cd;border:1px solid #ffc107;border-radius:4px;font-size:12px;font-weight:500;color:#856404;">🤖 Скаут</span>';
+    } else {
+        echo '<span style="color:#888;">—</span>';
+    }
+}
+add_action('manage_software_posts_custom_column', 'softmir_software_source_column_content', 10, 2);
+
+/**
+ * Add "Источник" dropdown filter in software list
+ */
+function softmir_software_source_filter()
+{
+    global $typenow;
+    if ($typenow !== 'software')
+        return;
+
+    $current = $_GET['sw_source_filter'] ?? '';
+    ?>
+    <select name="sw_source_filter">
+        <option value="">Все источники</option>
+        <option value="scout" <?php selected($current, 'scout'); ?>>🤖 Скаут (Квиз)</option>
+        <option value="manual" <?php selected($current, 'manual'); ?>>✍️ Ручное добавление</option>
+    </select>
+    <?php
+}
+add_action('restrict_manage_posts', 'softmir_software_source_filter');
+
+/**
+ * Apply source filter to query
+ */
+function softmir_software_source_filter_query($query)
+{
+    global $pagenow, $typenow;
+    if (!is_admin() || $pagenow !== 'edit.php' || $typenow !== 'software' || !$query->is_main_query())
+        return;
+
+    $filter = $_GET['sw_source_filter'] ?? '';
+    if ($filter === 'scout') {
+        $query->set('meta_key', 'software_status');
+        $query->set('meta_value', 'external_scout');
+    } elseif ($filter === 'manual') {
+        $query->set('meta_query', [
+            'relation' => 'OR',
+            ['key' => 'software_status', 'compare' => 'NOT EXISTS'],
+            ['key' => 'software_status', 'value' => 'external_scout', 'compare' => '!='],
+        ]);
+    }
+}
+add_action('pre_get_posts', 'softmir_software_source_filter_query');
+
+/**
+ * Add "Скаут" view link in the views bar (All | Mine | Published | Scout)
+ */
+function softmir_software_views_scout($views)
+{
+    global $wpdb;
+    $count = (int) $wpdb->get_var(
+        "SELECT COUNT(*) FROM {$wpdb->posts} p
+         INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+         WHERE p.post_type = 'software' AND p.post_status = 'publish'
+         AND pm.meta_key = 'software_status' AND pm.meta_value = 'external_scout'"
+    );
+
+    $current = ($_GET['sw_source_filter'] ?? '') === 'scout' ? 'class="current"' : '';
+    $url = admin_url('edit.php?post_type=software&sw_source_filter=scout');
+    $views['scout'] = "<a href=\"{$url}\" {$current}>🤖 Скаут <span class=\"count\">({$count})</span></a>";
+
+    return $views;
+}
+add_filter('views_edit-software', 'softmir_software_views_scout');
+
+/**
+ * Make source column sortable
+ */
+function softmir_software_source_sortable($columns)
+{
+    $columns['sw_source'] = 'sw_source';
+    return $columns;
+}
+add_filter('manage_edit-software_sortable_columns', 'softmir_software_source_sortable');
+
+function softmir_software_source_orderby($query)
+{
+    if (!is_admin() || !$query->is_main_query())
+        return;
+    if ($query->get('orderby') === 'sw_source') {
+        $query->set('meta_key', 'software_status');
+        $query->set('orderby', 'meta_value');
+    }
+}
+add_action('pre_get_posts', 'softmir_software_source_orderby');
