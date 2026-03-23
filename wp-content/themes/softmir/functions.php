@@ -355,6 +355,7 @@ require_once get_template_directory() . '/inc/google-oauth.php';
 // ========== Quiz System ==========
 require_once get_template_directory() . '/inc/polylang-strings.php';
 require_once get_template_directory() . '/inc/quiz-functions.php';
+require_once get_template_directory() . '/inc/db-tables.php';
 require_once get_template_directory() . '/inc/quiz-frontend.php';
 require_once get_template_directory() . '/inc/quiz-rest-api.php';
 
