@@ -8,10 +8,47 @@
     $short_desc = get_field('short_description');
     $pricing = get_field('pricing');
     $features = get_field('key_features');
-    $advantages = get_field('advantages');
+
+    $scenarios = [];
+    for ($i = 1; $i <= 3; $i++) {
+        $t = get_field("scenario_{$i}_title");
+        $d = get_field("scenario_{$i}_desc");
+        $ic = get_field("scenario_{$i}_icon");
+        if ($t || $d) {
+            $scenarios[] = ['title' => $t, 'desc' => $d, 'icon' => $ic];
+        }
+    }
+    // Очистка от старых HTML таблиц (если в базе остался старый сохраненный код)
+    function softmir_parse_text_list($raw)
+    {
+        if (is_array($raw))
+            return $raw;
+        if (empty($raw))
+            return [];
+        // Заменяем закрывающие теги блоков на перенос строки, чтобы текст не слипся
+        $text = str_replace(array('</tr>', '</td>', '</p>', '<br>', '<br/>', '<br />', '</li>', '</h3>'), "\n", $raw);
+        $text = wp_strip_all_tags($text); // Удаляем весь оставшийся HTML
+        return array_filter(array_map('trim', explode("\n", $text)));
+    }
+    // Получение значения поля с фолбэком через get_post_meta 
+    // (на случай если ACF-ссылка _field_name отсутствует после очистки)
+    function softmir_get_text_field($field_name)
+    {
+        $val = get_field($field_name);
+        if (empty($val)) {
+            $val = get_post_meta(get_the_ID(), $field_name, true);
+        }
+        return $val;
+    }
+
+    $advantages = softmir_parse_text_list(softmir_get_text_field('top_reasons'));
+    $disadvantages = softmir_parse_text_list(softmir_get_text_field('disadvantages'));
+    $best_for = softmir_parse_text_list(softmir_get_text_field('best_for'));
+    $bad_for = softmir_parse_text_list(softmir_get_text_field('bad_for'));
+
+
+
     $areas = get_field('business_areas');
-    $markets = get_field('target_markets');
-    $is_featured = get_field('is_featured');
     $terms = get_the_terms(get_the_ID(), 'software_category');
     $primary_cat_id = get_post_meta(get_the_ID(), 'primary_category', true);
     $term_to_display = null;
@@ -57,9 +94,10 @@
                 </div>
 
                 <?php if ($short_desc): ?>
-                    <p class="detail-short-desc"><?php echo esc_html($short_desc); ?></p>
-                    <?php
-                endif; ?>
+                    <div style="background: #eff6ff; color: #1e3a8a; padding: 18px 24px; border-radius: 12px; margin-bottom: 24px; font-size: 1.05rem; line-height: 1.6; border: 1px solid #bfdbfe;">
+                        <p class="detail-short-desc" style="margin: 0;"><?php echo esc_html($short_desc); ?></p>
+                    </div>
+                <?php endif; ?>
 
                 <!-- Full Description (collapsible) -->
                 <?php if (get_the_content()): ?>
@@ -76,6 +114,167 @@
                     <?php
                 endif; ?>
 
+                <!-- Scenarios Block -->
+                <?php if (!empty($scenarios) && is_array($scenarios)): ?>
+                    <div class="scenarios-section detail-block" style="margin-top: 0.5rem;">
+                        <div class="section-heading"
+                            style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                            <h2
+                                style="font-size: 1.25rem; margin: 0; font-weight: 700; color: #111827; border-bottom: none; padding-bottom: 0;">
+                                <?php esc_html_e('Сценарии использования', 'softmir'); ?>
+                            </h2>
+                        </div>
+                        <div class="scenarios-list" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <?php
+                            $svg_icons = [
+                                '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 1 4 12.9V17H8v-2.1A7 7 0 0 1 12 2z"/></svg>',
+                                '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+                                '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>',
+                            ];
+                            $icon_idx = 0;
+                            foreach ($scenarios as $scene):
+                                $svg = isset($svg_icons[$icon_idx]) ? $svg_icons[$icon_idx] : $svg_icons[0];
+                                $icon_idx++;
+                                ?>
+                                <div class="scenario-row"
+                                    style="background: #ffffff; border-radius: 12px; padding: 16px 20px; border: 1px solid #f3f4f6; display: flex; gap: 16px; align-items: flex-start;">
+                                    <div class="scenario-icon"
+                                        style="background: #e0e7ff; color: #4f46e5; width: 44px; height: 44px; min-width: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <?php echo $svg; ?>
+                                    </div>
+                                    <div class="scenario-content">
+                                        <h4 class="scenario-title"
+                                            style="font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; color: #1f2937;">
+                                            <?php echo esc_html($scene['title']); ?>
+                                        </h4>
+                                        <p class="scenario-desc"
+                                            style="font-size: 0.95rem; color: #4b5563; line-height: 1.5; margin: 0;">
+                                            <?php echo esc_html($scene['desc']); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <!-- Pros & Cons Grid -->
+                <?php if (!empty($advantages) || !empty($disadvantages)): ?>
+                    <div class="pros-cons-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 0.5rem;">
+
+                        <?php if (!empty($advantages) && is_array($advantages)): ?>
+                            <div class="pros-box"
+                                style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 24px;">
+                                <h3
+                                    style="color: #166534; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                    <?php esc_html_e('Почему это ТОП', 'softmir'); ?>
+                                </h3>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <?php foreach ($advantages as $adv): ?>
+                                        <li
+                                            style="position: relative; padding-left: 28px; margin-bottom: 12px; font-size: 0.95rem; color: #374151; line-height: 1.4;">
+                                            <span style="position: absolute; left: 0; top: 0px; color: #22c55e;">✓</span>
+                                            <?php echo esc_html(is_array($adv) ? ($adv['text'] ?? '') : $adv); ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (!empty($disadvantages) && is_array($disadvantages)): ?>
+                            <div class="cons-box"
+                                style="background: #fffbeb; border: 1px solid #fef08a; border-radius: 12px; padding: 24px;">
+                                <h3
+                                    style="color: #b45309; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                                    <span style="font-size: 1.25rem; line-height: 1;">⚠️</span>
+                                    <?php esc_html_e('Нюансы и Риски', 'softmir'); ?>
+                                </h3>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <?php foreach ($disadvantages as $dis): ?>
+                                        <li
+                                            style="position: relative; padding-left: 28px; margin-bottom: 12px; font-size: 0.95rem; color: #374151; line-height: 1.4;">
+                                            <span
+                                                style="position: absolute; left: 0; top: 0px; color: #f59e0b; font-weight: bold;">✕</span>
+                                            <?php echo esc_html(is_array($dis) ? ($dis['text'] ?? '') : $dis); ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+
+                    </div>
+                <?php endif; ?>
+
+                <!-- Best / Bad For Block (Full Width) -->
+                <?php if (!empty($best_for) || !empty($bad_for)): ?>
+                    <div class="recommendations-block"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 0.5rem;">
+
+                        <?php if (!empty($best_for) && is_array($best_for)): ?>
+                            <div class="best-for-box"
+                                style="background: #ffffff; border: 1px solid #bbf7d0; border-radius: 12px; padding: 24px;">
+                                <h3
+                                    style="color: #166534; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <?php esc_html_e('🚀 Вам ПОДОЙДЁТ, если:', 'softmir'); ?>
+                                </h3>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <?php foreach ($best_for as $bf): ?>
+                                        <li
+                                            style="position: relative; padding-left: 28px; margin-bottom: 10px; font-size: 0.95rem; color: #374151; line-height: 1.4;">
+                                            <span style="position: absolute; left: 0; top: 2px; color: #22c55e;">✓</span>
+                                            <?php echo esc_html(is_array($bf) ? ($bf['text'] ?? '') : $bf); ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (!empty($bad_for) && is_array($bad_for)): ?>
+                            <div class="bad-for-box"
+                                style="background: #ffffff; border: 1px solid #fecaca; border-radius: 12px; padding: 24px;">
+                                <h3
+                                    style="color: #991b1b; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                                    </svg>
+                                    <?php esc_html_e('Лучше не брать, если:', 'softmir'); ?>
+                                </h3>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <?php foreach ($bad_for as $bf): ?>
+                                        <li
+                                            style="position: relative; padding-left: 28px; margin-bottom: 10px; font-size: 0.95rem; color: #374151; line-height: 1.4;">
+                                            <span
+                                                style="position: absolute; left: 0; top: 2px; color: #ef4444; font-weight:bold;">✕</span>
+                                            <?php echo esc_html(is_array($bf) ? ($bf['text'] ?? '') : $bf); ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+
+                    </div>
+                <?php endif; ?>
+
                 <!-- Key Functions -->
                 <?php if (function_exists('softmir_render_key_functions')): ?>
                     <div class="detail-block detail-key-functions">
@@ -90,9 +289,6 @@
 
                 <!-- Attributes (Middle) -->
                 <?php echo softmir_render_attrs_block(get_the_ID(), '_attr_page_position', 'middle', 'detail-block'); ?>
-
-                <!-- Attributes (Sidebar - now in main content) -->
-                <?php echo softmir_render_attrs_block(get_the_ID(), '_attr_page_position', 'sidebar', 'detail-block'); ?>
 
                 <!-- Categories Block (Moved from Sidebar) -->
                 <?php if ($terms && !is_wp_error($terms)): ?>
@@ -112,7 +308,7 @@
 
                 <!-- Feature List -->
                 <?php if ($features): ?>
-                    <div class="accordion">
+                    <div class="accordion mt-8">
                         <button class="accordion-header"
                             onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
                             <span>🔑 <?php esc_html_e('Ключевые особенности', 'softmir'); ?></span>
@@ -121,23 +317,6 @@
                         <div class="accordion-body">
                             <div class="wysiwyg-content">
                                 <?php echo wp_kses_post($features); ?>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                endif; ?>
-
-                <!-- Advantages -->
-                <?php if ($advantages): ?>
-                    <div class="accordion">
-                        <button class="accordion-header"
-                            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
-                            <span>💪 <?php esc_html_e('Преимущества', 'softmir'); ?></span>
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-body">
-                            <div class="wysiwyg-content">
-                                <?php echo wp_kses_post($advantages); ?>
                             </div>
                         </div>
                     </div>
@@ -308,6 +487,11 @@
                         <?php esc_html_e('＋ Добавить к сравнению', 'softmir'); ?>
                     </a>
                 </div>
+
+
+
+                <!-- Attributes (Sidebar - below recommendations) -->
+                <?php echo softmir_render_attrs_block(get_the_ID(), '_attr_page_position', 'sidebar', 'detail-block'); ?>
 
                 <!-- Reviews Summary (Sidebar) -->
                 <div class="sidebar-box">

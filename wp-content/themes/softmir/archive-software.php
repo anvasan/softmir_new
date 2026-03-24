@@ -136,6 +136,7 @@
                 'post_type' => 'software',
                 'posts_per_page' => 12,
                 'paged' => $paged,
+                'prioritize_partner' => true,
                 'orderby' => 'date',
                 'order' => 'DESC',
             ];

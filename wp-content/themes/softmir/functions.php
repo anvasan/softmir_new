@@ -333,6 +333,7 @@ add_action('acf/init', 'softmir_acf_fields');
 require_once get_template_directory() . '/inc/shortcodes.php';
 require_once get_template_directory() . '/inc/shortcodes-home.php';
 require_once get_template_directory() . '/inc/acf-home-options.php';
+require_once get_template_directory() . '/inc/acf-software.php';
 require_once get_template_directory() . '/inc/block-patterns.php';
 
 require_once get_template_directory() . '/inc/attributes.php';
