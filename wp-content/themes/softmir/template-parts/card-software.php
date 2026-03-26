@@ -5,7 +5,7 @@
  */
 $is_featured = get_field('is_featured');
 $short_desc = get_field('short_description');
-$logo = get_field('company_logo');
+$logo = softmir_get_company_logo();
 $price = get_field('price_summary');
 $website = get_field('website_url');
 $terms = get_the_terms(get_the_ID(), 'software_category');

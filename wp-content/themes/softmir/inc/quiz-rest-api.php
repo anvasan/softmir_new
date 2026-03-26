@@ -459,15 +459,18 @@ function softmir_run_scout($category_id, $region, $answers, $user_text = '', $la
         update_field('origin', sanitize_text_field($item['origin'] ?? ''), $post_id);
 
         // Новые глубокие текстовые поля (ACF Text/Textarea)
+        // Сценарии использования — формируем Markdown
         if (!empty($item['scenarios']) && is_array($item['scenarios'])) {
-            $i = 1;
+            $md_parts = [];
             foreach ($item['scenarios'] as $sc) {
-                if ($i > 3)
-                    break;
-                update_field("scenario_{$i}_title", sanitize_text_field($sc['title'] ?? ''), $post_id);
-                update_field("scenario_{$i}_desc", sanitize_textarea_field($sc['desc'] ?? ''), $post_id);
-                update_field("scenario_{$i}_icon", sanitize_text_field($sc['icon'] ?? ''), $post_id);
-                $i++;
+                $title = sanitize_text_field($sc['title'] ?? '');
+                $desc = sanitize_textarea_field($sc['desc'] ?? '');
+                if (!empty($title)) {
+                    $md_parts[] = "### {$title}\n{$desc}";
+                }
+            }
+            if (!empty($md_parts)) {
+                update_field('scenarios_md', implode("\n\n", $md_parts), $post_id);
             }
         }
 

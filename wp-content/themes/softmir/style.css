@@ -1023,7 +1023,7 @@ img {
 .detail-main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .detail-sidebar {
@@ -2247,8 +2247,8 @@ img {
 
 /* ========== Software Attributes ========== */
 .detail-block {
-    margin: 2rem 0;
-    padding: 1.5rem;
+    margin: 1rem 0;
+    padding: 1.25rem;
     background: var(--gray-50);
     border-radius: var(--radius);
     border: 1px solid var(--gray-200);
@@ -2313,6 +2313,43 @@ img {
     color: var(--gray-700);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
+/* ========== Integrations Tags Block ========== */
+.sw-integrations-block {
+    margin: 1rem 0;
+    padding: 1.25rem;
+    background: var(--gray-50);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+}
+
+.sw-integrations-block .section-heading {
+    margin-bottom: 1rem;
+}
+
+.sw-integrations-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sw-integration-tag {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background: var(--brand-50);
+    border: 1px solid var(--brand-200, #bae6fd);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--brand-700, #0369a1);
+    transition: var(--transition);
+}
+
+.sw-integration-tag:hover {
+    background: var(--brand-100, #e0f2fe);
+    border-color: var(--brand-300, #7dd3fc);
+}
+
 
 /* Sidebar attributes adjustments */
 .sidebar-box .attrs-block {
@@ -2409,8 +2446,7 @@ img {
 
 /* Accordion tweaks */
 .accordion {
-    margin-bottom: 0.5rem;
-    /* Reduced spacing between accordions */
+    margin-bottom: 0.25rem;
     border: 1px solid var(--gray-200);
 }
 
@@ -5029,13 +5065,13 @@ img {
 .section-heading {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .section-heading--sm {
     font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .section-heading--xs {

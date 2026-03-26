@@ -47,9 +47,9 @@ function softmir_enqueue()
     if (is_singular('software')) {
         wp_enqueue_script('softmir-single', get_template_directory_uri() . '/js/single-software.js', [], '1.0.0', true);
         wp_localize_script('softmir-single', 'softmirSingleL10n', [
-            'showMore' => __('Показать больше...', 'softmir'),
-            'showLess' => __('Показать меньше...', 'softmir'),
-            'hide' => __('Скрыть', 'softmir'),
+            'showMore' => softmir_quiz_t('sw_show_more', 'Показать больше...'),
+            'showLess' => softmir_quiz_t('sw_show_less', 'Показать меньше...'),
+            'hide' => softmir_quiz_t('sw_hide', 'Скрыть'),
         ]);
     }
 
@@ -1105,3 +1105,41 @@ function softmir_software_source_orderby($query)
     }
 }
 add_action('pre_get_posts', 'softmir_software_source_orderby');
+
+/**
+ * Получить логотип компании с поддержкой фоллбэка через Polylang (если Media Module блокирует картинки)
+ */
+function softmir_get_company_logo($post_id = null)
+{
+    if (!$post_id) {
+        $post_id = get_the_ID();
+    }
+    
+    // Пытаемся получить стандартным способом
+    $logo = get_field('company_logo', $post_id);
+    if (!empty($logo)) {
+        return $logo;
+    }
+    
+    // Если логотип скрыт из-за отсутствия перевода медиа в Polylang: ищем в оригинале
+    if (function_exists('pll_get_post_translations')) {
+        $translations = pll_get_post_translations($post_id);
+        if (!empty($translations)) {
+            foreach ($translations as $lang => $trans_id) {
+                if ($trans_id != $post_id) {
+                    $raw_logo = get_post_meta($trans_id, 'company_logo', true);
+                    if ($raw_logo) {
+                        if (is_numeric($raw_logo)) {
+                            $url = wp_get_attachment_url($raw_logo);
+                            if ($url) return $url;
+                        } else {
+                            return $raw_logo;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    return '';
+}

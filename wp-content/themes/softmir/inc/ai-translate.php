@@ -29,12 +29,7 @@ function softmir_get_translatable_fields($post_type)
                 'bad_for',
                 'business_areas',
                 'price_summary',
-                'scenario_1_title',
-                'scenario_1_desc',
-                'scenario_2_title',
-                'scenario_2_desc',
-                'scenario_3_title',
-                'scenario_3_desc',
+                'scenarios_md',
             ],
             'skip_copy' => ['company_logo', 'website_url', 'video_url', 'screenshot_1', 'screenshot_2', 'screenshot_3', 'screenshot_4', 'is_featured', 'is_pinned', 'target_markets'],
         ],
@@ -1016,7 +1011,8 @@ function softmir_background_translate_term($term_id, $taxonomy)
  * Обработчик асинхронного перевода карточек, созданных ИИ-Скаутом
  */
 add_action('softmir_async_translate_scout_cards', 'softmir_handle_async_translate_scout_cards');
-function softmir_handle_async_translate_scout_cards($post_id) {
+function softmir_handle_async_translate_scout_cards($post_id)
+{
     if (!function_exists('pll_languages_list') || !function_exists('softmir_translate_post') || !function_exists('pll_get_post_language')) {
         return;
     }

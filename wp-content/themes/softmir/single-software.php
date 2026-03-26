@@ -2,20 +2,28 @@
 
 <?php while (have_posts()):
     the_post();
-    $logo = get_field('company_logo');
+    $logo = softmir_get_company_logo();
     $website = get_field('website_url');
     $video = get_field('video_url');
     $short_desc = get_field('short_description');
     $pricing = get_field('pricing');
     $features = get_field('key_features');
 
+    // Парсим сценарии из одного Markdown-поля (### Заголовок\nОписание)
     $scenarios = [];
-    for ($i = 1; $i <= 3; $i++) {
-        $t = get_field("scenario_{$i}_title");
-        $d = get_field("scenario_{$i}_desc");
-        $ic = get_field("scenario_{$i}_icon");
-        if ($t || $d) {
-            $scenarios[] = ['title' => $t, 'desc' => $d, 'icon' => $ic];
+    $scenarios_raw = get_field('scenarios_md');
+    if (!empty($scenarios_raw)) {
+        $parts = preg_split('/^###\s*/m', $scenarios_raw);
+        foreach ($parts as $part) {
+            $part = trim($part);
+            if (empty($part))
+                continue;
+            $lines = explode("\n", $part, 2);
+            $title = trim($lines[0], " :\t\r\n");
+            $desc = isset($lines[1]) ? trim($lines[1]) : '';
+            if (!empty($title)) {
+                $scenarios[] = ['title' => $title, 'desc' => $desc];
+            }
         }
     }
     // Очистка от старых HTML таблиц (если в базе остался старый сохраненный код)
@@ -94,7 +102,8 @@
                 </div>
 
                 <?php if ($short_desc): ?>
-                    <div style="background: #eff6ff; color: #1e3a8a; padding: 18px 24px; border-radius: 12px; margin-bottom: 24px; font-size: 1.05rem; line-height: 1.6; border: 1px solid #bfdbfe;">
+                    <div
+                        style="background: #eff6ff; color: #1e3a8a; padding: 18px 24px; border-radius: 12px; margin-bottom: 24px; font-size: 1.05rem; line-height: 1.6; border: 1px solid #bfdbfe;">
                         <p class="detail-short-desc" style="margin: 0;"><?php echo esc_html($short_desc); ?></p>
                     </div>
                 <?php endif; ?>
@@ -107,7 +116,7 @@
                         </div>
                         <div class="description-fade" id="softDescFade"></div>
                         <button class="description-toggle" id="softDescToggle" onclick="softmirToggleDesc()">
-                            <?php esc_html_e('Показать больше...', 'softmir'); ?>
+                            <?php echo esc_html(softmir_quiz_t('sw_show_more', 'Показать больше...')); ?>
                         </button>
                     </div>
 
@@ -127,7 +136,7 @@
                             </svg>
                             <h2
                                 style="font-size: 1.25rem; margin: 0; font-weight: 700; color: #111827; border-bottom: none; padding-bottom: 0;">
-                                <?php esc_html_e('Сценарии использования', 'softmir'); ?>
+                                <?php echo esc_html(softmir_quiz_t('sw_scenarios', 'Сценарии использования')); ?>
                             </h2>
                         </div>
                         <div class="scenarios-list" style="display: flex; flex-direction: column; gap: 1rem;">
@@ -179,7 +188,7 @@
                                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                         <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                     </svg>
-                                    <?php esc_html_e('Почему это ТОП', 'softmir'); ?>
+                                    <?php echo esc_html(softmir_quiz_t('sw_why_top', 'Почему это ТОП')); ?>
                                 </h3>
                                 <ul style="list-style: none; padding: 0; margin: 0;">
                                     <?php foreach ($advantages as $adv): ?>
@@ -199,7 +208,7 @@
                                 <h3
                                     style="color: #b45309; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
                                     <span style="font-size: 1.25rem; line-height: 1;">⚠️</span>
-                                    <?php esc_html_e('Нюансы и Риски', 'softmir'); ?>
+                                    <?php echo esc_html(softmir_quiz_t('sw_nuances', 'Нюансы и Риски')); ?>
                                 </h3>
                                 <ul style="list-style: none; padding: 0; margin: 0;">
                                     <?php foreach ($disadvantages as $dis): ?>
@@ -232,7 +241,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
-                                    <?php esc_html_e('🚀 Вам ПОДОЙДЁТ, если:', 'softmir'); ?>
+                                    <?php echo esc_html(softmir_quiz_t('sw_best_for', '🚀 Вам ПОДОЙДЁТ, если:')); ?>
                                 </h3>
                                 <ul style="list-style: none; padding: 0; margin: 0;">
                                     <?php foreach ($best_for as $bf): ?>
@@ -257,7 +266,7 @@
                                         <line x1="15" y1="9" x2="9" y2="15"></line>
                                         <line x1="9" y1="9" x2="15" y2="15"></line>
                                     </svg>
-                                    <?php esc_html_e('Лучше не брать, если:', 'softmir'); ?>
+                                    <?php echo esc_html(softmir_quiz_t('sw_bad_for', 'Лучше не брать, если:')); ?>
                                 </h3>
                                 <ul style="list-style: none; padding: 0; margin: 0;">
                                     <?php foreach ($bad_for as $bf): ?>
@@ -290,25 +299,19 @@
                 <!-- Attributes (Middle) -->
                 <?php echo softmir_render_attrs_block(get_the_ID(), '_attr_page_position', 'middle', 'detail-block'); ?>
 
-                <!-- Categories Block (Moved from Sidebar) -->
-                <?php if ($terms && !is_wp_error($terms)): ?>
-                    <div class="detail-block">
-                        <h3 class="section-heading--sm"><?php esc_html_e('Категории', 'softmir'); ?></h3>
-                        <div class="categories-2col">
-                            <?php foreach ($terms as $term): ?>
-                                <a href="<?php echo get_term_link($term); ?>" class="category-item-link">
-                                    <?php echo esc_html($term->name); ?>
-                                </a>
-                                <?php
-                            endforeach; ?>
-                        </div>
-                    </div>
-                    <?php
-                endif; ?>
+                <!-- Integrations Tags Block -->
+                <?php
+                if (function_exists('softmir_render_integrations_block')) {
+                    $integrations_html = softmir_render_integrations_block(get_the_ID());
+                    if ($integrations_html) {
+                        echo $integrations_html;
+                    }
+                }
+                ?>
 
                 <!-- Feature List -->
                 <?php if ($features): ?>
-                    <div class="accordion mt-8">
+                    <div class="accordion">
                         <button class="accordion-header"
                             onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
                             <span>🔑 <?php esc_html_e('Ключевые особенности', 'softmir'); ?></span>

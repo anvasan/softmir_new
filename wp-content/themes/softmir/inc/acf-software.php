@@ -5,45 +5,14 @@ if (function_exists('acf_add_local_field_group')):
         'key' => 'group_software_scout_details',
         'title' => 'Детали ПО (Scout Data)',
         'fields' => array(
-            // === СЦЕНАРИИ (фиксированные 3 слота) ===
+            // === СЦЕНАРИИ ИСПОЛЬЗОВАНИЯ (Markdown) ===
             array(
-                'key' => 'field_sw_scene_1_title',
-                'label' => 'Сценарий 1: Заголовок',
-                'name' => 'scenario_1_title',
-                'type' => 'text',
-            ),
-            array(
-                'key' => 'field_sw_scene_1_desc',
-                'label' => 'Сценарий 1: Описание',
-                'name' => 'scenario_1_desc',
+                'key' => 'field_sw_scenarios_md',
+                'label' => 'Сценарии использования',
+                'name' => 'scenarios_md',
                 'type' => 'textarea',
-                'rows' => 3,
-            ),
-            array(
-                'key' => 'field_sw_scene_2_title',
-                'label' => 'Сценарий 2: Заголовок',
-                'name' => 'scenario_2_title',
-                'type' => 'text',
-            ),
-            array(
-                'key' => 'field_sw_scene_2_desc',
-                'label' => 'Сценарий 2: Описание',
-                'name' => 'scenario_2_desc',
-                'type' => 'textarea',
-                'rows' => 3,
-            ),
-            array(
-                'key' => 'field_sw_scene_3_title',
-                'label' => 'Сценарий 3: Заголовок',
-                'name' => 'scenario_3_title',
-                'type' => 'text',
-            ),
-            array(
-                'key' => 'field_sw_scene_3_desc',
-                'label' => 'Сценарий 3: Описание',
-                'name' => 'scenario_3_desc',
-                'type' => 'textarea',
-                'rows' => 3,
+                'rows' => 10,
+                'instructions' => 'Формат: ### Заголовок сценария' . "\n" . 'Текст описания сценария. Каждый блок ### = отдельный сценарий.',
             ),
 
             // === ТЕКСТОВЫЕ СПИСКИ (каждая строка = пункт) ===
