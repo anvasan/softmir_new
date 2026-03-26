@@ -315,6 +315,27 @@ function softmir_run_scout($category_id, $region, $answers, $user_text = '', $la
         $exclude_text = "6. ИСКЛЮЧИ ИЗ ПОИСКА следующие программы (они уже есть в нашей базе): \n   " . implode(", ", $existing_software) . "\n";
     }
 
+    // Собираем атрибуты категории для промпта
+    $category_attrs = softmir_get_attrs_for_category($category_id);
+    $attrs_prompt = "";
+    if (!empty($category_attrs)) {
+        $attrs_prompt = "7. Заполни динамические атрибуты для каждой программы.\nНиже список атрибутов (ID : Название [Тип]). В JSON-ответе в массиве `attributes` верни объект, где ключ - это ID атрибута, а значение - строка (если текст/число) или массив строк (если чекбоксы/множественный выбор):\n";
+        foreach ($category_attrs as $attr) {
+            $meta = softmir_get_attr_meta($attr->ID);
+            $type_desc = $meta['type'];
+            if ($meta['multiple'] || $meta['type'] === 'checkbox') {
+                $type_desc .= ' (массив значений)';
+            }
+            if (!empty($meta['options'])) {
+                $type_desc .= " (Варианты на выбор: {$meta['options']})";
+            }
+            // Переводим заголовок на язык запроса для понимания ИИ
+            $attr_title = $attr->post_title;
+            $attrs_prompt .= "- {$attr->ID} : {$attr_title} [{$type_desc}]\n";
+        }
+        $attrs_prompt .= "\n";
+    }
+
     // Формируем промпт для Gemini
     $prompt = "Ты B2B-эксперт по подбору программного обеспечения. "
         . "Найди 3 реально существующих, популярных и актуальных программных продукта, "
@@ -326,6 +347,7 @@ function softmir_run_scout($category_id, $region, $answers, $user_text = '', $la
         . "4. Цены (price_summary) выводи ИСКЛЮЧИТЕЛЬНО в долларах (USD), евро (EUR) или гривнах (UAH).\n"
         . "5. ВНИМАНИЕ: ВЕСЬ СГЕНЕРИРОВАННЫЙ ТЕКСТ (включая названия, описания вердикты и массивы) ДОЛЖЕН БЫТЬ СТРОГО НА ЯЗЫКЕ: {$lang_name}!\n"
         . $exclude_text
+        . $attrs_prompt
         . "Верни ТОЛЬКО валидный JSON-массив из 3 элементов. Формат каждого элемента:\n"
         . "{\n"
         . "  \"title\": \"Название ПО\",\n"
@@ -335,13 +357,14 @@ function softmir_run_scout($category_id, $region, $answers, $user_text = '', $la
         . "  \"verdict\": \"Вердикт выгоды: Почему это точно подходит пользователю (1-2 предложения)\",\n"
         . "  \"price_summary\": \"Примерная цена (например, 'От $10/мес' или 'Бесплатно')\",\n"
         . "  \"origin\": \"Полное название страны происхождения на русском, например: Украина, США, Великобритания, Польша, Эстония и т.д.\",\n"
-        . "  \"tech_specs\": \"Технические характеристики. Например: Платформы: Web, iOS. Языки: RU, EN. Особенности: ...\",\n"
+        . "  \"tech_specs\": \"Технические характеристики общим текстом.\",\n"
+        . "  \"attributes\": {\"123\": \"Значение (если текст/select/url)\", \"124\": [\"Выбор 1\", \"Выбор 2\"]}, // Заполни поля на основе списка ID, указанного выше\n"
         . "  \"scenarios\": [{\"title\": \"Заголовок\", \"desc\": \"Описание сценария (1 пред.)\", \"icon\": \"Название иконки Google Material (например chat, inventory_2)\"}],\n"
         . "  \"features\": [\"Строка 1\", \"Строка 2\"], // 3-4 ключевые функции (массив строк)\n"
         . "  \"advantages\": [\"Строка 1\"], // 3 главных преимущества (почему это ТОП)\n"
         . "  \"disadvantages\": [\"Строка 1\"], // 2-3 нюанса и риска (минусы)\n"
         . "  \"best_for\": [\"Строка 1\"], // 2-3 критерия 'Вам подойдет, если:'\n"
-        . "  \"bad_for\": [\"Строка 1\"]\n // 2-3 критерия 'Лучше не брать, если:'"
+        . "  \"bad_for\": [\"Строка 1\"]\n // 2-3 критерия 'Лучше не брать, если:'\n"
         . "}\n"
         . "Твой ответ не должен содержать ничего, кроме JSON массива.";
 
@@ -502,6 +525,22 @@ function softmir_run_scout($category_id, $region, $answers, $user_text = '', $la
         }
 
         update_field('tech_specs', sanitize_textarea_field($item['tech_specs'] ?? ''), $post_id);
+
+        // Сохранение динамических атрибутов (возвращенных ИИ)
+        if (!empty($item['attributes']) && is_array($item['attributes'])) {
+            foreach ($item['attributes'] as $attr_id_str => $attr_val) {
+                $attr_id = intval($attr_id_str);
+                if ($attr_id > 0) {
+                    $field_name = '_sw_attr_' . $attr_id;
+                    if (is_array($attr_val)) {
+                        $clean_val = array_map('sanitize_text_field', $attr_val);
+                    } else {
+                        $clean_val = sanitize_text_field($attr_val);
+                    }
+                    update_post_meta($post_id, $field_name, $clean_val);
+                }
+            }
+        }
 
         // Парсим логотип
         softmir_sideload_logo($item['logo_url'] ?? '', $post_id);
