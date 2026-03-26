@@ -360,6 +360,24 @@
                     <?php
                 endif; ?>
 
+                <!-- Additional Attributes Accordion -->
+                <?php
+                $added_options_html = softmir_render_attrs_block(get_the_ID(), '_attr_page_position', 'sidebar', '');
+                if (!empty(trim(strip_tags($added_options_html)))): ?>
+                    <div class="accordion">
+                        <button class="accordion-header"
+                            onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                            <span>⚙️ <?php esc_html_e('Дополнительные характеристики', 'softmir'); ?></span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="wysiwyg-content">
+                                <?php echo $added_options_html; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
                 <!-- Video -->
                 <?php
                 if ($video):
@@ -493,8 +511,7 @@
 
 
 
-                <!-- Attributes (Sidebar - below recommendations) -->
-                <?php echo softmir_render_attrs_block(get_the_ID(), '_attr_page_position', 'sidebar', 'detail-block'); ?>
+                <!-- Attributes (Sidebar - moved to accordion) -->
 
                 <!-- Reviews Summary (Sidebar) -->
                 <div class="sidebar-box">
