@@ -14,13 +14,25 @@ add_action('rest_api_init', function () {
     register_rest_route('softmir/v1', '/quiz-submit', [
         'methods' => 'POST',
         'callback' => 'softmir_rest_quiz_submit',
-        'permission_callback' => '__return_true', // Публичный эндпоинт
+        'permission_callback' => function (\WP_REST_Request $request) {
+            $nonce = $request->get_header('x_wp_nonce');
+            if (empty($nonce) || !wp_verify_nonce($nonce, 'wp_rest')) {
+                return new WP_Error('rest_forbidden', 'Invalid Nonce.', ['status' => 403]);
+            }
+            return true;
+        },
     ]);
 
     register_rest_route('softmir/v1', '/quiz-classify', [
         'methods' => 'POST',
         'callback' => 'softmir_rest_quiz_classify',
-        'permission_callback' => '__return_true',
+        'permission_callback' => function (\WP_REST_Request $request) {
+            $nonce = $request->get_header('x_wp_nonce');
+            if (empty($nonce) || !wp_verify_nonce($nonce, 'wp_rest')) {
+                return new WP_Error('rest_forbidden', 'Invalid Nonce.', ['status' => 403]);
+            }
+            return true;
+        },
     ]);
 });
 
@@ -446,8 +458,15 @@ function softmir_run_scout($category_id, $region, $answers, $user_text = '', $la
         $added_items[] = $item['title']; // Сохраняем названия для брифа
 
         // Избегаем дубликатов по заголовку
-        $existing = get_page_by_title($item['title'], OBJECT, 'software');
-        if ($existing)
+        $existing_query = new WP_Query([
+            'post_type' => 'software',
+            'title' => sanitize_text_field($item['title']),
+            'post_status' => 'any',
+            'posts_per_page' => 1,
+            'no_found_rows' => true,
+            'fields' => 'ids',
+        ]);
+        if (!empty($existing_query->posts))
             continue;
 
         // Создаем пост
@@ -503,7 +522,7 @@ function softmir_run_scout($category_id, $region, $answers, $user_text = '', $la
                 $features_html .= '<li>' . esc_html($f) . '</li>';
             }
             $features_html .= '</ul>';
-            update_field('field_sw_features', wp_kses_post($features_html), $post_id);
+            update_field('key_features', wp_kses_post($features_html), $post_id);
         }
 
         if (!empty($item['top_reasons']) && is_array($item['top_reasons'])) {
